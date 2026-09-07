@@ -1,0 +1,53 @@
+schema_version: 1
+id: null
+state: proposed
+target_population: null
+intended_use: null
+target: null
+prediction_time: null
+horizon: null
+prediction_kind: null
+data:
+  sources_and_versions: []
+  audit_path: null
+  measurement_anchors: []
+  observed_domains: []
+  inferred_domains: []
+  unavailable_domains: []
+inputs:
+  allowed_features: []
+  excluded_diagnosis_fields: []
+  diagnosis_proxy_audit: null
+  target_overlap_audit: null
+  minimum_required_inputs: []
+  missing_input_strategy: null
+  abstention_rule: null
+validation:
+  participant_family_split: null
+  site_dataset_split: null
+  temporal_split: null
+  preprocessing_fit_scope: training_fold_only
+  latent_measurement_fit_scope: training_fold_only
+  inner_model_selection: null
+  reserved_test: null
+  external_test: null
+  subgroup_audit_labels: []
+  primary_metric: null
+  calibration_method: null
+  uncertainty_method: null
+  sampling_design: null
+results:
+  state: not_run
+  baseline_metrics: null
+  model_metrics: null
+  external_validation_status: not_performed
+  subgroup_performance: null
+  missing_domain_performance: null
+  attribution_stability: null
+  causal_interpretation: not_established
+reproducibility:
+  command: null
+  code_revision: null
+  input_hashes: {}
+  seed: null
+  model_artifact: null

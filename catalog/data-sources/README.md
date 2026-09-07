@@ -9,6 +9,9 @@ A metodologia integrada está em
 com esquema operacional em
 [`multidimensional-model-schema.yaml`](multidimensional-model-schema.yaml).
 
+O [plano de descobertas e skills](DISCOVERY_PLAN.md) define a primeira rodada de
+análises, seus limites e as cinco habilidades reutilizáveis para executá-la.
+
 O arquivo [`sources.yaml`](sources.yaml) é a versão estruturada e deve ser tratado
 como a fonte principal. As informações de acesso devem ser verificadas antes do
 início de cada projeto, pois políticas e versões dos conjuntos podem mudar.

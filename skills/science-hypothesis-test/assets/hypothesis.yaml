@@ -1,0 +1,48 @@
+schema_version: 1
+id: null
+status: draft
+question: null
+created_at: null
+data_already_inspected: []
+external_registration: null
+population:
+  eligibility: null
+  age_range: null
+  group_measurement: null
+  comparison_plan: []
+data:
+  sources_and_versions: []
+  audit_path: null
+  exposure_fields: []
+  outcome_fields: []
+  time_windows: null
+estimand:
+  type: null
+  exposure_contrast: null
+  comparator: null
+  outcome_and_unit: null
+  predicted_direction_or_range: null
+  smallest_effect_of_interest: null
+  identification_limits: []
+causal_structure:
+  dag: null
+  confounders: []
+  mediators: []
+  effect_modifiers: []
+analysis:
+  primary_model: null
+  sampling_design: null
+  missing_data_strategy: null
+  multiplicity_family: null
+  multiplicity_method: null
+  uncertainty_method: null
+  sensitivity_analyses: []
+  falsification_rule: null
+  replication_plan: null
+  evidence_selection_protocol: null
+execution:
+  state: not_run
+  command: null
+  input_hashes: {}
+  code_revision: null
+  results_path: null

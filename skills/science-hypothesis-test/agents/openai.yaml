@@ -1,0 +1,3 @@
+interface:
+  display_name: "Testes de hipóteses"
+  short_description: "Teste relações com incerteza e replicação"

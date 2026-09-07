@@ -1,0 +1,49 @@
+schema_version: 1
+id: null
+status: draft
+hypothesis_id: null
+finding_artifact: null
+search_protocol:
+  date: null
+  query: null
+  database: null
+  eligibility: null
+study:
+  title: null
+  doi: null
+  pmid: null
+  nct: null
+  primary_url: null
+  publication_date: null
+  accessed_at: null
+  design: null
+  evidence_level: null
+  population_and_group_identification: null
+  age_and_sex_gender: null
+  randomized_n: null
+  analyzed_n: null
+  attrition: null
+  intervention_form_dose_duration: null
+  comparator: null
+  cointerventions: null
+  outcome_and_followup: null
+  shared_sample_or_reports: []
+extraction:
+  access_level: null
+  source_locator: null
+  effect_measure: null
+  estimate: null
+  interval: null
+  adverse_events: null
+  prespecified_outcome: null
+  risk_of_bias_tool: null
+  risk_of_bias_by_domain: {}
+interpretation:
+  proposed_before_finding: null
+  candidate_mechanism: null
+  relevance_to_finding: null
+  transport_to_HA_ASD_ADHD: null
+  rival_explanations: []
+  discriminating_prediction: null
+  evidence_that_would_weaken_theory: null
+  next_discriminating_test: null

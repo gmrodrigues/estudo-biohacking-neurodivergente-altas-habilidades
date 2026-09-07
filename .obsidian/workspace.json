@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "catalog/data-sources/TWICE_EXCEPTIONAL_MODELS.md",
+                "file": "catalog/data-sources/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TWICE_EXCEPTIONAL_MODELS"
+              "title": "README"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "catalog/data-sources/TWICE_EXCEPTIONAL_MODELS.md",
+                "file": "catalog/data-sources/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "catalog/data-sources/TWICE_EXCEPTIONAL_MODELS.md",
+                "file": "catalog/data-sources/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "catalog/data-sources/TWICE_EXCEPTIONAL_MODELS.md",
+                "file": "catalog/data-sources/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -190,27 +190,36 @@
   },
   "active": "707665c4d55c00bc",
   "lastOpenFiles": [
-    "catalog/data-sources/stratification-schema.yaml",
+    "skills/science-cycle-publish/agents/openai.yaml",
+    "skills/science-cycle-publish/agents",
+    "skills/science-cycle-publish/SKILL.md",
+    "skills/science-cycle-publish",
+    "catalog/data-sources/DISCOVERY_PLAN.md",
+    "skills/science-evidence-synthesis/assets/evidence-card.yaml",
+    "skills/science-evidence-synthesis/assets",
+    "skills/science-predictive-model/assets/model-card.yaml",
+    "skills/science-predictive-model/assets",
+    "skills/science-hypothesis-test/assets/hypothesis.yaml",
+    "skills/science-hypothesis-test/assets",
+    "skills/science-discovery/references/project-contract.md",
+    "skills/science-discovery/references",
     "catalog/data-sources/STRATIFICATION_MODEL.md",
+    "skills/science-evidence-synthesis/agents/openai.yaml",
+    "skills/science-evidence-synthesis/SKILL.md",
+    "skills/science-predictive-model/SKILL.md",
+    "skills/science-hypothesis-test/SKILL.md",
+    "skills/science-data-audit/SKILL.md",
+    "skills/science-discovery/SKILL.md",
+    "catalog/data-sources/MULTIDIMENSIONAL_HYPOTHESIS_PREDICTION_METHODOLOGY.md",
+    "catalog/data-sources/SUPPLEMENTATION_HYPOTHESES.md",
+    "catalog/data-sources/TWICE_EXCEPTIONAL_MODELS.md",
     "catalog/data-sources/CORE_STUDY_DESIGN.md",
     "catalog/data-sources/PERSONAL_SUPPLEMENT_HYPOTHESES.md",
-    "catalog/data-sources/personal-supplement-history.yaml",
     "catalog/data-sources/PERSONALIZED_HYPOTHESIS_PRIORITY.md",
-    "catalog/data-sources/supplementation-hypotheses.yaml",
-    "catalog/data-sources/SUPPLEMENTATION_HYPOTHESES.md",
     "catalog/data-sources/REPORT_DATA_MODELS_GIFTEDNESS.md",
     "catalog/data-sources/README.md",
     "catalog/data-sources/INITIAL_FEASIBILITY_ANALYSIS.md",
-    "catalog/data-sources/__pycache__/build_trial_evidence_graph.cpython-314.pyc.139754061329072",
-    "catalog/data-sources/TWICE_EXCEPTIONAL_MODELS.md",
-    "catalog/data-sources/exceptionality-comparison-schema.yaml",
-    "data/derived/evidence-graph/edges.csv",
-    "data/derived/evidence-graph/nodes.csv",
-    "catalog/data-sources/__pycache__/build_trial_evidence_graph.cpython-314.pyc",
     "data/derived/evidence-graph/README.md",
-    "data/derived/evidence-graph",
-    "data/derived",
-    "catalog/data-sources/build_trial_evidence_graph.py",
     "data/public/clinicaltrials/README.md",
     "data/public/nhanes/2021-2023/README.md",
     "catalog/data-sources/ACCESS_FROM_CODEX.md"

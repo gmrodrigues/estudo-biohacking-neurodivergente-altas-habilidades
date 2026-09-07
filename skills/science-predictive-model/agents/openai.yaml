@@ -1,0 +1,3 @@
+interface:
+  display_name: "Previsão dimensional"
+  short_description: "Preveja desfechos sem diagnóstico conhecido"

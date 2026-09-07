@@ -1,0 +1,3 @@
+interface:
+  display_name: "Auditoria dos dados"
+  short_description: "Verifique cobertura, medidas e pesos amostrais"

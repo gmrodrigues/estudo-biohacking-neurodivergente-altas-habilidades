@@ -7,6 +7,8 @@ name = "pypi"
 pandas = "*"
 
 [dev-packages]
+pyyaml = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.14"
