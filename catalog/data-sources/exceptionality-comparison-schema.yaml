@@ -1,0 +1,92 @@
+schema_version: 1
+last_updated: "2026-09-07"
+
+principles:
+  representation: multilabel
+  missing_diagnosis_policy: unknown_not_absent
+  continuous_scores_required: true
+  preserve_assessment_provenance: true
+  minimum_levels: [isolated, double, triple]
+
+exceptionalities:
+  HA:
+    label: altas habilidades
+    requires: [assessment_instrument, version, norms, continuous_scores, criterion]
+  ADHD:
+    label: TDAH
+    requires: [symptom_dimensions, onset, impairment, informants, diagnostic_method]
+  ASD:
+    label: autismo
+    requires: [social_communication, restricted_repetitive_behavior, sensory_profile, adaptive_function, diagnostic_method]
+  DEP:
+    label: depressão
+    requires: [symptoms, duration, impairment, recurrence, suicidality, diagnostic_method]
+  SOC:
+    label: ansiedade ou fobia social
+    requires: [fear, avoidance, duration, impairment, context, diagnostic_method]
+  SLD:
+    label: transtorno específico de aprendizagem
+    requires: [academic_domain, standardized_achievement, history, impairment, diagnostic_method]
+  DCD:
+    label: transtorno do desenvolvimento da coordenação
+    requires: [motor_assessment, daily_function, onset, diagnostic_method]
+  OCD:
+    label: transtorno obsessivo-compulsivo
+    requires: [obsessions, compulsions, interference, diagnostic_method]
+  TIC:
+    label: Tourette ou transtorno de tiques
+    requires: [motor_tics, vocal_tics, duration, interference, diagnostic_method]
+
+comparison_levels:
+  isolated:
+    definition: Uma excepcionalidade presente e todas as demais avaliadas como ausentes.
+    required_references: [unaffected_reference]
+  double:
+    definition: HA mais uma condição, ou par clínico justificado sem HA.
+    required_references: [unaffected_reference, first_isolated, second_isolated]
+    required_effects: [first_main, second_main, first_by_second]
+  triple:
+    definition: HA mais duas condições coexistentes.
+    required_references: [unaffected_reference, each_isolated_component, each_nested_double_combination]
+    required_effects: [all_main_effects, all_pairwise_interactions, selected_triple_interaction]
+
+priority_double_comparisons:
+  - [HA, ADHD]
+  - [HA, ASD]
+  - [HA, DEP]
+  - [HA, SOC]
+  - [HA, SLD]
+  - [HA, DCD]
+  - [HA, OCD]
+  - [HA, TIC]
+
+priority_triple_comparisons:
+  - [HA, ADHD, ASD]
+  - [HA, ADHD, DEP]
+  - [HA, ADHD, SLD]
+  - [HA, ASD, SOC]
+  - [HA, ASD, DEP]
+  - [HA, SLD, DCD]
+
+model_requirements:
+  descriptive_table_before_modeling: true
+  hierarchical_partial_pooling: true
+  stronger_shrinkage_for_higher_order_interactions: true
+  pre_specified_contrasts: true
+  external_or_temporal_validation: true
+  report_uncertainty: true
+  report_benefit_and_harm: true
+  suppress_reidentification_risk: true
+
+required_covariates:
+  - age
+  - sex_and_gender_as_available
+  - socioeconomic_context
+  - assessment_method
+  - medication
+  - therapy
+  - educational_or_work_support
+  - sleep
+  - physical_activity
+  - site
+  - time

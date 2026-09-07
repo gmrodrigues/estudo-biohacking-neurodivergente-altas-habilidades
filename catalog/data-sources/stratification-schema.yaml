@@ -1,0 +1,103 @@
+schema_version: 1
+last_updated: "2026-09-07"
+
+age:
+  preserve_continuous: true
+  recommended_model: restricted_cubic_spline
+  descriptive_bands:
+    child: {min: 6, max: 11}
+    adolescent: {min: 12, max: 17}
+    young_adult: {min: 18, max: 29}
+    midlife_adult: {min: 30, max: 59}
+    older_adult: {min: 60, max: null}
+  require_age_appropriate_norms: true
+
+sex_and_gender:
+  separate_fields: true
+  fields: [sex_recorded_at_birth, gender_identity, hormonal_context_if_relevant]
+  never_infer_from_name: true
+  allow_unknown_or_not_reported: true
+
+occupation:
+  coding_system: ISCO-08_or_compatible
+  preserve_original_text: true
+  fields:
+    - employment_status
+    - occupation_code
+    - work_hours
+    - shift_work
+    - physical_demand
+    - cognitive_demand
+    - creative_autonomy
+    - social_demand
+    - job_control
+    - unemployment_duration
+  not_a_proxy_for_giftedness: true
+
+education:
+  fields:
+    - completed_years
+    - highest_level
+    - field_of_study
+    - acceleration
+    - repetition
+    - dropout
+    - special_education
+    - opportunity_and_quality
+    - self_directed_learning
+  not_a_proxy_for_giftedness: true
+
+creativity:
+  dimensions:
+    - divergent_fluency
+    - divergent_flexibility
+    - originality
+    - elaboration
+    - everyday_creativity
+    - domain_achievement
+    - motivation
+  preserve_instrument_and_norms: true
+
+artistic_inclination:
+  domains: [visual_art, music, writing, dance, theater, audiovisual, design, other]
+  fields:
+    - interest_intensity
+    - weekly_practice_hours
+    - years_of_practice
+    - formal_training
+    - portfolio_or_output
+    - peer_or_public_recognition
+    - professional_status
+    - barriers_and_access
+
+family_composition:
+  fields: [household_relationships, caregivers, siblings_birth_order, dependents,
+    care_hours, family_transitions, parental_education_occupation,
+    support_cohesion_conflict, family_health_history]
+  separate_biological_kinship_from_cohabitation: true
+
+financial_independence:
+  age_dependent: true
+  minor_value: not_applicable
+  fields: [personal_income, household_income, own_expense_share,
+    employment_stability, housing_security, debt_assets, support_received,
+    support_provided, dependents, material_hardship]
+
+substance_history:
+  collect_per_substance: true
+  fields: [lifetime_use, past_year_use, past_30_day_use, age_at_first_use,
+    frequency, quantity, route, context, polysubstance_use, consequences,
+    treatment_recovery, abstinence_duration]
+  separate_prescription_misuse: true
+  never_use_as_moral_or_diagnostic_proxy: true
+  require_specific_consent_and_small_cell_suppression: true
+
+analysis:
+  descriptive_cross_tabs: true
+  suppress_small_cells: true
+  hierarchical_partial_pooling: true
+  prespecify_interactions: true
+  multiplicity_control: true
+  report_within_and_between_group_correlations: true
+  check_simpsons_paradox: true
+  require_external_or_temporal_validation: true

@@ -1,0 +1,109 @@
+schema_version: 1
+version: "0.1"
+last_updated: "2026-09-07"
+status: hypothesis_generation
+not_clinical_recommendations: true
+
+group_comparison_schema: exceptionality-comparison-schema.yaml
+
+hypotheses:
+  - id: H01
+    exposure: caffeine
+    target: acute_performance_and_next_day_sleep
+    expected_direction: heterogeneous_net_effect
+    priority: high
+    public_data: [NHANES, ClinicalTrials.gov, ODS]
+    prospective_data_required: true
+    safety: [blood_pressure, pulse, anxiety, insomnia, stimulant_medication]
+    falsified_if: No meaningful net benefit after subsequent sleep is included.
+
+  - id: H02
+    exposure: creatine_monohydrate
+    target: repeated_high_intensity_performance
+    expected_direction: positive_absolute_performance_uncertain_relative_performance
+    priority: high
+    public_data: [ClinicalTrials.gov, ODS]
+    prospective_data_required: true
+    safety: [body_mass, gastrointestinal_symptoms, clinical_contraindications]
+    falsified_if: Absolute gains do not translate into relevant relative-performance gains.
+
+  - id: H03
+    exposure: EPA_DHA
+    target: ADHD_functioning_as_adjunct
+    expected_direction: small_or_null_with_effect_modification
+    priority: medium
+    public_data: [ClinicalTrials.gov, ODS]
+    prospective_data_required: true
+    safety: [product_identity, concomitant_treatment, adverse_events]
+    falsified_if: Posterior effect remains below the prespecified meaningful threshold.
+
+  - id: H04
+    exposure: melatonin
+    target: sleep_timing_or_latency
+    expected_direction: sleep_mediated_not_direct_cognitive_effect
+    priority: medium
+    public_data: [ClinicalTrials.gov]
+    prospective_data_required: true
+    clinical_review_required: true
+    falsified_if: Sleep does not improve or next-day harm offsets benefit.
+
+  - id: H05
+    exposure: vitamin_D
+    target: deficiency_correction_not_general_antidepressant_effect
+    expected_direction: benefit_if_deficient_otherwise_null
+    priority: high
+    public_data: [NHANES, ODS]
+    prospective_data_required: true
+    baseline_modifier: serum_25OHD
+    falsified_if: No benefit in the prespecified deficient stratum or association fails sensitivity analysis.
+
+  - id: H06
+    exposure: magnesium
+    target: sleep_neuromuscular_function_wellbeing
+    expected_direction: benefit_if_low_baseline_otherwise_null
+    priority: medium
+    public_data: [NHANES, ODS]
+    prospective_data_required: true
+    baseline_modifier: intake_or_valid_status_measure
+    falsified_if: No baseline modification or harms exceed benefit.
+
+  - id: H07
+    exposure: iron
+    target: deficiency_related_fatigue_and_performance
+    expected_direction: benefit_only_if_deficient
+    priority: high_safety
+    public_data: [NHANES, ODS]
+    prospective_data_required: true
+    clinical_review_required: true
+    required_biomarkers: [CBC, ferritin, transferrin_saturation, inflammation]
+    falsified_if: Biomarkers improve without meaningful functional benefit.
+
+  - id: H08
+    exposure: protein_and_energy_adequacy
+    target: training_adaptation_and_recovery
+    expected_direction: plateau_after_adequacy
+    priority: high
+    public_data: [NHANES, ODS]
+    prospective_data_required: true
+    falsified_if: The initially inadequate stratum has no meaningful benefit.
+
+  - id: H09
+    exposure: supplement_stack
+    target: incremental_net_benefit
+    expected_direction: no_advantage_over_components
+    priority: high
+    public_data: [ClinicalTrials.gov, DSLD, PubChem, CAERS]
+    prospective_data_required: true
+    required_design: factorial_or_dismantling_trial
+    falsified_if: Stack has a replicated safe incremental benefit over each component.
+
+  - id: H10
+    exposure: all_eligible_supplements
+    target: tolerability_by_exceptionality_profile
+    expected_direction: stronger_tolerability_than_efficacy_modification
+    priority: high
+    public_data: [ClinicalTrials.gov, CAERS]
+    prospective_data_required: true
+    required_model: hierarchical_isolated_double_triple_comparisons
+    falsified_if: Replicated profile-specific efficacy differences dominate tolerability differences.
+

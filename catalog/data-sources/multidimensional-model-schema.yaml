@@ -1,0 +1,38 @@
+schema_version: 1
+last_updated: "2026-09-07"
+principle:
+  diagnosis_agnostic_primary_model: true
+  diagnosis_only_for_post_training_validation: true
+  prediction_is_not_diagnosis: true
+dimensions: [cognition, executive_attention, social_communication_sensory,
+  mood_anxiety, sleep_circadian, nutrition_supplementation_methylation,
+  physical_performance, creativity_art, education_work, family_context,
+  financial_independence, substance_history, treatment_health_support]
+measurement:
+  candidates: [CFA, ESEM, bifactor, IRT, normative_model]
+  invariance: [age, sex_gender, language, dataset, diagnosis_after_training]
+  preserve_uncertainty: true
+hypothesis_required: [population, exposure, comparator, outcome, time_window,
+  estimand, dag, predicted_direction, confounders, mediators, effect_modifiers,
+  analysis, falsifier]
+prediction:
+  targets: [future_attention, future_sleep, future_mood, future_performance,
+    intervention_response, adverse_event, adherence]
+  forbidden_features: [diagnosis_label, post_outcome_measure, target_component]
+  baselines: [base_rate_or_mean, elastic_net, GAM]
+  candidates: [gradient_boosting, hierarchical_bayesian]
+  split_units: [participant, time, site_or_dataset]
+  nested_cross_validation: true
+  external_validation: true
+  explanations: [latent_contributions, domain_ablation, permutation_importance,
+    ALE, SHAP_with_stability, calibrated_uncertainty]
+scarce_data:
+  allowed: [isolated_domain_hypotheses, normative_reference,
+    hierarchical_partial_pooling, auxiliary_multitask_learning,
+    simulation_for_power_and_software]
+  forbidden: [synthetic_as_empirical_confirmation,
+    unknown_diagnosis_as_absent, hidden_uncertainty]
+theory_linkage:
+  select_before_results: true
+  required: [mechanism, prediction, temporality, moderators, primary_evidence,
+    rivals, falsifier]

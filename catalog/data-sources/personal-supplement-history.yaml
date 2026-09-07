@@ -1,0 +1,98 @@
+schema_version: 1
+last_updated: "2026-09-07"
+source: user_reported_in_conversation
+verification: not_independently_verified
+
+items:
+  - name: GABA
+    status: acquired
+    dates: ["2024-05", "2025-08"]
+    intended_use: [relaxation, anxiety_control]
+  - name: whey protein
+    status: acquired
+    dates: ["2024-07"]
+    intended_use: [protein_intake, physical_recovery]
+  - name: ashwagandha
+    status: acquired
+    dates: ["2025"]
+    intended_use: [stress_management, performance]
+  - name: alpha-GPC
+    status: acquired
+    dates: ["2025"]
+    intended_use: [cognition, acetylcholine_support]
+  - name: PQQ
+    status: acquired
+    dates: ["2025"]
+    intended_use: [mitochondrial_health, mitochondrial_biogenesis]
+  - name: L-theanine
+    status: acquired
+    dates: ["2025-11"]
+    intended_use: [focus, relaxation, nootropic_combination]
+  - name: dandelion
+    status: acquired
+    dates: ["2026-04/2026-05"]
+    intended_use: [metabolic_support]
+  - name: cinnamon
+    status: acquired
+    dates: ["2026-04/2026-05"]
+    intended_use: [metabolic_support]
+  - name: methylene blue
+    status: researched
+    intended_use: [mitochondrial_optimization, fasting_metabolism, cellular_detoxification]
+  - name: creatine
+    status: researched_and_discussed
+    intended_use: [physical_performance, cellular_bioenergetics]
+  - name: magnesium
+    forms: [threonate, glycinate]
+    status: researched_and_discussed
+    intended_use: [neurological_health, cognition, sleep, muscle_relaxation]
+  - name: zinc
+    forms: [chelated]
+    status: researched
+    intended_use: [enzyme_cofactor, immune_support]
+  - name: selenium
+    status: researched
+    intended_use: [enzyme_cofactor, immune_support]
+    user_reported_caution: true
+  - name: astaxanthin
+    status: researched
+    intended_use: [antioxidant, oxidative_stress]
+  - name: alpha-lipoic acid
+    status: researched
+    intended_use: [antioxidant, oxidative_stress]
+  - name: NAC
+    status: researched_and_discussed
+    intended_use: [glutathione_support, mucolytic_action, detoxification]
+  - name: caffeine
+    status: used_and_discussed
+    intended_use: [focus, alertness, nootropic]
+  - name: vitamins
+    members: [K2, D, A, B6, B12, C]
+    status: ongoing_research
+    intended_use: [one_carbon_metabolism, immunity, metabolic_regulation]
+  - name: electrolytes_and_minerals
+    status: ongoing_research
+    intended_use: [metabolic_regulation, physical_performance]
+  - name: amino_acids_and_metabolic_compounds
+    members: [glycine, tyrosine, D-ribose, arginine, citrulline, glutamine, inositol, choline, citicoline]
+    status: researched
+    intended_use: [physical_performance, vasodilation, recovery, synaptic_optimization]
+  - name: adaptogens_and_phytochemicals
+    members: [long_jack, rhodiola, mulungu, artichoke, black_beggarticks, resveratrol, quercetin, coenzyme_Q10]
+    status: researched_or_content_consumed
+    intended_use: [longevity, stress_modulation]
+
+missing_fields_required_for_analysis:
+  - exact_product_and_brand
+  - formulation_and_chemical_form
+  - dose
+  - frequency
+  - time_of_day
+  - start_and_stop_dates
+  - adherence
+  - perceived_benefits
+  - adverse_effects
+  - reason_for_discontinuation
+  - medications_and_interactions
+  - relevant_laboratory_results
+

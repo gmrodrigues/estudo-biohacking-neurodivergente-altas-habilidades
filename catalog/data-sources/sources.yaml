@@ -1,0 +1,299 @@
+schema_version: 1
+last_updated: "2026-09-07"
+
+access_levels:
+  open: Dados públicos sem aprovação individual, embora termos de uso possam valer.
+  registered: Exige conta, treinamento ou aceite de termos.
+  controlled: Exige aprovação institucional, projeto ou ambiente seguro.
+  mixed: Possui camadas com níveis de acesso diferentes.
+
+sources:
+  - id: nimh-nda-abcd
+    name: NIMH Data Archive / Adolescent Brain Cognitive Development Study
+    organization: US National Institute of Mental Health
+    url: https://nda.nih.gov/
+    access: controlled
+    geography: United States
+    population: Crianças e adolescentes; o ABCD é longitudinal.
+    topics: [ADHD, autism, neurodevelopment, cognition, mental-health, sleep, physical-activity]
+    modalities: [questionnaires, clinical-assessments, MRI, fMRI, genetics, physical-measures]
+    formats: [tabular, imaging, genomic]
+    suggested_uses:
+      - Relações entre sintomas neurodivergentes, cognição, sono e atividade física.
+      - Modelos longitudinais de desenvolvimento cerebral e saúde mental.
+    limitations:
+      - Dados individuais normalmente exigem qualificação e aprovação de acesso.
+      - Coorte adolescente; não representa diretamente atletas adultos.
+    privacy_ethics: Não tentar reidentificar participantes; respeitar os termos do NDA.
+    last_verified: "2026-09-07"
+
+  - id: openneuro
+    name: OpenNeuro
+    organization: Stanford Center for Reproducible Neuroscience
+    url: https://openneuro.org/
+    access: open
+    geography: International
+    population: Varia conforme o conjunto.
+    topics: [neuroscience, ADHD, autism, cognition]
+    modalities: [MRI, fMRI, PET, MEG, EEG, iEEG, NIRS]
+    formats: [BIDS]
+    suggested_uses:
+      - Reanálise reproduzível de neuroimagem e neurofisiologia.
+      - Busca de conjuntos por diagnóstico, tarefa e faixa etária.
+    limitations:
+      - Fenótipos e tamanho amostral variam muito entre conjuntos.
+      - Nem todo conjunto contém atividade física ou suplementação.
+    privacy_ethics: Conferir a licença e o arquivo README de cada conjunto.
+    last_verified: "2026-09-07"
+
+  - id: physionet
+    name: PhysioNet
+    organization: MIT Laboratory for Computational Physiology
+    url: https://physionet.org/
+    access: mixed
+    geography: International
+    population: Varia conforme o conjunto.
+    topics: [physiology, sleep, fatigue, clinical-data, digital-biomarkers]
+    modalities: [ECG, EEG, PPG, EHR, clinical-text, imaging]
+    formats: [WFDB, CSV, waveform, text]
+    suggested_uses:
+      - Desenvolvimento e validação de métricas fisiológicas.
+      - Pesquisa sobre sono, sistema autonômico e recuperação.
+    limitations:
+      - Alguns conjuntos exigem treinamento e credenciamento.
+      - Muitas coortes são clínicas e não representam atletas saudáveis.
+    privacy_ethics: Seguir a credencial e o acordo específicos de cada conjunto.
+    last_verified: "2026-09-07"
+
+  - id: nsrr
+    name: National Sleep Research Resource
+    organization: US National Heart, Lung, and Blood Institute
+    url: https://sleepdata.org/
+    access: registered
+    geography: Predominantly United States
+    population: Múltiplas coortes e ensaios.
+    topics: [sleep, circadian-rhythm, recovery, cognition]
+    modalities: [polysomnography, actigraphy, questionnaires, anthropometry, outcomes]
+    formats: [CSV, EDF, XML]
+    suggested_uses:
+      - Relações entre arquitetura do sono, recuperação e saúde.
+      - Validação de algoritmos de sono e actigrafia.
+    limitations:
+      - Acesso e variáveis disponíveis diferem entre coortes.
+      - Neurodivergência e desempenho esportivo podem não estar diretamente medidos.
+    privacy_ethics: Solicitar somente os dados necessários e cumprir o acordo da coorte.
+    last_verified: "2026-09-07"
+
+  - id: all-of-us
+    name: All of Us Research Program
+    organization: US National Institutes of Health
+    url: https://www.researchallofus.org/data-tools/data-access/
+    access: mixed
+    geography: United States
+    population: Adultos diversos; cobertura pediátrica limitada.
+    topics: [precision-health, mental-health, physical-activity, supplementation, genetics]
+    modalities: [EHR, surveys, physical-measures, Fitbit, genomics]
+    formats: [OMOP, tabular, genomic]
+    suggested_uses:
+      - Estudos multimodais de atividade, saúde mental, medicamentos e biomarcadores.
+      - Exploração pública de contagens agregadas.
+    limitations:
+      - Dados individuais permanecem no Researcher Workbench.
+      - Camadas registrada e controlada têm requisitos institucionais e de identidade.
+    privacy_ethics: Proibidos reidentificação e exportação de dados individuais do ambiente seguro.
+    last_verified: "2026-09-07"
+
+  - id: nhanes
+    name: National Health and Nutrition Examination Survey
+    organization: US Centers for Disease Control and Prevention
+    url: https://www.cdc.gov/nchs/nhanes/
+    access: open
+    geography: United States
+    population: Amostra populacional civil não institucionalizada.
+    topics: [nutrition, supplements, physical-activity, biomarkers, body-composition]
+    modalities: [interviews, laboratory-tests, examinations, accelerometry, dietary-recall]
+    formats: [XPT, documentation]
+    suggested_uses:
+      - Associações entre suplementos, dieta, exames e atividade física.
+      - Estimativas populacionais usando pesos amostrais.
+    limitations:
+      - Muitos dados são transversais e sujeitos a autorrelato.
+      - Diagnósticos neurodivergentes e desempenho esportivo são limitados.
+    privacy_ethics: Usar pesos, estratos e unidades amostrais no cálculo de estimativas.
+    last_verified: "2026-09-07"
+
+  - id: open-humans
+    name: Open Humans
+    organization: Open Humans Foundation
+    url: https://www.openhumans.org/
+    access: mixed
+    geography: International
+    population: Voluntários e comunidades de ciência cidadã.
+    topics: [self-research, wearables, genomics, lifestyle, quantified-self]
+    modalities: [Fitbit, Oura, Apple-Health, Google-Fit, surveys, genomic-data]
+    formats: [API, JSON, user-contributed-files]
+    suggested_uses:
+      - Estudos N-of-1 e coleta longitudinal consentida.
+      - Projetos participativos com devolução de dados aos participantes.
+    limitations:
+      - Amostras autoselecionadas e protocolos heterogêneos.
+      - Disponibilidade depende da autorização explícita de cada membro.
+    privacy_ethics: Dados genéticos, localização e séries temporais podem ser reidentificáveis.
+    last_verified: "2026-09-07"
+
+  - id: datasus
+    name: DATASUS
+    organization: Ministério da Saúde do Brasil
+    url: https://datasus.saude.gov.br/
+    access: mixed
+    geography: Brazil
+    population: População atendida ou registrada nos sistemas do SUS.
+    topics: [epidemiology, morbidity, mortality, nutrition, health-services]
+    modalities: [administrative-records, aggregate-indicators]
+    formats: [TABNET, CSV, DBC, DBF]
+    suggested_uses:
+      - Contexto epidemiológico e de serviços de saúde no Brasil.
+      - Séries históricas e comparações geográficas agregadas.
+    limitations:
+      - Pouca granularidade para suplementação e desempenho individual.
+      - Cobertura, codificação e completude variam por sistema e período.
+    privacy_ethics: Evitar inferências sobre indivíduos em células pequenas.
+    last_verified: "2026-09-07"
+
+  - id: nih-ods-fact-sheets
+    name: NIH Office of Dietary Supplements Fact Sheets
+    organization: US National Institutes of Health
+    url: https://ods.od.nih.gov/factsheets/list-all/
+    access: open
+    geography: International evidence; US recommendations and regulation.
+    population: Varia conforme a revisão e o ingrediente.
+    topics: [supplements, efficacy, safety, interactions, athletic-performance]
+    modalities: [evidence-summaries, references]
+    formats: [HTML, PDF]
+    suggested_uses:
+      - Triagem inicial de eficácia, segurança, limites e interações.
+      - Revisão de suplementos voltados ao exercício e desempenho.
+    limitations:
+      - É uma coleção de sínteses, não dados individuais brutos.
+      - Evidência pode não incluir neurodivergentes ou a modalidade esportiva desejada.
+    privacy_ethics: Não aplicável a dados pessoais; não substitui avaliação clínica.
+    last_verified: "2026-09-07"
+
+  - id: dsld
+    name: Dietary Supplement Label Database
+    organization: NIH Office of Dietary Supplements
+    url: https://dsld.od.nih.gov/
+    api_url: https://api.ods.od.nih.gov/dsld/v9/
+    access: open
+    license: CC0-1.0
+    geography: United States market
+    population: Produtos, não participantes humanos.
+    topics: [supplements, labels, ingredients, products]
+    modalities: [label-images, ingredient-lists, doses, claims, warnings]
+    formats: [API, JSON, CSV]
+    suggested_uses:
+      - Comparar ingredientes, doses e versões de produtos comerciais.
+      - Codificar exposição a suplementos em estudos populacionais.
+    limitations:
+      - Reproduz o rótulo; não comprova pureza nem quantidade real.
+      - Cobertura centrada no mercado dos Estados Unidos.
+    privacy_ethics: Não aplicável a participantes humanos.
+    last_verified: "2026-09-07"
+
+  - id: dsid
+    name: Dietary Supplement Ingredient Database
+    organization: USDA and NIH Office of Dietary Supplements
+    url: https://ods.od.nih.gov/Research/databases.aspx
+    access: open
+    geography: United States market
+    population: Amostras de produtos, não participantes humanos.
+    topics: [supplements, laboratory-analysis, ingredient-content]
+    modalities: [analytical-measurements, population-estimates]
+    formats: [reports, tables]
+    suggested_uses:
+      - Estimar conteúdo real de categorias selecionadas de suplementos.
+      - Estudar divergências sistemáticas entre rótulo e análise.
+    limitations:
+      - Não valida cada unidade ou marca individualmente.
+      - Cobre somente categorias e ingredientes analisados pelo programa.
+    privacy_ethics: Não aplicável a participantes humanos.
+    last_verified: "2026-09-07"
+
+  - id: clinicaltrials-gov
+    name: ClinicalTrials.gov
+    organization: US National Library of Medicine
+    url: https://clinicaltrials.gov/
+    api_url: https://clinicaltrials.gov/data-api/about-api
+    access: open
+    geography: International
+    population: Participantes de estudos clínicos registrados.
+    topics: [clinical-trials, supplements, interventions, outcomes]
+    modalities: [protocols, eligibility, outcomes, adverse-events]
+    formats: [API, JSON, CSV]
+    suggested_uses:
+      - Localizar ensaios de suplementos por diagnóstico e desfecho físico.
+      - Comparar resultados publicados com protocolos registrados.
+    limitations:
+      - Nem todo estudo publica resultados e registros podem estar incompletos.
+      - Registro de ensaio não equivale a evidência favorável.
+    privacy_ethics: Dados públicos são agregados; respeitar termos para documentos vinculados.
+    last_verified: "2026-09-07"
+
+  - id: pubchem
+    name: PubChem
+    organization: US National Library of Medicine
+    url: https://pubchem.ncbi.nlm.nih.gov/
+    access: open
+    geography: International
+    population: Compostos e substâncias, não uma coorte humana.
+    topics: [chemistry, bioactivity, toxicology, supplements, interactions]
+    modalities: [chemical-structures, assays, linked-literature, safety-data]
+    formats: [PUG-REST-API, JSON, XML, SDF, RDF]
+    suggested_uses:
+      - Normalizar nomes e identificadores de ingredientes.
+      - Investigar mecanismos, alvos e sinais toxicológicos.
+    limitations:
+      - Bioatividade in vitro não demonstra benefício clínico.
+      - Registros integrados variam em qualidade e contexto experimental.
+    privacy_ethics: Não aplicável a participantes humanos.
+    last_verified: "2026-09-07"
+
+  - id: openfda-caers
+    name: openFDA CFSAN Adverse Event Reporting System
+    organization: US Food and Drug Administration
+    url: https://open.fda.gov/data/caers/
+    api_url: https://open.fda.gov/apis/food/event/
+    access: open
+    license: Public Domain / CC0
+    geography: Predominantly United States
+    population: Notificações sobre consumidores, anonimizadas para divulgação.
+    topics: [supplements, adverse-events, safety-signals, product-complaints]
+    modalities: [spontaneous-reports, outcomes, products, reactions]
+    formats: [API, JSON, CSV]
+    suggested_uses:
+      - Detectar sinais que merecem investigação adicional.
+      - Descrever padrões de produtos, reações e gravidade notificados.
+    limitations:
+      - Subnotificação, duplicação, notoriedade e ausência de denominador de exposição.
+      - Uma notificação não demonstra que o produto causou o evento.
+    privacy_ethics: Não tentar reidentificar notificantes ou consumidores.
+    last_verified: "2026-09-07"
+
+  - id: anvisa-nutrivigilancia
+    name: Anvisa / Nutrivigilância e dados abertos
+    organization: Agência Nacional de Vigilância Sanitária
+    url: https://www.gov.br/anvisa/pt-br/
+    access: open
+    geography: Brazil
+    population: Notificações e produtos no mercado brasileiro.
+    topics: [supplements, adverse-events, regulation, food-safety]
+    modalities: [bulletins, alerts, aggregate-notifications, regulatory-records]
+    formats: [HTML, PDF, dashboards]
+    suggested_uses:
+      - Conferir situação regulatória e alertas de produtos no Brasil.
+      - Acompanhar sinais agregados de eventos adversos de suplementos.
+    limitations:
+      - Dados públicos podem ser agregados e menos programáveis.
+      - Notificações espontâneas não fornecem incidência nem causalidade.
+    privacy_ethics: Tratar relatos como sinais de vigilância, não como diagnósticos causais.
+    last_verified: "2026-09-07"

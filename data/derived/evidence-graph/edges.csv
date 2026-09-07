@@ -1,0 +1,505 @@
+source,relation,target,original_label
+NCT00273650,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT00273650,TESTS,intervention:methylcobalamin,methylcobalamin
+NCT00273650,TESTS,intervention:placebo-control,saline placebo
+NCT00414921,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT00414921,TESTS,intervention:clonidine,clonidine
+NCT00414921,TESTS,intervention:methylphenidate,methylphenidate
+NCT00414921,TESTS,intervention:placebo-control,placebo
+NCT00418184,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT00418184,TESTS,intervention:colored-cellulose-tainted-with-fishy-odor,Colored cellulose tainted with fishy odor
+NCT00418184,TESTS,intervention:phosphatidylserine,Phosphatidylserine-Omega3
+NCT00561340,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT00561340,TESTS,intervention:dietary-intervention,Nutritional counseling
+NCT00561340,TESTS,intervention:pediasure,Pediasure
+NCT00572741,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT00572741,TESTS,intervention:b-complex,B complex
+NCT00572741,TESTS,intervention:b12,B12
+NCT00572741,TESTS,intervention:carnitine,carnitine
+NCT00572741,TESTS,intervention:cod-liver-oil,cod liver oil
+NCT00572741,TESTS,intervention:folate,folate
+NCT00572741,TESTS,intervention:mineral-complex,Mineral complex
+NCT00572741,TESTS,intervention:placebo-control,Placebo
+NCT00572741,TESTS,intervention:vitamin-c,vitamin C
+NCT00577447,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT00577447,TESTS,intervention:omega-3-epa-dha,docosahexaenoic acid (DHA)
+NCT00577447,TESTS,intervention:placebo-control,Placebo
+NCT00672360,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT00672360,TESTS,intervention:folic-acid,Folic acid
+NCT00672360,TESTS,intervention:placebo-control,Placebo
+NCT00700323,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT00700323,TESTS,intervention:placebo-control,placebo
+NCT00700323,TESTS,intervention:ps-omega3-conjugate-supplementation,PS-Omega3 conjugate supplementation
+NCT00704990,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT00704990,TESTS,intervention:zinc-magnesium-vitamin-b6-vitamin-c-compound-natural-health-product-for-adhd,"Zinc, Magnesium, Vitamin B6, Vitamin C (Compound Natural Health Product for ADHD)"
+NCT00770627,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT00770627,TESTS,intervention:omega-3-epa-dha,Omega 3 caps
+NCT00786799,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT00786799,TESTS,intervention:omega-3-epa-dha,Omega-3 Fatty Acids
+NCT00819429,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT00819429,TESTS,intervention:exercise-intervention,Social Skills Training
+NCT00819429,TESTS,intervention:omega-3-epa-dha,Omega-3
+NCT00819429,TESTS,intervention:standard-treatment-or-tau-in-child-guidance-clinic,Standard Treatment (or TAU in Child Guidance Clinic)
+NCT00874536,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT00874536,TESTS,intervention:omega-3-epa-dha,omega-3 fatty acid alpha-linolenic acid (ALA)
+NCT00874536,TESTS,intervention:placebo-control,Placebo
+NCT01022229,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01022229,TESTS,intervention:compound-natural-health-product,Compound Natural Health Product
+NCT01022229,TESTS,intervention:placebo-control,Placebo
+NCT01039792,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01039792,TESTS,intervention:methyl-b12,Methyl B12
+NCT01039792,TESTS,intervention:placebo-control,Placebo
+NCT01040702,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01040702,TESTS,intervention:methylphenidate,methylphenidate
+NCT01040702,TESTS,intervention:sweetener-pill,sweetener pill
+NCT01055119,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01055119,TESTS,intervention:omega-3-epa-dha,Omega-3 fatty acids
+NCT01109849,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01109849,TESTS,intervention:behavior-therapy,behavior therapy
+NCT01109849,TESTS,intervention:caloric-supplement,caloric supplement
+NCT01109849,TESTS,intervention:drug-holiday,drug holiday
+NCT01109849,TESTS,intervention:methylphenidate,Extended release (ER) methylphenidate product
+NCT01109849,TESTS,intervention:monitoring,monitoring
+NCT01219309,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01219309,TESTS,intervention:omega-3-epa-dha,Omega 3/6 fatty acids
+NCT01219309,TESTS,intervention:placebo-control,Placebo (olive oil)
+NCT01225198,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01225198,TESTS,intervention:multi-vitamin-mineral-supplement,Multi-Vitamin/Mineral Supplement
+NCT01225198,TESTS,intervention:placebo-control,Liquid Placebo
+NCT01230359,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01230359,TESTS,intervention:pyridoxine-hydrochloride,Pyridoxine hydrochloride
+NCT01230359,TESTS,intervention:tang-orange-powder,Tang orange powder
+NCT01248728,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01248728,TESTS,intervention:omega-3-epa-dha,Omega-3 Fatty Acids
+NCT01248728,TESTS,intervention:placebo-control,Placebo
+NCT01260961,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01260961,TESTS,intervention:docosahexanoic-acid,Docosahexanoic Acid
+NCT01260961,TESTS,intervention:placebo-control,Placebo
+NCT01329770,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01329770,TESTS,intervention:ascorbic-acid-vitamin-c-and-alpha-tocopherol-vitamin-e,Ascorbic Acid (Vitamin C) and Alpha-tocopherol (Vitamin E)
+NCT01329770,TESTS,intervention:placebo-control,Placebo
+NCT01340690,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01340690,TESTS,intervention:3-fatty-acids-suspension,ω-3 fatty acids suspension
+NCT01340690,TESTS,intervention:placebo-control,placebo suspension
+NCT01366859,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01366859,TESTS,intervention:placebo-control,Rice Protein (Placebo)
+NCT01366859,TESTS,intervention:whey-protein,Whey Protein
+NCT01554462,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01554462,TESTS,intervention:omega-3-epa-dha,Eicosapentaenoic acid / Docosahexaenoic acid
+NCT01554462,TESTS,intervention:placebo-control,Placebo dietary intervention (MUFA) in ADHD group
+NCT01554462,TESTS,intervention:placebo-control,Placebo dietary intervention (MUFA) in healthy control group
+NCT01625299,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01625299,TESTS,intervention:gluten-and-dry-milk,Gluten and dry milk
+NCT01625299,TESTS,intervention:placebo-control,Placebo
+NCT01695200,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01695200,TESTS,intervention:omega-3-epa-dha,Omega-3 fatty acids
+NCT01750307,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01750307,TESTS,intervention:experimental-fatty-acid-supplementation,Experimental fatty acid supplementation
+NCT01750307,TESTS,intervention:placebo-control,Placebo comparator: MCT oil softgel
+NCT01777048,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01777048,TESTS,intervention:omega-3-epa-dha,Omega-3 Fatty Acids Supplementation
+NCT01777048,TESTS,intervention:placebo-control,Omega-3 Placebo
+NCT01778647,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01778647,TESTS,intervention:placebo-control,Stimulants plus placebo
+NCT01778647,TESTS,intervention:stimulants-plus-lovaza,Stimulants plus Lovaza
+NCT01795040,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01795040,TESTS,intervention:omega-3-epa-dha,omega-3/omega-6 fatty acids (PUFAs)
+NCT01796262,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01796262,TESTS,intervention:omega-3-epa-dha,docosahexaenoic acid
+NCT01796262,TESTS,intervention:wheat-germ-oil,Wheat germ oil
+NCT01798381,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01798381,TESTS,intervention:essential-fatty-acids,Essential fatty acids
+NCT01807299,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01807299,TESTS,intervention:exercise-intervention,Physical Training
+NCT01807299,TESTS,intervention:omega-3-epa-dha,Omega 3
+NCT01847521,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT01847521,TESTS,intervention:luteolin-quercetin-and-rutin-combined-in-a-capsule,"Luteolin, Quercetin and Rutin combined in a capsule"
+NCT01853280,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01853280,TESTS,intervention:l-methylfolate,L-methylfolate
+NCT01853280,TESTS,intervention:methylphenidate,OROS-Methylphenidate
+NCT01853280,TESTS,intervention:placebo-control,Placebo
+NCT01855984,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01855984,TESTS,intervention:oral-mixed-tocotrienols,Oral mixed tocotrienols
+NCT01855984,TESTS,intervention:placebo-control,Placebo
+NCT01856686,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01856686,TESTS,intervention:bp22042013,BP22042013
+NCT01856686,TESTS,intervention:dietary-intervention,Low carbohydrate diet
+NCT01862484,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT01862484,TESTS,intervention:dietary-intervention,Restricted Diet
+NCT01862484,TESTS,intervention:dietary-intervention,Ruse Diet
+NCT02059577,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02059577,TESTS,intervention:dietary-intervention,Nutritional and Dietary Interventions
+NCT02086110,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02086110,TESTS,intervention:microbiome-intervention,Synbiotic
+NCT02086110,TESTS,intervention:prebiotic,Prebiotic
+NCT02114632,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02114632,TESTS,intervention:eye-q,Eye Q
+NCT02204410,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02204410,TESTS,intervention:adhd-medication,ADHD Medication
+NCT02204410,TESTS,intervention:omega-3-epa-dha,Omega-3 Fatty Acid
+NCT02248948,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02248948,TESTS,intervention:medium-chain-triglycerides,Medium Chain Triglycerides
+NCT02248948,TESTS,intervention:omega-3-epa-dha,Omega-3 Fatty Acids
+NCT02315651,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02315651,TESTS,intervention:coenzyme-q10,Coenzyme Q10
+NCT02315651,TESTS,intervention:placebo-control,Placebo
+NCT02333149,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02333149,TESTS,intervention:melatonin,Melatonin
+NCT02333149,TESTS,intervention:placebo-control,Placebo
+NCT02391428,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02391428,TESTS,intervention:blood-test,blood test
+NCT02391428,TESTS,intervention:omega3-capsules,omega3 capsules
+NCT02508922,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02508922,TESTS,intervention:placebo-control,Placebo
+NCT02508922,TESTS,intervention:vitamin-d3,Vitamin D3
+NCT02545634,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02545634,TESTS,intervention:l-helveticus-r0052-and-b-longum-r0175,L. helveticus R0052 and B. longum R0175
+NCT02545634,TESTS,intervention:placebo-control,Placebo
+NCT02614599,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02614599,TESTS,intervention:bp22042013,BP22042013
+NCT02614599,TESTS,intervention:dietary-intervention,Low carbohydrate diet
+NCT02654743,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02654743,TESTS,intervention:sulforaphane,Sulforaphane
+NCT02674022,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02674022,TESTS,intervention:prenatal-supplement,Prenatal supplement
+NCT02700685,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02700685,TESTS,intervention:methylphenidate,Methylphenidate
+NCT02700685,TESTS,intervention:placebo-control,Placebo
+NCT02700685,TESTS,intervention:pycnogenol,Pycnogenol
+NCT02708901,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02708901,TESTS,intervention:placebo-control,Placebo
+NCT02708901,TESTS,intervention:vivomixx,Vivomixx®
+NCT02720900,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02720900,TESTS,intervention:b-gos,B-GOS
+NCT02720900,TESTS,intervention:maltodextrin,Maltodextrin
+NCT02879110,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02879110,TESTS,intervention:placebo-control,Placebo
+NCT02879110,TESTS,intervention:sulforaphane,Sulforaphane
+NCT02893852,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02893852,TESTS,intervention:standard-co-op-approach,standard CO-OP Approach
+NCT02893852,TESTS,intervention:standard-co-op-approach-plus-coaching-parents,standard CO-OP Approach plus coaching parents
+NCT02897570,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02897570,TESTS,intervention:eeg-post,EEG_post
+NCT02897570,TESTS,intervention:eeg-pre,EEG_pre
+NCT02897570,TESTS,intervention:glucose,Glucose
+NCT02897570,TESTS,intervention:milk-apple-bread-w-cream,"Milk, apple & bread w/ cream"
+NCT02897570,TESTS,intervention:milk-cereals,Milk & Cereals
+NCT02897570,TESTS,intervention:n-acetylcysteine,"Milk, apple & snack"
+NCT02908802,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02908802,TESTS,intervention:microbiome-intervention,Probiotic
+NCT02908802,TESTS,intervention:placebo-control,Placebo
+NCT02909959,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02909959,TESTS,intervention:placebo-control,Placebo
+NCT02909959,TESTS,intervention:sulforaphane,Sulforaphane
+NCT02911194,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02911194,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT02911194,TESTS,intervention:a1-containing-milk,a1 containing milk
+NCT02911194,TESTS,intervention:a2-milk,a2 milk
+NCT02986672,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT02986672,TESTS,intervention:calanus-oil,Calanus oil
+NCT02986672,TESTS,intervention:medical-paraffin,Medical Paraffin
+NCT03008889,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03008889,TESTS,intervention:n-acetylcysteine,N-acetylcysteine
+NCT03008889,TESTS,intervention:placebo-control,Placebo
+NCT03103750,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03103750,TESTS,intervention:calcitriol,calcitriol
+NCT03103750,TESTS,intervention:dextro-amphetamine,Dextro Amphetamine
+NCT03103750,TESTS,intervention:high-resolution-research-tomography,high-resolution research tomography
+NCT03103750,TESTS,intervention:magnetic-resonance-imaging-mri,Magnetic Resonance Imaging (MRI)
+NCT03103750,TESTS,intervention:phno,PHNO
+NCT03103750,TESTS,intervention:placebo-control,Placebo oral capsule
+NCT03115671,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03115671,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03115671,TESTS,intervention:vayarin,Vayarin
+NCT03195465,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03195465,TESTS,intervention:dark-chocolate,Dark Chocolate
+NCT03252522,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03252522,TESTS,intervention:broad-spectrum-micronutrients-a-36-ingredient-blend-of-vitamins-minerals-amino-acids-and-antioxidants,"Broad Spectrum Micronutrients; a 36-ingredient blend of vitamins, minerals, amino acids, and antioxidants"
+NCT03252522,TESTS,intervention:placebo-control,Placebo
+NCT03337035,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03337035,TESTS,intervention:intranasal-oxytocin,intranasal oxytocin
+NCT03337035,TESTS,intervention:microbiome-intervention,oral probiotics
+NCT03337035,TESTS,intervention:placebo-control,oral placebo
+NCT03368690,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03368690,TESTS,intervention:oligopin,Oligopin®
+NCT03368690,TESTS,intervention:placebo-control,Placebo
+NCT03369431,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03369431,TESTS,intervention:placebo-control,Placebo
+NCT03369431,TESTS,intervention:vivomixx,Vivomixx
+NCT03439111,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03439111,TESTS,intervention:standardized-lycium-chinense-fruit-extract-lcf-capsules,Standardized Lycium chinense Fruit Extract (LCF) capsules
+NCT03495375,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03495375,TESTS,intervention:microbiome-intervention,Treatment with a probiotic
+NCT03495375,TESTS,intervention:placebo-control,Treatment with placebo
+NCT03514784,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03514784,TESTS,intervention:bb-12-with-lgg-higher-dose,BB-12 with LGG (Higher Dose)
+NCT03514784,TESTS,intervention:bb-12-with-lgg-lower-dose,BB-12 with LGG (Lower Dose)
+NCT03514784,TESTS,intervention:placebo-control,Placebo
+NCT03533556,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03533556,TESTS,intervention:caffeine,Caffeine
+NCT03533556,TESTS,intervention:l-theanine,L-theanine
+NCT03533556,TESTS,intervention:l-theanine-caffeine-combination,L-theanine-Caffeine Combination
+NCT03533556,TESTS,intervention:placebo-control,Placebo
+NCT03542643,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03542643,TESTS,intervention:n-3-polyunsaturated-fatty-acid,n-3 Polyunsaturated fatty acid
+NCT03542643,TESTS,intervention:placebo-control,Placebo
+NCT03550209,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03550209,TESTS,intervention:omega-3-epa-dha,LCPUFA Oil Supplement
+NCT03550209,TESTS,intervention:placebo-control,Canola Oil Placebo
+NCT03620097,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03620097,TESTS,intervention:eupoly-3-dha-infant,EuPoly-3 DHA Infant
+NCT03620097,TESTS,intervention:placebo-control,Placebo
+NCT03730194,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03730194,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03730194,TESTS,intervention:bedtime-bank,Bedtime Bank
+NCT03730194,TESTS,intervention:melatonin,Melatonin
+NCT03749824,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT03749824,TESTS,intervention:omega-3-epa-dha,Omega-3
+NCT03749824,TESTS,intervention:placebo-control,Placebo Capsules
+NCT03835117,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03835117,TESTS,intervention:dietary-intervention,Wide-spectrum nutritional supplement
+NCT03835117,TESTS,intervention:placebo-control,Placebo
+NCT03982290,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT03982290,TESTS,intervention:microbiome-intervention,"Probiotic, Lactobacillus plantarum PS128"
+NCT03982290,TESTS,intervention:placebo-control,"Placebo, microcrystalline cellulose"
+NCT04097457,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04097457,TESTS,intervention:exercise-intervention,"""Parent training for disruptive behaviors"" manual (Bearss, Johnson, Handen, Butter, Lecavalier, Smith & Scahill, 2018)"
+NCT04144790,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT04144790,TESTS,intervention:ferrous-sulfate,ferrous sulfate
+NCT04284059,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT04284059,TESTS,intervention:placebo-control,Placebos
+NCT04284059,TESTS,intervention:vitamin-ad,vitamin AD
+NCT04284059,TESTS,intervention:vitamin-d,vitamin D
+NCT04293783,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04293783,TESTS,intervention:l-reuteri,L.Reuteri
+NCT04293783,TESTS,intervention:placebo-control,Placebo
+NCT04312152,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04312152,TESTS,intervention:multi-vitamin-b-complex,Multi-Vitamin B complex
+NCT04312152,TESTS,intervention:q10-ubiquinol,Q10 Ubiquinol
+NCT04312152,TESTS,intervention:vitamin-e,Vitamin E
+NCT04312932,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04312932,TESTS,intervention:omega-3-epa-dha,LCPUFA Oil Supplement
+NCT04312932,TESTS,intervention:placebo-control,Canola Oil Placebo
+NCT04333394,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT04333394,TESTS,intervention:microbiome-intervention,Probiotic
+NCT04333394,TESTS,intervention:placebo-control,Placebo
+NCT04498078,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04498078,TESTS,intervention:creatine,Creatine
+NCT04639141,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04639141,TESTS,intervention:gut-directed-hypnotherapy,Gut-directed Hypnotherapy
+NCT04639141,TESTS,intervention:microbiome-intervention,Synbiotic
+NCT04655326,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04655326,TESTS,intervention:flore,Flore
+NCT04779632,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT04779632,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04779632,TESTS,intervention:comparator-safflower-oil,Comparator: Safflower Oil
+NCT04779632,TESTS,intervention:experimental-fish-oil,Experimental: Fish Oil
+NCT04805957,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04805957,TESTS,intervention:sulforaphane,Sulforaphane
+NCT04845776,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04845776,TESTS,intervention:anrc-essentials-plus,ANRC Essentials Plus
+NCT04878198,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04878198,TESTS,intervention:jogging-program,Jogging program
+NCT04878198,TESTS,intervention:melatonin,Melatonin supplement intervention
+NCT04939974,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04939974,TESTS,intervention:microbiome-intervention,probiotic
+NCT04962334,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT04962334,TESTS,intervention:dietary-intervention,Nutritional supplementation standardized formula.
+NCT04962334,TESTS,intervention:placebo-control,Placebo
+NCT04983667,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT04983667,TESTS,intervention:zn-aa,Zn-AA
+NCT05025553,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05025553,TESTS,intervention:gut-mobilization,Gut mobilization
+NCT05031364,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05031364,TESTS,intervention:behavioral-interventions-for-anxiety-in-children-with-autism-biaca,Behavioral Interventions for Anxiety in Children with Autism (BIACA)
+NCT05031364,TESTS,intervention:treatment-as-usual-supplemented-by-internet-based-self-instruction-meya,Treatment-as-Usual Supplemented by Internet-Based Self-Instruction (MEYA)
+NCT05151601,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05151601,TESTS,intervention:experimental,Experimental
+NCT05151601,TESTS,intervention:placebo-control,Placebo
+NCT05155696,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT05155696,TESTS,intervention:microbiome-intervention,Experimental: Kefir probiotic drink (supplied by Nourish)
+NCT05155696,TESTS,intervention:placebo-control,Placebo comparator
+NCT05167110,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT05167110,TESTS,intervention:microbiome-intervention,Probiotic
+NCT05167110,TESTS,intervention:placebo-control,Placebo
+NCT05218577,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05218577,TESTS,intervention:high-selenium-functional-food,high selenium functional food
+NCT05218577,TESTS,intervention:placebo-control,Placebo
+NCT05218577,TESTS,intervention:selenium-supplement,selenium supplement
+NCT05234593,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT05234593,TESTS,intervention:empowerplus-lightning-sticks,EmpowerPlus Lightning Sticks
+NCT05268744,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05268744,TESTS,intervention:micronutrient,Micronutrient
+NCT05307744,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05307744,TESTS,intervention:placebo-control,Placebo
+NCT05307744,TESTS,intervention:ps128,PS128
+NCT05476549,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT05476549,TESTS,intervention:lemon-verbena,Lemon verbena
+NCT05476549,TESTS,intervention:placebo-control,Placebo
+NCT05664789,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05664789,TESTS,intervention:n-acetylcysteine,N acetyl cysteine
+NCT05664789,TESTS,intervention:placebo-control,Placebo
+NCT05716906,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05716906,TESTS,intervention:melatonin,Melatonin
+NCT05841927,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05841927,TESTS,intervention:omega-3-epa-dha,Docosahexaenoic acid supplement
+NCT05841927,TESTS,intervention:placebo-control,ASD placebo
+NCT05954052,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05954052,TESTS,intervention:glutathione,Glutathione
+NCT05980520,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT05980520,TESTS,intervention:behavioral-rehabilitation-therapy,Behavioral rehabilitation therapy
+NCT05980520,TESTS,intervention:corn-starch-white-sugar,Corn starch+white sugar
+NCT05980520,TESTS,intervention:taurine-corn-starch-white-sugar,Taurine+corn starch+white sugar
+NCT06005506,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06005506,TESTS,intervention:dietary-intervention,Dietary fiber
+NCT06005506,TESTS,intervention:microbiome-intervention,Probiotic
+NCT06005506,TESTS,intervention:prebiotic-fiber,Prebiotic fiber
+NCT06126185,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06126185,TESTS,intervention:microbiome-intervention,12-week course of synbiotic
+NCT06133231,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06133231,TESTS,intervention:multinutrients-a-36-ingredient-blend-of-vitamins-minerals-amino-acids-and-antioxidants,"Multinutrients; a 36-ingredient blend of vitamins, minerals, amino acids, and antioxidants"
+NCT06187090,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06187090,TESTS,intervention:oral-ultramicronized-palmitoylethanolamide-um-pea-600-mg-per-day-in-tablet-form,Oral Ultramicronized-Palmitoylethanolamide (um-PEA; 600 mg per day) in tablet form
+NCT06226584,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06226584,TESTS,intervention:microbiome-intervention,multiple-strain probiotics
+NCT06234501,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06234501,TESTS,intervention:placebo-control,Placebo
+NCT06234501,TESTS,intervention:pyridoxal-5-phosphate-100-mg,Pyridoxal 5'-Phosphate (100 mg)
+NCT06235177,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06235177,TESTS,intervention:applied-relaxation,Applied Relaxation
+NCT06235177,TESTS,intervention:clinical-yoga,Clinical Yoga
+NCT06235177,TESTS,intervention:comprehensive-theocentric-psychological-assessment,Comprehensive Theocentric Psychological Assessment
+NCT06235177,TESTS,intervention:decompartmentalization-framework,Decompartmentalization Framework
+NCT06235177,TESTS,intervention:dietary-intervention,Dietary Supplements
+NCT06235177,TESTS,intervention:liquid-herbal-tinctures,Liquid Herbal TInctures
+NCT06235177,TESTS,intervention:mental-imagery,Mental Imagery
+NCT06235177,TESTS,intervention:pain-relaxation-techniques,Pain Relaxation Techniques
+NCT06269614,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06269614,TESTS,intervention:microbiome-intervention,Probiotic
+NCT06315465,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06315465,TESTS,intervention:dietary-intervention,Modified Atkin's Diet with standard of care
+NCT06315465,TESTS,intervention:standard-of-care,Standard of Care
+NCT06348121,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06348121,TESTS,intervention:microbiome-intervention,Probiotic
+NCT06382909,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06382909,TESTS,intervention:cognitive-assessment,Cognitive assessment
+NCT06382909,TESTS,intervention:inflammatory-level,Inflammatory level
+NCT06382909,TESTS,intervention:pedagogical-assessment,Pedagogical assessment
+NCT06448767,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06448767,TESTS,intervention:microbiome-intervention,Multispecies probiotics
+NCT06448767,TESTS,intervention:placebo-control,Placebo
+NCT06491836,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06491836,TESTS,intervention:dietary-intervention,oligoantigenic diet
+NCT06491836,TESTS,intervention:food-regimen-without-food-restrictions,Food regimen without food restrictions.
+NCT06514573,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06514573,TESTS,intervention:placebo-control,Placebo (cornstarch)
+NCT06514573,TESTS,intervention:sodium-butyrate,Sodium Butyrate
+NCT06542146,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06542146,TESTS,intervention:dietary-intervention,Mediterranean diet
+NCT06542146,TESTS,intervention:dietary-intervention,Usual diet
+NCT06560359,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06560359,TESTS,intervention:f-v,F&V
+NCT06560359,TESTS,intervention:no-f-v,No F&V
+NCT06594536,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06594536,TESTS,intervention:placebo-control,Placebo
+NCT06594536,TESTS,intervention:sulforaphane,Sulforaphane
+NCT06623227,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06623227,TESTS,intervention:placebo-control,Placebo
+NCT06623227,TESTS,intervention:vitamin-e-and-c,Vitamin E and C
+NCT06650644,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06650644,TESTS,intervention:microbiome-intervention,Lactococcus lactis KD10 (health food)
+NCT06650644,TESTS,intervention:placebo-control,Placebo of Lactococcus lactis KD10
+NCT06677840,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06677840,TESTS,intervention:placebo-control,probiotic (GKB7/placebo)
+NCT06698588,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT06698588,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06698588,TESTS,intervention:omega-3-epa-dha,Omega 3 Fish Oil supplements
+NCT06698588,TESTS,intervention:placebo-control,Placebo
+NCT06756711,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06756711,TESTS,intervention:a-combination-of-apitherapy-and-plant-extracts,A combination of apitherapy and plant extracts
+NCT06756711,TESTS,intervention:placebo-control,Placebo Combination
+NCT06906068,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06906068,TESTS,intervention:placebo-control,Placebo
+NCT06906068,TESTS,intervention:three-strains-of-lactobacillus-l-acidophilus-cl1285-l-casei-lbc80r-and-l-rhamnosus-clr2,"Three strains of Lactobacillus: L. acidophilus CL1285®, L. casei LBC80R® and L. rhamnosus CLR2®"
+NCT06911905,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT06911905,TESTS,intervention:dietary-intervention,Nutritional supplements
+NCT06911905,TESTS,intervention:treatment-as-usual-tau,Treatment as usual (TAU)
+NCT07047976,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07047976,TESTS,intervention:sulforaphane,Sulforaphane
+NCT07060872,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07060872,TESTS,intervention:placebo-control,Placebo Syrup
+NCT07060872,TESTS,intervention:risperidone,Risperidone
+NCT07060872,TESTS,intervention:spirulina-syrup,Spirulina Syrup
+NCT07061470,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07061470,TESTS,intervention:ferrous-sulfate,Ferrous Sulfate
+NCT07061470,TESTS,intervention:placebo-control,Placebo
+NCT07064538,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07064538,TESTS,intervention:neuralli-mp,Neuralli® MP
+NCT07086157,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07086157,TESTS,intervention:dietary-intervention,Low-FODMAP Diet
+NCT07086157,TESTS,intervention:microbiome-intervention,Probiotic
+NCT07118267,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07118267,TESTS,intervention:lactiplantibacillus-plantarum,Lactiplantibacillus plantarum
+NCT07165509,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07165509,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07165509,TESTS,intervention:dietary-intervention,Structured Dietary Program
+NCT07165509,TESTS,intervention:dietary-intervention,T-2 Nutritional Supplement
+NCT07189442,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07189442,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07189442,TESTS,intervention:l-theanine-and-paraxanthine,L-theanine and paraxanthine
+NCT07189442,TESTS,intervention:placebo-control,Placebo
+NCT07333339,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07333339,TESTS,intervention:exercise-intervention,Brain-Computer Interface-Based Attention Training
+NCT07348562,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07348562,TESTS,intervention:omega-3-epa-dha,Omega-3
+NCT07348562,TESTS,intervention:placebo-control,Placebo
+NCT07363551,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07363551,TESTS,intervention:omega-3-epa-dha,Omega-3 fatty acids
+NCT07363551,TESTS,intervention:placebo-control,Placebo
+NCT07364331,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07364331,TESTS,intervention:omega-3-epa-dha,Omega-3
+NCT07364331,TESTS,intervention:placebo-control,Placebo
+NCT07365553,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07365553,TESTS,intervention:omega-3-epa-dha,Omega-3
+NCT07365553,TESTS,intervention:placebo-control,Placebo
+NCT07380412,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07380412,TESTS,intervention:placebo-control,Placebo
+NCT07380412,TESTS,intervention:stasis-daytime-and-nighttime,Stasis Daytime and Nighttime
+NCT07419659,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07419659,TESTS,intervention:microbiome-intervention,postbiotics
+NCT07435740,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07435740,TESTS,intervention:exercise-intervention,Sleep Parent Training (SPT)
+NCT07435740,TESTS,intervention:sleep-parent-education-spe,Sleep Parent Education (SPE)
+NCT07450443,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07450443,TESTS,intervention:placebo-control,Control
+NCT07450443,TESTS,intervention:postbiotix-comfort,PostbiotiX Comfort®
+NCT07459699,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07459699,TESTS,intervention:microbiome-intervention,Probiotics
+NCT07459699,TESTS,intervention:placebo-control,Placebo
+NCT07521449,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07521449,TESTS,intervention:omega-3-epa-dha,DHA Omega-3
+NCT07521449,TESTS,intervention:phosphatidylserine,Phosphatidylserine-Omega3
+NCT07521449,TESTS,intervention:placebo-control,Placebo
+NCT07546942,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07546942,TESTS,intervention:autologous-msc-isolation-concentration-and-cryopreservation-of-adult-mesenchymal-stem-cells,"Autologous MSC isolation, concentration, and cryopreservation of adult mesenchymal stem cells"
+NCT07546942,TESTS,intervention:dietary-intervention,Ketogenic RESET Diet Protocol
+NCT07546942,TESTS,intervention:dietary-intervention,Trial combines use of cSVF and MSCs (cryopres) with diet modification and FMT (fecal material Transplant in adult ASD patients
+NCT07546942,TESTS,intervention:fecal-biomicrome-transplantation-fmt,Fecal Biomicrome Transplantation (FMT)
+NCT07546942,TESTS,intervention:fmt-fecal-material-tranplantation,FMT (Fecal Material Tranplantation)
+NCT07546942,TESTS,intervention:use-autologous-csvf-mscs-cryo-for-management-of-autoimmune-component-anti-inflammatory-and-immune-modulation,"Use autologous cSVF + MSCs (cryo) for management of autoimmune component, anti-inflammatory and immune modulation"
+NCT07631455,STUDIES_CONDITION,condition:autism,autism_dietary_supplement.json
+NCT07631455,TESTS,intervention:lactobacillus-and-omega-fatty-acids,Lactobacillus and Omega Fatty acids
+NCT07631455,TESTS,intervention:supplement-paidinil-hd-epitech-group-spa-saccolongo-padova-italy-containing-12-umpea,"supplement (Paidinil® HD, Epitech Group SpA, Saccolongo, Padova, Italy) containing 12% umPEA"
+NCT07665658,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07665658,TESTS,intervention:microbiome-intervention,Inulin
+NCT07665658,TESTS,intervention:microbiome-intervention,Probiotic
+NCT07665658,TESTS,intervention:omega-3-epa-dha,Omega-3 Fatty Acids
+NCT07665658,TESTS,intervention:placebo-control,Placebo
+NCT07665658,TESTS,intervention:thiamine,Thiamine
+NCT07717359,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07717359,TESTS,intervention:microbiome-intervention,Synbiotic Cap Gut-Brain
+NCT07717359,TESTS,intervention:placebo-control,Placebo
+NCT07777328,STUDIES_CONDITION,condition:ADHD,adhd_dietary_supplement.json
+NCT07777328,TESTS,intervention:5-hydroxytryptophan-food-supplement-200mg,5-hydroxytryptophan (food supplement) 200mg
+NCT07777328,TESTS,intervention:5-hydroxytryptophan-food-supplement-300mg,5-hydroxytryptophan (food supplement) 300mg
+NCT07777328,TESTS,intervention:placebo-control,Placebo
