@@ -25,8 +25,8 @@ personalização; compra, interesse e uso continuado têm significados distintos
 ## Conduzir a rodada
 
 Leia a skill correspondente antes de realizar cada fase necessária. As quatro
-especializadas acompanham este pacote; as fases podem ser executadas pela mesma
-instância, sem exigir delegação.
+especializadas de análise acompanham este pacote; as fases podem ser executadas
+pela mesma instância, sem exigir delegação. A publicação fecha o ciclo.
 
 1. [Auditar dados](../science-data-audit/SKILL.md): determinar perguntas
    estimáveis, pesos, cobertura, confiabilidade e população real.
@@ -37,6 +37,8 @@ instância, sem exigir delegação.
 4. [Interpretar evidências](../science-evidence-synthesis/SKILL.md): selecionar
    estudos e previsões teóricas antes de interpretar; depois confrontar os achados
    com mecanismos e explicações rivais. Esta fase pode começar antes dos testes.
+5. [Publicar o ciclo](../science-cycle-publish/SKILL.md): gerar gráficos, manifesto,
+   READMEs e navegação no GitHub Pages após revisar os resultados reais.
 
 Na falta de uma dimensão, prossiga com uma hipótese isolada estimável e registre
 a lacuna. Uma amostra populacional sem diagnósticos medidos não constitui um grupo
@@ -47,7 +49,9 @@ não cria informação sobre combinações que nunca foram observadas.
 
 Use uma rodada identificável em `research/discoveries/<run-id>/`. Entregue a
 pergunta, origem dos dados, resultados com intervalos, validações executadas,
-limites de transporte para HA/ASD/ADHD e próximos testes discriminantes. Inclua
+limites de transporte para HA/ASD/ADHD e próximos testes discriminantes. Cada ciclo
+deve ter gráficos e página navegável; mantenha a apresentação no README principal
+e atualize sua seção de resultados após cada ciclo concluído. Inclua
 comandos Pipenv e versão/hash dos insumos. Preserve resultados nulos e hipóteses
 não estimáveis. Declare separadamente modelos propostos, ajustados e validados.
 

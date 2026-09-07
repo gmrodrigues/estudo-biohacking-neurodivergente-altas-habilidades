@@ -10,7 +10,8 @@ com esquema operacional em
 [`multidimensional-model-schema.yaml`](multidimensional-model-schema.yaml).
 
 O [plano de descobertas e skills](DISCOVERY_PLAN.md) define a primeira rodada de
-análises, seus limites e as cinco habilidades reutilizáveis para executá-la.
+análises, seus limites e as seis habilidades reutilizáveis para executá-la e
+publicar os resultados de cada ciclo com gráficos navegáveis no GitHub Pages.
 
 O arquivo [`sources.yaml`](sources.yaml) é a versão estruturada e deve ser tratado
 como a fonte principal. As informações de acesso devem ser verificadas antes do

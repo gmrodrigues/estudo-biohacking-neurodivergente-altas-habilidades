@@ -2,7 +2,7 @@
 
 Estas instruções aplicam-se ao projeto `science`, identificado por `Pipfile` e
 `catalog/data-sources`. Resolva caminhos a partir da raiz do checkout, inclusive
-quando as skills estiverem instaladas por links. Mantenha o pacote de cinco skills
+quando as skills estiverem instaladas por links. Mantenha o pacote de seis skills
 junto para preservar suas referências. Não altere outro projeto por ter uma
 skill instalada no perfil do usuário.
 

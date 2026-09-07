@@ -51,6 +51,15 @@ próprias. Acesso a microdados controlados permanece uma dependência explícita
 | `$science-hypothesis-test` | registrar e executar contrastes | ficha da hipótese e resultados com intervalos |
 | `$science-predictive-model` | mensurar dimensões e prever sem diagnóstico | modelo, ficha, teste e contribuições por domínio |
 | `$science-evidence-synthesis` | selecionar estudos e avaliar teorias rivais | fichas de evidência e próximos testes discriminantes |
+| `$science-cycle-publish` | plotar e publicar cada ciclo | gráficos, READMEs e páginas navegáveis no GitHub Pages |
+
+O README principal apresenta o projeto desde a preparação. Sua seção de resultados
+será atualizada após cada ciclo concluído. Cada ciclo terá README próprio,
+gráficos, fontes, estimativas e limites.
+O gerador `scripts/build_discovery_site.py` produz índice e navegação entre ciclos;
+o workflow `.github/workflows/discovery-pages.yml` está preparado para deploy no
+GitHub Pages quando houver resultados concluídos e Pages estiver habilitado.
+Publicação efetiva exige envio ao remoto e verificação do deploy.
 
 Fontes das skills ficam em [skills](../../skills/science-discovery/SKILL.md), no
 checkout. Sua instalação usa links individuais no diretório de skills do usuário
