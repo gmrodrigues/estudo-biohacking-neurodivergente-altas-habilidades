@@ -13,9 +13,18 @@ excepcionalidades isoladas, duplas e triplas.
 <!-- discovery-cycles:start -->
 ## Resultados
 
-O projeto está na preparação do primeiro ciclo de descobertas. Já existem um
-catálogo de fontes, análises descritivas de viabilidade, hipóteses e ferramentas
-de publicação; ainda não há ciclos científicos concluídos.
+Ainda não há ciclos científicos concluídos. Os resultados disponíveis agora são
+de preparação e viabilidade:
+
+- [Análise inicial de viabilidade](catalog/data-sources/INITIAL_FEASIBILITY_ANALYSIS.md):
+  cobertura das bases, 6.337 adultos na interseção NHANES examinada e quais
+  perguntas já são estimáveis;
+- [Grafo de evidências dos ensaios](data/derived/evidence-graph/README.md): estudos,
+  intervenções e relações extraídas dos registros do ClinicalTrials.gov;
+- [Consultas de TDAH e autismo](data/public/clinicaltrials/README.md): quantidade
+  de registros e disponibilidade de resultados;
+- [Perfil dos dados NHANES](data/public/nhanes/2021-2023/README.md): arquivos,
+  procedência e integridade dos microdados públicos locais.
 
 Cada ciclo terá gráficos, estimativas, incertezas, fontes e limitações. Seus
 resultados serão ligados aqui e publicados em páginas navegáveis no GitHub Pages.
