@@ -73,3 +73,12 @@ ou validar a skill, por si só, não treina modelos nem produz descobertas.
 
 Toda execução Python usa Pipenv. Os templates YAML são fichas a preencher,
 marcadas como `draft`/`proposed` e `not_run`; não são motores estatísticos.
+
+## Retomada da próxima sessão
+
+Consulte [`NEXT_SESSION.md`](../../NEXT_SESSION.md) antes de alterar o ciclo 001.
+O documento registra o estado publicado, a divergência de fronteira de sono em H2,
+o adendo que precisa ser decidido antes de rerodar, a auditoria de robustez e as
+perguntas de suplementação cafeína–magnésio. A tese sobre capacidades encobertas
+está em [`FOUNDATIONAL_HYPOTHESIS.md`](FOUNDATIONAL_HYPOTHESIS.md) e permanece
+hipótese, não conclusão do ciclo 001.
