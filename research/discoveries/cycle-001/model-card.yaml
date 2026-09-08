@@ -1,0 +1,45 @@
+schema_version: 1
+model_id: cycle-001-ridge-phq8
+task: prediction
+target: PHQ8_NOSLEEP_0_24_cross_sectional
+population: NHANES 2021-2023 adults with complete predictor and target data
+diagnostic_labels_used: false
+features:
+  - sleep_hours
+  - sedentary_hours
+  - age
+  - sex
+  - race_ethnicity
+  - education
+  - poverty_income_ratio
+split:
+  method: single random internal holdout
+  train_n: 3391
+  test_n: 1131
+  random_seed: 20260907
+model:
+  algorithm: RidgeCV
+  alpha: 1000.0
+metrics:
+  baseline_mean:
+    mae: 3.0675
+    rmse: 4.1362
+    r2: -0.0006
+  ridge:
+    mae: 2.9027
+    rmse: 3.9447
+    r2: 0.0899
+  ablation_delta_rmse:
+    remove_sleep: 0.0088
+    remove_sedentary: 0.0390
+    remove_demographic_context: 0.1677
+uncertainty_and_validation:
+  external_validation: false
+  temporal_validation: false
+  calibration_interval: not_estimated
+  survey_weights: used_for_training_and_metrics
+limitations:
+  - cross-sectional target and predictors
+  - no clinical diagnosis labels in this cycle
+  - single split can overstate or understate generalization
+  - no individualized treatment recommendation

@@ -1,0 +1,48 @@
+schema_version: 1
+cycle: cycle-001
+status: locally_registered_before_model_results
+registered_at: "2026-09-07"
+data_already_inspected:
+  - table dimensions, columns and marginal ranges
+  - previously documented completeness counts
+  - no coefficients or group contrasts from the models below
+population: NHANES_August_2021_to_August_2023_adults_18_plus
+group_measurement: not_assessed_for_HA_ASD_ADHD
+multiplicity:
+  family: three_primary_hypotheses
+  method: Benjamini-Hochberg_FDR
+hypotheses:
+  - id: H1_caffeine_sleep
+    question: Is dietary caffeine associated with weekday/workday sleep duration, and does age modify the association?
+    exposure: day_1_dietary_caffeine_per_100_mg
+    outcome: usual_weekday_or_workday_sleep_hours
+    estimand: adjusted_cross_sectional_mean_difference
+    predicted_direction: higher_caffeine_lower_sleep_duration
+    primary_terms: [caffeine_per_100mg, caffeine_per_100mg_x_age_per_10y]
+    confounders: [age, sex_recorded, race_ethnicity, education, income_poverty_ratio, day_1_energy]
+    weight: WTDRD1
+    falsifier: interval_excludes_a_practically_relevant_negative_association_or_direction_is_stably_positive
+    limits: [caffeine_timing_unavailable, one_day_dietary_recall, reverse_causality]
+  - id: H2_sleep_sedentary_depression
+    question: Are sleep duration category and sedentary time jointly associated with non-sleep depressive symptom burden?
+    exposures: [sleep_short_under_7h, sleep_long_over_9h, sedentary_hours]
+    reference: sleep_7_to_9h
+    outcome: PHQ8_without_sleep_item_sum_0_to_24
+    estimand: adjusted_cross_sectional_mean_difference
+    predicted_direction: short_sleep_and_more_sedentary_time_higher_symptom_burden
+    confounders: [age, sex_recorded, race_ethnicity, education, income_poverty_ratio]
+    weight: WTMEC2YR
+    falsifier: intervals_exclude_practically_relevant_positive_associations_or_directions_are_stably_negative
+    limits: [cross_sectional, self_reported_sedentary_time, residual_bidirectionality]
+  - id: H3_magnesium_sleep
+    question: Are dietary and supplement-derived magnesium associated with weekday/workday sleep duration?
+    exposures: [day_1_dietary_magnesium_per_100_mg, supplement_magnesium_per_100_mg, supplement_magnesium_unquantified]
+    outcome: usual_weekday_or_workday_sleep_hours
+    estimand: adjusted_cross_sectional_mean_difference
+    predicted_direction: higher_magnesium_modestly_higher_sleep_duration_if_baseline_intake_is_low
+    confounders: [age, sex_recorded, race_ethnicity, education, income_poverty_ratio, day_1_energy]
+    weight: WTDRD1
+    falsifier: no_gradient_or_stable_opposite_direction_after_sensitivity_analyses
+    limits: [different_exposure_windows, supplement_form_unknown, nutrient_amount_missing_for_some_users, antacids_included]
+replication_plan: new_NHANES_cycle_or_independent_cohort
+causal_claim: not_identified
