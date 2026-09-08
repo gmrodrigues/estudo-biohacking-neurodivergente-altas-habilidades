@@ -15,6 +15,8 @@ excepcionalidades isoladas, duplas e triplas.
 
 [Explorar gráficos e ciclos no site](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/)
 
+[Objetivos e desenho](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/objetivos.html) · [Ciclos e hipóteses](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/planejamento.html) · [Bases e evidências](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/fontes.html) · [Progresso e decisões](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/progresso.html)
+
 - [Cafeína, sono, sedentarismo, magnésio e predição diagnóstico-agnóstica](research/discoveries/cycle-001/README.md) — 2026-09-08
 
 [Métodos e fontes](catalog/data-sources/README.md)

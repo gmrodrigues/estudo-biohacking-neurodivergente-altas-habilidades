@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "intro": [
+    {
+      "title": "O que este estudo procura entender",
+      "paragraphs": [
+        "Investigar como cognição, sono, nutrição, suplementação, atividade física e contexto de vida se relacionam com funcionamento e bem-estar, com foco em altas habilidades/superdotação (HA). Autismo, TDAH, suas combinações e uma referência neurotípica explicitamente avaliada fazem parte do desenho comparativo.",
+        "A primeira rodada usa dados populacionais de adultos sem identificação desses grupos. Ela testa a viabilidade de perguntas e de previsão sem diagnóstico; ainda não produz conclusões específicas para HA. O planejamento, as fontes e o registro das decisões estão nas páginas de navegação."
+      ]
+    },
+    {
+      "title": "Estado do trabalho",
+      "items": [
+        "Executado: inventário de fontes, inspeção de NHANES, consultas de ensaios, grafo inicial e ciclo 001 com três famílias de hipóteses e uma prova de conceito preditiva.",
+        "Revisão pendente: fronteira das categorias de sono de H2 e alinhamento entre documentação, código e gráficos. Veja a nota na página do ciclo.",
+        "Planejado: replicação, validação por estratos, síntese de intervenções e comparação entre HA, autismo e TDAH quando houver medidas adequadas."
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "id": "objetivos",
+      "title": "Objetivos e desenho",
+      "sections": [
+        {
+          "title": "Perguntas centrais",
+          "items": [
+            "Quais dimensões de sono, nutrição, atividade e contexto acompanham melhor funcionamento cognitivo, emocional e físico?",
+            "Quais relações são compartilhadas entre grupos e quais variam com HA, autismo, TDAH ou coexistências?",
+            "Quanto se consegue prever em pessoas novas sem conhecer um rótulo diagnóstico?",
+            "Que evidência adicional distinguiria associação, mecanismo plausível e resposta real a uma intervenção?"
+          ]
+        },
+        {
+          "title": "Grupos e entendimento recíproco",
+          "paragraphs": [
+            "O desenho prevê HA, autismo e TDAH isolados; HA+autismo, HA+TDAH e autismo+TDAH; a combinação tripla; e uma referência neurotípica definida por avaliação. Autismo e TDAH são comparadores ativos, e não grupos automaticamente equivalentes a controles saudáveis.",
+            "Ausência de diagnóstico em uma tabela não confirma neurotipicidade. Escolaridade, profissão, criatividade ou bom desempenho em um teste não substituem identificação de HA. Depressão, ansiedade social e outras condições entram como dimensões ou condições coexistentes, conforme os instrumentos disponíveis."
+          ]
+        },
+        {
+          "title": "Estratificação multidimensional",
+          "table": {
+            "headers": [
+              "Dimensão planejada",
+              "Como será tratada",
+              "Cobertura no ciclo 001"
+            ],
+            "rows": [
+              [
+                "Ciclo de vida",
+                "Idade contínua e faixas com instrumentos próprios para crianças, jovens, adultos e idosos",
+                "Amostra adulta; faixa observada do preditor 20–80 (idade pública limitada superiormente)"
+              ],
+              [
+                "Sexo e gênero",
+                "Registrar a medida disponível e não inferir identidade de gênero",
+                "Sexo registrado usado como covariável; sem comparação detalhada publicada"
+              ],
+              [
+                "Educação, profissão e finanças",
+                "Separar escolaridade, ocupação, renda e independência financeira",
+                "Escolaridade e razão renda/pobreza; não mede independência financeira"
+              ],
+              [
+                "Criatividade e arte",
+                "Usar instrumentos/atividades informados, sem diagnóstico por proxy",
+                "Não avaliadas"
+              ],
+              [
+                "Família e substâncias",
+                "Composição familiar, suporte e histórico de uso, com mensuração e confidencialidade",
+                "Não avaliados nesta rodada"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Da associação à intervenção",
+          "paragraphs": [
+            "O programa separa quatro produtos: descrição das dimensões, teste de associações, previsão fora da amostra e avaliação de intervenção. Um bom preditor não identifica automaticamente causas ou a melhor dieta para uma pessoa.",
+            "Calistenia, artes marciais, recuperação e força relativa exigem medidas de desempenho próprias. Tempo sedentário não mede essas capacidades. Metilação exige biomarcadores apropriados: ingestão de vitaminas não mede diretamente o processo.",
+            "Uma etapa prospectiva poderia investigar resposta individual com protocolos registrados e acompanhamento adequado. Não há ensaio próprio, intervenção aplicada ou recomendador clínico validado neste projeto."
+          ]
+        },
+        {
+          "title": "Documentação do desenho",
+          "links": [
+            {
+              "title": "Desenho central e oito grupos",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/CORE_STUDY_DESIGN.md"
+            },
+            {
+              "title": "Metodologia multidimensional e preditiva",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/MULTIDIMENSIONAL_HYPOTHESIS_PREDICTION_METHODOLOGY.md"
+            },
+            {
+              "title": "Estratificação e contexto de vida",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/STRATIFICATION_MODEL.md"
+            },
+            {
+              "title": "Modelos de excepcionalidades coexistentes",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/TWICE_EXCEPTIONAL_MODELS.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "planejamento",
+      "title": "Ciclos e hipóteses",
+      "sections": [
+        {
+          "title": "Sequência proposta, condicionada aos dados",
+          "paragraphs": [
+            "O ciclo 001 é o único executado. As etapas seguintes são planejamento editorial atualizado a partir das lacunas encontradas, sem cronograma garantido ou resultados antecipados. Cada nova rodada deve registrar perguntas e decisões antes dos novos ajustes."
+          ],
+          "table": {
+            "headers": [
+              "Etapa",
+              "Estado",
+              "Pergunta / entrega",
+              "Condição para avançar"
+            ],
+            "rows": [
+              [
+                "Ciclo 001",
+                "Executado; H2 com ressalva de revisão",
+                "Cafeína–sono; sono/sedentarismo–sintomas; magnésio–sono; Ridge sem diagnóstico",
+                "Reconciliar rótulos e fronteira de 7 horas antes de usar H2 como confirmação do protocolo"
+              ],
+              [
+                "Próximo ciclo: robustez",
+                "Proposto",
+                "Repetir definições, perdas por variável, não linearidade e sensibilidade de magnésio",
+                "Registrar correções como nova versão; não substituir silenciosamente os achados"
+              ],
+              [
+                "Replicação e estratos",
+                "Proposto",
+                "Testar estabilidade por idade/sexo e em outra onda; validar previsão por grupos de amostragem",
+                "Compatibilidade de instrumentos, pesos e tamanho amostral"
+              ],
+              [
+                "Síntese de suplementação",
+                "Proposto",
+                "Extrair efeitos, desfechos e segurança dos ensaios elegíveis em autismo/TDAH",
+                "Resultados publicados e critérios explícitos; deduplicação de registros"
+              ],
+              [
+                "Comparação HA/autismo/TDAH",
+                "Dependente de dados",
+                "Comparar isolados, duplas e tripla; testar especificidade versus dimensões compartilhadas",
+                "Cognição e condições efetivamente medidas; acesso autorizado quando necessário"
+              ],
+              [
+                "Validação prospectiva",
+                "Futura",
+                "Prever mudança e investigar resposta individual a rotinas",
+                "Protocolo próprio, medidas repetidas e condições de pesquisa adequadas"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Hipóteses testadas no ciclo 001",
+          "table": {
+            "headers": [
+              "ID",
+              "Expectativa registrada",
+              "Teste executado",
+              "Leitura atual"
+            ],
+            "rows": [
+              [
+                "H1",
+                "Mais cafeína associada a menos sono; possível modificação por idade",
+                "Cafeína por 100 mg + interação por década, com ajuste demográfico e energia",
+                "Associação negativa aos 45 anos; interação não ultrapassa FDR de 5%"
+              ],
+              [
+                "H2",
+                "Sono curto e mais sedentarismo associados a mais sintomas",
+                "Sono categórico e horas sedentárias em um único modelo",
+                "Associações observadas; execução usa ≤7 h, divergente do <7 h registrado"
+              ],
+              [
+                "H3",
+                "Maior magnésio poderia acompanhar mais sono, especialmente com baixa ingestão basal",
+                "Magnésio alimentar, suplementar e dose ausente",
+                "Inconclusivo; modificação por baixa ingestão não foi testada"
+              ],
+              [
+                "P1",
+                "Dimensões observáveis podem prever sintomas sem diagnóstico",
+                "Ridge, média ponderada de referência e ablações",
+                "R² interno ≈0,09; sem validação externa"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Hipóteses ainda não testadas",
+          "paragraphs": [
+            "Creatina e proteína/recuperação; cafeína com L-teanina; formulações de magnésio; micronutrientes e estado basal; vias relacionadas a B12/folato/metilação são linhas candidatas. A lista não declara eficácia e não implica que os dados já permitam todos os testes.",
+            "TDAH, autismo, depressão, ansiedade social e outras excepcionalidades só serão comparados quando houver mensuração adequada. Não será atribuído retrospectivamente um diagnóstico a um agrupamento estatístico."
+          ],
+          "links": [
+            {
+              "title": "Plano operacional original, datado de 07/09/2026",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/DISCOVERY_PLAN.md"
+            },
+            {
+              "title": "Hipóteses registradas do ciclo 001",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/hypotheses.yaml"
+            }
+          ]
+        },
+        {
+          "title": "O que precisa constar em cada ciclo",
+          "items": [
+            "Pergunta, estimando, direção prevista, população e covariáveis; versão/data do registro e desvios posteriores.",
+            "Base/onda, campos, recodificações, perdas, pesos e amostragem.",
+            "Estimativa, intervalo, multiplicidade e resultados inconclusivos; sem inferência em grupo não medido.",
+            "Validação reservada, baseline, métricas e limites de generalização do preditor.",
+            "Explicações alternativas, estudos selecionados, testes discriminantes e pendências publicáveis."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fontes",
+      "title": "Bases e evidências",
+      "sections": [
+        {
+          "title": "O que foi consultado e o que entrou nas análises",
+          "paragraphs": [
+            "Este inventário descreve o trabalho registrado em 07–08/09/2026. Consultar metadados, baixar uma tabela e estimar um modelo são etapas diferentes. Não foram obtidos microdados controlados de ABCD/NDA ou All of Us."
+          ],
+          "table": {
+            "headers": [
+              "Fonte",
+              "Progresso documentado",
+              "Uso efetivo / limite"
+            ],
+            "rows": [
+              [
+                "NHANES 2021–2023 / CDC",
+                "Nove arquivos públicos inspecionados; seis módulos usados nos modelos",
+                "Análises individuais com saída agregada; HA, autismo e TDAH não identificados"
+              ],
+              [
+                "ClinicalTrials.gov API v2",
+                "Consultas de suplementos em TDAH (83 registros) e autismo (87); 11 e 17 com seção de resultados",
+                "Inventário histórico, não estimativas de eficácia; contagens por consulta podem se sobrepor"
+              ],
+              [
+                "Grafo de ensaios",
+                "Nós e relações estudo–condição–intervenção derivados",
+                "Normalização inicial; intervenções não classificadas exigem revisão"
+              ],
+              [
+                "ABCD/NDA",
+                "Metadados de cognição, desenvolvimento, sono e atividade consultados",
+                "Potencial longitudinal; acesso aos indivíduos pendente"
+              ],
+              [
+                "OpenNeuro",
+                "Plataforma e metadados avaliados",
+                "Nenhuma coorte elegível de HA analisada neste ciclo"
+              ],
+              [
+                "All of Us",
+                "Camadas públicas/metadados avaliados",
+                "Sem acesso ao Workbench ou modelo individual executado"
+              ],
+              [
+                "PhysioNet, NSRR, DSLD, DSID, ODS, PubChem, CAERS, DATASUS e Anvisa",
+                "Catalogados como fontes potenciais",
+                "Não usados para estimar os resultados do ciclo 001"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Módulos NHANES utilizados",
+          "table": {
+            "headers": [
+              "Módulo",
+              "Variáveis/papel",
+              "Hipóteses"
+            ],
+            "rows": [
+              [
+                "DEMO_L",
+                "SEQN, idade, sexo, raça/etnia, escolaridade, renda/pobreza, estratos e PSUs",
+                "H1, H2, H3 e predição"
+              ],
+              [
+                "DR1TOT_L",
+                "DR1TCAFF, DR1TMAGN, DR1TKCAL, WTDRD1; recordatório alimentar de um dia",
+                "H1 e H3"
+              ],
+              [
+                "SLQ_L",
+                "SLD012; duração usual de sono em dias úteis/de trabalho",
+                "H1, H2, H3 e predição"
+              ],
+              [
+                "PAQ_L",
+                "PAD680; minutos sedentários convertidos em horas",
+                "H2 e predição"
+              ],
+              [
+                "DPQ_L",
+                "Oito itens, removendo DPQ030; sintomas nas duas semanas anteriores",
+                "H2 e predição"
+              ],
+              [
+                "DSQTOT_L",
+                "DSD010 e DSQTMAGN; suplementos e antiácidos na janela de 30 dias",
+                "H3"
+              ]
+            ]
+          },
+          "links": [
+            {
+              "title": "Codebook oficial DEMO_L",
+              "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.htm"
+            },
+            {
+              "title": "Codebook oficial DR1TOT_L",
+              "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DR1TOT_L.htm"
+            },
+            {
+              "title": "Codebook oficial SLQ_L",
+              "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SLQ_L.htm"
+            },
+            {
+              "title": "Codebook oficial PAQ_L",
+              "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/PAQ_L.htm"
+            },
+            {
+              "title": "Codebook oficial DPQ_L",
+              "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DPQ_L.htm"
+            },
+            {
+              "title": "Codebook oficial DSQTOT_L",
+              "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DSQTOT_L.htm"
+            }
+          ]
+        },
+        {
+          "title": "Literatura selecionada para interpretação",
+          "paragraphs": [
+            "A busca do primeiro ciclo foi dirigida, não sistemática. Os estudos servem para avaliar plausibilidade e explicações alternativas; não tornam causais as associações NHANES. Os resumos completos, critérios e limitações estão no protocolo e na síntese do ciclo."
+          ],
+          "links": [
+            {
+              "title": "Cafeína e sono — Gardiner et al. (2023), revisão/meta-análise",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/36870101/"
+            },
+            {
+              "title": "Sono e depressão — estudo longitudinal (2018)",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/29861378/"
+            },
+            {
+              "title": "Atividade e depressão — Maastricht Study (2022)",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/36114702/"
+            },
+            {
+              "title": "Magnésio bisglicinato — ensaio randomizado (2025)",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40918053/"
+            },
+            {
+              "title": "Protocolo de seleção de evidência",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/evidence-protocol.md"
+            },
+            {
+              "title": "Síntese e explicações rivais",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/evidence-synthesis.md"
+            }
+          ]
+        },
+        {
+          "title": "Proveniência e acesso",
+          "links": [
+            {
+              "title": "Inspeção inicial e cobertura das fontes",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/INITIAL_FEASIBILITY_ANALYSIS.md"
+            },
+            {
+              "title": "Perfil NHANES e procedência local",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/data/public/nhanes/2021-2023/README.md"
+            },
+            {
+              "title": "Consultas históricas de ensaios",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/data/public/clinicaltrials/README.md"
+            },
+            {
+              "title": "Grafo inicial de evidências",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/data/derived/evidence-graph/README.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "progresso",
+      "title": "Progresso e decisões",
+      "sections": [
+        {
+          "title": "Registro público de evolução",
+          "table": {
+            "headers": [
+              "Marco",
+              "Evidência disponível",
+              "Estado"
+            ],
+            "rows": [
+              [
+                "Preparação — 07/09/2026",
+                "Catálogo, desenho dos grupos, estratificação e metodologia multidimensional",
+                "Documentado; modelos propostos não equivalem a modelos ajustados"
+              ],
+              [
+                "Viabilidade — 07/09/2026",
+                "Tabelas NHANES, consultas ClinicalTrials.gov e grafo de intervenções",
+                "Executado como inventário"
+              ],
+              [
+                "Registro local — 07/09/2026",
+                "hypotheses.yaml e evidence-protocol.md",
+                "Arquivos declaram registro antes dos ajustes; não há pré-registro externo verificável"
+              ],
+              [
+                "Ciclo 001 — 08/09/2026",
+                "results.json, código, quatro gráficos, relatório e cartão do modelo",
+                "Executado; revisão editorial identificou divergência em H2"
+              ],
+              [
+                "Ampliação do portal",
+                "Objetivos, roteiro de ciclos, fontes, métodos e registro de decisões",
+                "Documentação vinculada aos artefatos; não acrescenta novos participantes ou efeitos"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Pendências científicas",
+          "items": [
+            "Resolver o limite de 7 horas de H2: código atual inclui exatamente 7 h no grupo curto; protocolo prevê esse valor na referência.",
+            "Revisar descrições da amostra por hipótese: as junções são específicas, não uma única coorte obrigatória de seis tabelas.",
+            "Padronizar o nome do escore como soma modificada de oito itens sem sono; não aplicar cortes clínicos do PHQ-8 convencional.",
+            "Auditar seleção por dados completos, distribuição dos pesos, células pequenas e compatibilidade da variância com o desenho completo.",
+            "Estimar incerteza das métricas preditivas, validar por PSU/onda e replicar sem reutilizar o teste para escolher especificações.",
+            "Extrair desfechos e qualidade dos ensaios antes de qualquer síntese de eficácia."
+          ]
+        },
+        {
+          "title": "O que significa registrar as decisões",
+          "paragraphs": [
+            "O registro publicável apresenta pergunta, evidência, premissas, escolhas, alternativas, execução, limitações e próximos testes. É uma justificativa científica verificável, baseada em arquivos e resultados, e não uma transcrição de deliberação interna.",
+            "Não se reconstrói como pré-registrada uma escolha feita após ver resultados. As datas declaradas nos documentos locais são preservadas com sua limitação de verificabilidade. Correções devem ficar visíveis com versão e impacto.",
+            "O site apresenta informações agregadas e documentação científica selecionada. Históricos individuais de saúde/suplementos, credenciais e microdados controlados não são copiados para o portal."
+          ]
+        },
+        {
+          "title": "Artefatos para auditoria",
+          "links": [
+            {
+              "title": "Resultados numéricos completos",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/results.json"
+            },
+            {
+              "title": "Código executado do ciclo 001",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/run_analysis.py"
+            },
+            {
+              "title": "Cartão do modelo",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/model-card.yaml"
+            },
+            {
+              "title": "Registro editorial público do ciclo",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/public-dossier.json"
+            },
+            {
+              "title": "Skill de publicação contínua",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/skills/science-cycle-publish/SKILL.md"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -143,6 +143,47 @@ class DiscoverySiteTests(unittest.TestCase):
             with self.subTest(output=output), self.assertRaises(ValueError):
                 build(self.root, output)
 
+    def test_public_narrative_navigation_review_and_privacy(self):
+        path, _ = self.cycle()
+        editorial = self.root / "research/site"
+        editorial.mkdir(parents=True)
+        study = {"intro": [{"title": "Visão", "paragraphs": ["Perguntas públicas"]}],
+                 "pages": [{"id": "objetivos", "title": "Objetivos",
+                            "sections": [{"title": "Escopo", "items": ["Planejado"]}]}]}
+        (editorial / "study.json").write_text(json.dumps(study))
+        (path.parent / "public-dossier.json").write_text(json.dumps({
+            "review_note": "Limite em revisão <7h",
+            "sections": [{"title": "Método", "paragraphs": ["<script>untrusted</script>"]}]}))
+        # A neighboring private file must never be discovered or copied automatically.
+        (path.parent / "personal-history.json").write_text('"PRIVATE-SENTINEL"')
+        build(self.root, self.root / "site", True)
+        for html in (self.root / "site").rglob("*.html"):
+            body = html.read_text()
+            self.assertNotIn("PRIVATE-SENTINEL", body)
+            links = Links()
+            links.feed(body)
+            for target in links.targets:
+                self.assertTrue((html.parent / target).is_file(), (html, target))
+        cycle_html = (self.root / "site/cycles/cycle-001/index.html").read_text()
+        self.assertLess(cycle_html.index("Limite em revisão"), cycle_html.index("<h2>Resultados"))
+        self.assertNotIn("<script>", cycle_html)
+        self.assertIn("&lt;script&gt;", cycle_html)
+        self.assertIn("Limite em revisão", (path.parent / "README.md").read_text())
+        self.assertFalse((self.root / "site/cycles/cycle-001/personal-history.json").exists())
+
+    def test_editorial_rejects_unsafe_links_and_page_paths(self):
+        editorial = self.root / "research/site"
+        editorial.mkdir(parents=True)
+        for entry in (
+            {"id": "../escape", "title": "Invalid", "sections": []},
+            {"id": "valid", "title": "Invalid", "sections": [{"title": "Source",
+             "links": [{"title": "Unsafe", "url": "javascript:alert(1)"}]}]},
+        ):
+            with self.subTest(entry=entry):
+                (editorial / "study.json").write_text(json.dumps({"intro": [], "pages": [entry]}))
+                with self.assertRaises(ValueError):
+                    build(self.root, self.root / "site")
+
 
 if __name__ == "__main__":
     unittest.main()

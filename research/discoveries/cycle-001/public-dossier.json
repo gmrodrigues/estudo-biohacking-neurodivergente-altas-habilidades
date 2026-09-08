@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "review_note": "Nota de revisão: os resultados de H2 foram calculados com sono ≤7 h versus >7 a ≤9 h, embora o registro e alguns rótulos originais digam <7 h versus 7–9 h. As estimativas abaixo são preservadas como execução original, com essa ressalva. Uma nova análise com a fronteira registrada permanece pendente. O alvo é uma soma modificada de oito itens sem sono, não o PHQ-8 convencional.",
+  "sections": [
+    {
+      "title": "Pergunta e justificativa do ciclo",
+      "paragraphs": [
+        "A rodada foi escolhida pela disponibilidade de exposições e desfechos no NHANES: cafeína e magnésio no recordatório alimentar, sono habitual, sedentarismo e itens de sintomas depressivos. Ela permite testar associações em adultos e construir uma primeira previsão sem diagnóstico.",
+        "A ambição do projeto inclui altas habilidades, autismo e TDAH, mas estes fenótipos não estão identificados no recorte usado. Portanto, esta rodada é uma referência populacional exploratória, não um grupo neurotípico confirmado nem evidência de resposta específica de superdotados."
+      ]
+    },
+    {
+      "title": "Registro das escolhas e sua verificabilidade",
+      "paragraphs": [
+        "hypotheses.yaml e evidence-protocol.md declaram registro local em 07/09/2026 antes de obter os coeficientes, após inspecionar dimensões, intervalos e completude das tabelas. Não há depósito externo que comprove pré-registro independente.",
+        "Esta documentação editorial foi adicionada após os resultados. Explicita escolhas observáveis no código e lacunas do relatório; não transforma decisões retrospectivas em previsões anteriores. Os oito termos testados entram em uma mesma correção Benjamini–Hochberg, apesar de haver três famílias temáticas."
+      ],
+      "links": [
+        {
+          "title": "Registro de hipóteses e direções esperadas",
+          "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/hypotheses.yaml"
+        },
+        {
+          "title": "Critérios e estudos selecionados",
+          "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/evidence-protocol.md"
+        }
+      ]
+    },
+    {
+      "title": "Construção da amostra e medidas",
+      "paragraphs": [
+        "O código liga tabelas por SEQN, verifica unicidade e faz junções um-para-um, separadas por pergunta: DEMO+DR1TOT+SLQ para H1; DEMO+SLQ+PAQ+DPQ para H2; DEMO+DR1TOT+DSQTOT+SLQ para H3. A auditoria salva 6.337 pessoas em cada junção após a seleção de adultos, antes das perdas analíticas. Isso não significa que os seis módulos tenham sido obrigatórios para todos os modelos.",
+        "Idade elegível é ≥18; escolaridade usa DMDEDUC2. O preditor com dados completos contém idades registradas de 20 a 80; o limite superior público não deve ser interpretado como exclusão de todos os maiores de 80. Ausências nas variáveis do modelo e pesos inválidos reduzem a amostra. Ainda falta decompor as perdas por motivo.",
+        "Códigos de recusa/desconhecimento são excluídos das variáveis demográficas e itens DPQ conforme o código. PAD680 é aceito entre 0 e 1.380 minutos. Valores numéricos minúsculos oriundos do XPORT são convertidos a zero. Dieta representa um dia; suplementação resume 30 dias; sono é habitual. Essas janelas não são equivalentes."
+      ],
+      "table": {
+        "headers": [
+          "Análise",
+          "Junção registrada",
+          "Amostra analítica",
+          "Perdas totais"
+        ],
+        "rows": [
+          [
+            "H1",
+            "6.337",
+            "4.211",
+            "2.126"
+          ],
+          [
+            "H2",
+            "6.337",
+            "4.522",
+            "1.815"
+          ],
+          [
+            "H3",
+            "6.337",
+            "4.194",
+            "2.143"
+          ],
+          [
+            "Predição",
+            "4.522 completos",
+            "3.391 treino / 1.131 teste",
+            "Divisão interna, sem amostra externa"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Modelos estatísticos e leitura da incerteza",
+      "paragraphs": [
+        "As regressões usam mínimos quadrados ponderados, com covariância calculada por agregação dos escores por PSU e estrato. Foram registrados 15 estratos, 30 PSUs e 15 graus de liberdade. H1/H3 usam WTDRD1; H2 usa WTMEC2YR. A implementação da variância está disponível para auditoria e ainda requer confronto independente com análise de domínio do desenho completo.",
+        "Os ajustes incluem idade centrada em 45 anos, termo quadrático, sexo registrado, raça/etnia, escolaridade e razão renda/pobreza. H1/H3 acrescentam energia alimentar. Ajustar variáveis observadas não elimina causas comuns não medidas nem define a direção do efeito.",
+        "IC95% descreve incerteza amostral sob as premissas do modelo; não cobre automaticamente viés de seleção ou erro de autorrelato. FDR se refere à família de oito testes, não à probabilidade de uma hipótese individual ser verdadeira. Não foram definidos limiares numéricos prévios de relevância prática."
+      ]
+    },
+    {
+      "title": "H1 — cafeína, sono e idade",
+      "paragraphs": [
+        "A justificativa externa é a literatura experimental sobre cafeína e sono. A exposição observacional é DR1TCAFF/100, sem informação suficiente sobre horário e tolerância. A interação é com idade em décadas centrada em 45 anos.",
+        "O coeficiente −0,0537 h por 100 mg (IC95% −0,0869 a −0,0205) vale aos 45 anos, não como média universal: aproximadamente −3,22 minutos (−5,22 a −1,23). A interação por idade tem q=0,0564 e não atende ao critério usual de 5%. A sensibilidade excluindo ingestão >800 mg enfraquece esse sinal.",
+        "Sono insuficiente pode incentivar consumo de cafeína; horário, trabalho e saúde podem explicar parte da associação. Replicação com exposição repetida e horário medido ajudaria a distinguir essas explicações."
+      ],
+      "links": [
+        {
+          "title": "Revisão experimental de cafeína e sono — Gardiner et al.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36870101/"
+        }
+      ]
+    },
+    {
+      "title": "H2 — sono, sedentarismo e sintomas",
+      "paragraphs": [
+        "O alvo soma DPQ010, DPQ020 e DPQ040–DPQ090, aceitando 0–3 em todos os oito itens: escala de 0 a 24, removendo DPQ030 para reduzir a sobreposição com sono. Esse escore derivado não herda cortes diagnósticos do PHQ-9 nem do PHQ-8 convencional.",
+        "Desvio identificado: pd.cut com right=True inclui 7 h no grupo curto. Os valores publicados (+0,838, +1,276 e +0,1165 por hora sedentária) correspondem a ≤7 h, >9 h e sedentarismo, com referência >7 a ≤9 h. Os rótulos originais da tabela e da figura precisam ser lidos à luz desta nota; não houve novo ajuste nesta atualização editorial.",
+        "A relação pode ser bidirecional: sintomas podem afetar sono e movimento; saúde, medicação e trabalho também podem influenciar os três. Uma nova análise deve corrigir a fronteira registrada, examinar sono contínuo/não linear e comparar a estabilidade das estimativas."
+      ]
+    },
+    {
+      "title": "H3 — magnésio alimentar e suplementar",
+      "paragraphs": [
+        "DR1TMAGN e DSQTMAGN entram por 100 mg, com energia e contexto. Há um indicador separado para usuários de suplementos cuja quantidade de magnésio está ausente. O código preenche a quantidade ausente com zero e usa esse indicador quando DSD010=1; essa decisão precisa de análise de sensibilidade.",
+        "Totais de nutrientes e antiácidos não identificam glicinato, treonato ou outra forma. Ausência de quantidade não confirma ausência de ingestão. O modelo não incorpora concentração sérica, adesão ou indicação clínica.",
+        "Ambos os intervalos incluem zero. Isso é inconclusivo, não comprovação de equivalência nem teste adequado de resposta a uma formulação. O ensaio selecionado de bisglicinato avaliou sintomas de insônia; esse desfecho e a exposição não coincidem com duração habitual de sono e ingestão observacional."
+      ]
+    },
+    {
+      "title": "Previsão sem diagnóstico e explicação dimensional",
+      "paragraphs": [
+        "O Ridge usa sono, sedentarismo, idade, sexo registrado, raça/etnia, escolaridade e renda/pobreza. A divisão interna foi 75/25 com semente 20260907, estratificada pelo indicador do escore modificado ≥5; esse limiar foi usado na divisão, não como diagnóstico.",
+        "Transformações numéricas e codificação categórica são ajustadas no treino. RidgeCV avalia 25 valores de penalização de 10⁻³ a 10³; o escolhido foi 1.000. Pesos são usados no ajuste e nas métricas. Não houve reserva por PSU ou onda; treino e teste podem compartilhar contextos amostrais.",
+        "No teste, MAE=2,903, RMSE=3,945 e R²=0,090. A média ponderada do treino teve RMSE=4,136. Há melhora modesta, e a maior parte da variação individual continua sem explicação preditiva.",
+        "Remover sono, sedentarismo ou contexto demográfico aumentou RMSE em 0,009, 0,039 e 0,168, respectivamente. Isso mede contribuição preditiva condicionada às outras entradas; não prova mecanismo ou causalidade. Não há decomposição latente identificada, validação externa ou intervalos das métricas. O gráfico agrupa calibração por décimos internos e também não apresenta intervalos."
+      ],
+      "links": [
+        {
+          "title": "Cartão do modelo",
+          "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/model-card.yaml"
+        },
+        {
+          "title": "Todos os coeficientes, métricas, p e q",
+          "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/results.json"
+        }
+      ]
+    },
+    {
+      "title": "Documentos, reprodução e próximos testes",
+      "paragraphs": [
+        "Os resultados e PNGs são os da execução já publicada; esta ampliação acrescenta contexto e notas de revisão. Para reproduzir, instale o lock com Pipenv e execute o comando no rodapé. Os hashes dos seis XPT permitem conferir insumos.",
+        "Prioridade seguinte: reconciliar protocolo e H2, registrar um adendo, rerodar os testes afetados e atualizar todos os artefatos em conjunto; depois quantificar perdas, auditar pesos/variância e replicar o preditor. A revisão de H2 também pode afetar q-valores da família FDR.",
+        "As explicações aqui são hipóteses científicas resumidas, baseadas nos dados e estudos citados. Nenhum resultado estabelece uma dieta ou protocolo individual de suplementação."
+      ],
+      "links": [
+        {
+          "title": "Código analítico publicado",
+          "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/run_analysis.py"
+        },
+        {
+          "title": "Auditoria original (consulte as ressalvas desta página)",
+          "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/data-audit.md"
+        },
+        {
+          "title": "Síntese de evidência",
+          "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/evidence-synthesis.md"
+        },
+        {
+          "title": "CDC — desenho e ponderação NHANES",
+          "url": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx"
+        }
+      ]
+    }
+  ]
+}

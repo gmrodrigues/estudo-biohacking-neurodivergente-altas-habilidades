@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'research/discoveries/**'
+      - 'research/site/**'
       - 'scripts/build_discovery_site.py'
       - 'tests/test_discovery_site.py'
       - 'Pipfile*'

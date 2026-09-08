@@ -1,6 +1,6 @@
 ---
 name: science-cycle-publish
-description: "Finalize cada ciclo deste estudo com gráficos científicos, README e páginas navegáveis no GitHub Pages. Use após análises executadas ou para preparar a publicação e atualizar a seção de resultados do README principal."
+description: "Publique ciclos deste estudo com gráficos, objetivos, planejamento, hipóteses, métodos e registro científico verificável no site e README. Use para finalizar análises ou atualizar a documentação pública e o progresso."
 ---
 
 # Gráficos e publicação por ciclo
@@ -25,6 +25,12 @@ calibração pertinente. Dados ilustrativos/simulados não entram nas páginas d
 resultados empíricos. Estrelas de significância não substituem magnitude e IC.
 
 ## Montar e conferir
+
+Para ampliar ou atualizar o portal, leia [registro público](references/public-record.md).
+Mantenha objetivos, planejamento, cobertura das bases e progresso sincronizados
+com cada ciclo, além dos gráficos. Documente justificativas científicas resumidas,
+premissas, decisões e desvios verificáveis; não apresente deliberações internas
+como registro científico nem invente uma sequência de decisões anterior aos resultados.
 
 Em `research/discoveries/<cycle-id>/`, mantenha relatório, código ou sua referência,
 PNGs em `figures/` e `cycle.json`. Preencha o

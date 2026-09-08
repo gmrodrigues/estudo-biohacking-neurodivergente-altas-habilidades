@@ -16,6 +16,7 @@ START = "<!-- discovery-cycles:start -->"
 END = "<!-- discovery-cycles:end -->"
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 STYLE = """
+@font-face { font-family: LeagueGothic; src: url('https://gmrodrigues.github.io/old-site/assets/font/LeagueGothic-Regular.otf') format('opentype'); font-display: swap; }
 :root { color-scheme: light; font-family: system-ui, sans-serif; color: #182c38;
   background: #f4f6f7; line-height: 1.65; }
 body { margin: 0; } main { max-width: 1080px; margin: auto; padding: 2rem 1.2rem 4rem; }
@@ -31,7 +32,71 @@ table { width: 100%; border-collapse: collapse; background: white; }
 th, td { padding: .7rem; text-align: left; border-bottom: 1px solid #d7e1e6; vertical-align: top; }
 th { background: #e5eef1; } pre { overflow-x: auto; padding: 1rem; background: #e5eef1; }
 code { overflow-wrap: anywhere; } footer { border-top: 1px solid #c8d8df; margin-top: 3rem; padding-top: 1rem; }
+.notice { border-left: 5px solid #b77113; background: #fff4dd; padding: 1rem; }
+.reading { max-width: 78ch; } section { scroll-margin-top: 1rem; }
+.masthead { color: #edf4f4; background-color: #050505;
+  background-image: linear-gradient(120deg, #050505f2, #05050599),
+    url('https://gmrodrigues.github.io/old-site/assets/img/galaxy-wallpapers-22-1.jpg');
+  background-size: cover; background-position: center; border-bottom: 3px solid orangered; }
+.masthead-inner { max-width: 1080px; margin: auto; padding: 2rem 1.2rem; }
+.masthead a { color: #edf4f4; } .masthead .identity { font-size: 1.05rem; text-decoration: none; }
+.masthead .handle { color: #ff7948; font: 1.6rem LeagueGothic, Impact, sans-serif; letter-spacing: .05em; }
+.masthead .brand-title { font: clamp(2rem, 6vw, 3.4rem) LeagueGothic, Impact, sans-serif; margin: .4rem 0; }
+.masthead p { margin: .3rem 0; } .masthead .back-link { display: inline-block; margin-top: .8rem; }
+@media(max-width:600px) { main { padding: 1rem .8rem; } article, figure { padding: .8rem; } }
 """
+
+
+def render_sections(sections):
+    """Render public editorial content as escaped text, never arbitrary HTML."""
+    body = ""
+    for section in sections:
+        body += f"<section><h2>{escape(text_field(section, 'title'))}</h2>"
+        for paragraph in section.get("paragraphs", []):
+            body += f"<p class='reading'>{escape(paragraph)}</p>"
+        if section.get("items"):
+            body += "<ul>" + "".join(f"<li>{escape(x)}</li>" for x in section["items"]) + "</ul>"
+        if section.get("table"):
+            table = section["table"]
+            body += "<div class='table-wrap'><table><thead><tr>"
+            body += "".join(f"<th>{escape(x)}</th>" for x in table["headers"]) + "</tr></thead><tbody>"
+            for row in table["rows"]:
+                if len(row) != len(table["headers"]):
+                    raise ValueError("Editorial table has inconsistent columns")
+                body += "<tr>" + "".join(f"<td>{escape(x)}</td>" for x in row) + "</tr>"
+            body += "</tbody></table></div>"
+        if section.get("links"):
+            body += "<ul>"
+            for link in section["links"]:
+                url = text_field(link, "url")
+                if urlparse(url).scheme != "https" or not urlparse(url).netloc:
+                    raise ValueError("Editorial sources must be HTTPS URLs")
+                body += f"<li><a href='{escape(url, quote=True)}'>{escape(text_field(link, 'title'))}</a></li>"
+            body += "</ul>"
+        body += "</section>"
+    return body
+
+
+def study_navigation(pages, prefix=""):
+    return "<nav aria-label='Estudo'><a href='" + prefix + "index.html'>Resultados</a>" + "".join(
+        f"<a href='{prefix}{p['id']}.html'>{escape(p['title'])}</a>" for p in pages) + "</nav>"
+
+
+def load_study(root):
+    path = root / "research/site/study.json"
+    if not path.exists():
+        return {"pages": [], "intro": []}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    identifiers = set()
+    for entry in data["pages"]:
+        slug = text_field(entry, "id")
+        if not re.fullmatch(r"[a-z][a-z0-9-]{0,60}", slug) or slug == "index" or slug in identifiers:
+            raise ValueError("Invalid or duplicate study page id")
+        identifiers.add(slug)
+        text_field(entry, "title")
+        render_sections(entry["sections"])
+    render_sections(data["intro"])
+    return data
 
 
 def text_field(record, key):
@@ -102,7 +167,14 @@ def load_cycles(root):
 def page(title, body):
     return ("<!doctype html><html lang='pt-BR'><head><meta charset='utf-8'>"
             "<meta name='viewport' content='width=device-width,initial-scale=1'>"
-            f"<title>{escape(title)}</title><style>{STYLE}</style></head><body><main>"
+            f"<title>{escape(title)}</title><style>{STYLE}</style></head><body>"
+            "<header class='masthead'><div class='masthead-inner'>"
+            "<a class='identity' href='https://gmrodrigues.github.io/'>Glauber Machado Rodrigues</a>"
+            "<p class='handle'>gmrodrigues / pesquisa aberta</p>"
+            "<p class='brand-title'>Altas habilidades, neurodivergência e saúde</p>"
+            "<p>Perguntas, dados e descobertas em construção.</p>"
+            "<a class='back-link' href='https://gmrodrigues.github.io/'>← Site principal · Forte e Leve</a>"
+            "</div></header><main>"
             "<p class='eyebrow'>Altas habilidades · neurodivergência · saúde</p>"
             f"{body}<footer><a href='{REPO_URL}'>Repositório e métodos</a> · "
             "Resultados de pesquisa, com seus limites de população e desenho."
@@ -131,7 +203,12 @@ def build(root, output, write_readmes=False):
     if output.exists() and any(output.iterdir()):
         raise ValueError("Use an empty output directory for a clean site build")
     cycles = load_cycles(root)
+    study = load_study(root)
     output.mkdir(parents=True, exist_ok=True)
+    for entry in study["pages"]:
+        body = study_navigation(study["pages"]) + f"<h1>{escape(entry['title'])}</h1>"
+        body += render_sections(entry["sections"])
+        (output / f"{entry['id']}.html").write_text(page(entry["title"], body), encoding="utf-8")
     cards, root_links = [], []
     for index, (cycle, directory) in enumerate(cycles):
         cycle_id = cycle["id"]
@@ -142,12 +219,24 @@ def build(root, output, write_readmes=False):
             if 0 <= neighbor < len(cycles):
                 other_id = cycles[neighbor][0]["id"]
                 nav.append(f"<a href='../{other_id}/index.html'>{label}</a>")
-        body = (f"<nav>{' '.join(nav)}</nav><h1>{escape(cycle['title'])}</h1>"
+        body = (study_navigation(study["pages"], "../../") + f"<nav>{' '.join(nav)}</nav><h1>{escape(cycle['title'])}</h1>"
                 f"<p>{escape(cycle['completed_at'])} · {escape(cycle['population'])}</p>"
-                f"<p>{escape(cycle['summary'])}</p><h2>Resultados</h2>"
+                f"<p>{escape(cycle['summary'])}</p>")
+        dossier = directory / "public-dossier.json"
+        if dossier.exists():
+            narrative = json.loads(dossier.read_text(encoding="utf-8"))
+            if narrative.get("review_note"):
+                body += f"<aside class='notice'>{escape(narrative['review_note'])}</aside>"
+            body += render_sections(narrative["sections"])
+        body += ("<h2>Resultados</h2>"
                 "<div class='table-wrap'><table><thead><tr><th>Pergunta</th><th>Estimativa</th>"
                 "<th>Incerteza</th><th>Amostra</th><th>Interpretação</th></tr></thead><tbody>")
         readme = [f"## {cycle['title']}", "", cycle["summary"], "", f"População: {cycle['population']}"]
+        if dossier.exists():
+            if narrative.get("review_note"):
+                readme += ["", "> " + narrative["review_note"]]
+            readme += ["", f"[Métodos, decisões e fontes no site]({PAGES_URL}cycles/{cycle_id}/index.html)",
+                       "", "[Registro editorial completo](public-dossier.json)"]
         for finding in cycle["findings"]:
             body += "<tr>" + "".join(f"<td>{escape(finding[key])}</td>" for key in
                                    ("question", "estimate", "uncertainty", "sample", "interpretation")) + "</tr>"
@@ -178,6 +267,7 @@ def build(root, output, write_readmes=False):
         if write_readmes:
             update_readme(directory / "README.md", "# Resultados do ciclo\n", "\n".join(readme))
     intro = "<h1>Resultados por ciclo</h1><p>Explore perguntas, estimativas, gráficos, fontes e limites de cada rodada.</p>"
+    intro = study_navigation(study["pages"]) + intro + render_sections(study["intro"])
     if not cycles:
         intro += "<article><h2>Primeiro ciclo em preparação</h2><p>Ainda não há resultados de ciclos concluídos.</p></article>"
     (output / "index.html").write_text(page("Resultados por ciclo", intro + "".join(reversed(cards))), encoding="utf-8")
@@ -186,6 +276,7 @@ def build(root, output, write_readmes=False):
     if write_readmes and cycles:
         update_readme(root / "README.md", "# Estudo de biohacking, neurodivergência e altas habilidades\n",
                       f"## Resultados\n\n[Explorar gráficos e ciclos no site]({PAGES_URL})\n\n" +
+                      " · ".join(f"[{p['title']}]({PAGES_URL}{p['id']}.html)" for p in study["pages"]) + "\n\n" +
                       "\n".join(reversed(root_links)) +
                       "\n\n[Métodos e fontes](catalog/data-sources/README.md)\n\n" +
                       "Instale as dependências com `PIPENV_VENV_IN_PROJECT=1 pipenv sync --dev`.\n")

@@ -54,3 +54,11 @@ gerado é preservado.
 
 O workflow precisa ser enviado ao GitHub e Pages configurado para `GitHub Actions`
 antes do primeiro deploy. Criar as skills não significa que isso já ocorreu.
+
+## Contexto editorial do portal
+
+`research/site/study.json` acrescenta apresentação e páginas navegáveis de objetivos,
+planejamento, fontes e progresso. `public-dossier.json`, ao lado de `cycle.json`,
+acrescenta métodos, justificativas e notas de revisão antes das estimativas.
+Consulte [registro público](public-record.md) para campos e conteúdo esperado.
+Esses documentos não mudam `data_kind` nem transformam planejamento em resultado.
