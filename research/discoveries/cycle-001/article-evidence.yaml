@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "purpose": "Comparação pós-resultados para artigo do ciclo 001",
+  "search_protocol": {
+    "date": "2026-09-08",
+    "type": "Busca dirigida; não sistemática",
+    "databases": [
+      "PubMed",
+      "PubMed Central"
+    ],
+    "queries": [
+      "NHANES dietary magnesium sleep duration study cross sectional",
+      "NHANES caffeine sleep duration association adults",
+      "PMIDs 36870101, 29861378, 36114702, 40918053"
+    ],
+    "eligibility": "Estudos humanos selecionados pela proximidade com cafeína/sono, sono/sintomas e magnésio/sono; estudos observacionais da mesma plataforma e evidência experimental contextual.",
+    "selection_limits": "Não houve triagem exaustiva ou dupla avaliação; seleção após resultados. Estudos com datas/medições muito distintas não combinados quantitativamente.",
+    "overlap": "Não somar amostras entre artigos NHANES e não contar meta-análise e seus ensaios como evidências independentes. As ondas dos dois comparadores NHANES selecionados diferem da onda 2021–2023 do ciclo."
+  },
+  "context_sources": [
+    {"organization": "FDA", "url": "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much", "scope": "Fontes de cafeína, variação individual e referência de 400 mg/dia para a maioria dos adultos; não dose-alvo", "type": "Orientação oficial; não ensaio do ciclo"},
+    {"organization": "NIH ODS", "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/", "scope": "Magnésio elementar, fontes, limite suplementar de 350 mg/dia em adultos, riscos renais e interações", "type": "Síntese oficial; referência norte-americana, não prescrição"},
+    {"organization": "NIMH", "url": "https://www.nimh.nih.gov/health/publications/autism-spectrum-disorder", "scope": "Autismo, desenvolvimento, heterogeneidade e suporte", "type": "Contexto clínico; não teste da tese de HA encoberta"},
+    {"organization": "NIMH", "url": "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know", "scope": "TDAH, desenvolvimento e fatores envolvidos", "type": "Contexto clínico; não teste da tese de HA encoberta"}
+  ],
+  "studies": [
+    {
+      "schema_version": 1,
+      "id": "gardiner-2023",
+      "status": "comparison_for_article",
+      "hypothesis_id": "H1",
+      "finding_artifact": "research/discoveries/cycle-001/results.json",
+      "study": {
+        "pmid": "36870101",
+        "primary_url": "https://pubmed.ncbi.nlm.nih.gov/36870101/",
+        "design": "Revisão sistemática e meta-análise de 24 estudos",
+        "population_and_group_identification": "24 estudos",
+        "intervention_form_dose_duration": "Cafeína; doses, horários e protocolos heterogêneos",
+        "outcome_and_followup": "Medidas de sono após exposição",
+        "HA_ASD_ADHD_identification": "Não estabelecida nos materiais extraídos; não usados para comparação diagnóstica",
+        "shared_sample_or_reports": []
+      },
+      "extraction": {
+        "access_level": "Resumo indexado no PubMed",
+        "source_locator": "Abstract / Methods / Results conforme registro de acesso",
+        "estimate": "Direção de prejuízo ao sono; não extraído efeito agregado numérico",
+        "interval": "Não extraído para comparação quantitativa",
+        "adverse_events": "Não extraídos; ausência de extração não significa ausência de eventos",
+        "risk_of_bias_tool": "Avaliação formal não realizada",
+        "risk_of_bias_by_domain": {
+          "limitations": "Não confundir meta-análise com estudo independente de cada ensaio incluído."
+        }
+      },
+      "interpretation": {
+        "proposed_before_finding": false,
+        "relevance_to_finding": "Contexto indireto: contraste experimental não equivale à inclinação por 100 mg de ingestão habitual.",
+        "transport_to_HA_ASD_ADHD": "Não estabelecido",
+        "candidate_mechanism": "Não identificado por esta comparação",
+        "rival_explanations": [
+          "Diferenças de população, mensuração e ajuste",
+          "Confundimento ou seleção nas análises observacionais"
+        ],
+        "discriminating_prediction": "Reavaliar associação após harmonizar exposição, desfecho e covariáveis; usar dados temporais para direção",
+        "next_discriminating_test": "Replicação harmonizada em dados independentes; não agrupar efeitos incompatíveis"
+      }
+    },
+    {
+      "schema_version": 1,
+      "id": "nhanes-caffeine-2016",
+      "status": "comparison_for_article",
+      "hypothesis_id": "H1",
+      "finding_artifact": "research/discoveries/cycle-001/results.json",
+      "study": {
+        "pmid": "27377580",
+        "primary_url": "https://pubmed.ncbi.nlm.nih.gov/27377580/",
+        "design": "Transversal, NHANES 2007–2008",
+        "population_and_group_identification": "4.730 adultos",
+        "intervention_form_dose_duration": "Cafeína de dois recordatórios",
+        "outcome_and_followup": "Sintomas de insônia, regressão logística; interação com duração de sono",
+        "HA_ASD_ADHD_identification": "Não estabelecida nos materiais extraídos; não usados para comparação diagnóstica",
+        "shared_sample_or_reports": []
+      },
+      "extraction": {
+        "access_level": "Resumo PubMed; métodos disponíveis em PMC6230475",
+        "source_locator": "Abstract / Methods / Results conforme registro de acesso",
+        "estimate": "Associações brutas atenuadas após ajuste; interação para sono não restaurador",
+        "interval": "Não extraído para comparação quantitativa",
+        "adverse_events": "Não extraídos; ausência de extração não significa ausência de eventos",
+        "risk_of_bias_tool": "Avaliação formal não realizada",
+        "risk_of_bias_by_domain": {
+          "limitations": "Confundimento residual e autorrelato; não determina direção causal."
+        }
+      },
+      "interpretation": {
+        "proposed_before_finding": false,
+        "relevance_to_finding": "Comparabilidade parcial: mesma plataforma, outra onda, desfechos e interação diferentes.",
+        "transport_to_HA_ASD_ADHD": "Não estabelecido",
+        "candidate_mechanism": "Não identificado por esta comparação",
+        "rival_explanations": [
+          "Diferenças de população, mensuração e ajuste",
+          "Confundimento ou seleção nas análises observacionais"
+        ],
+        "discriminating_prediction": "Reavaliar associação após harmonizar exposição, desfecho e covariáveis; usar dados temporais para direção",
+        "next_discriminating_test": "Replicação harmonizada em dados independentes; não agrupar efeitos incompatíveis"
+      }
+    },
+    {
+      "schema_version": 1,
+      "id": "sleep-depression-2018",
+      "status": "comparison_for_article",
+      "hypothesis_id": "H2",
+      "finding_artifact": "research/discoveries/cycle-001/results.json",
+      "study": {
+        "pmid": "29861378",
+        "primary_url": "https://pubmed.ncbi.nlm.nih.gov/29861378/",
+        "design": "Coorte longitudinal de meia-idade e idosos",
+        "population_and_group_identification": "Não reextraído para este artigo",
+        "intervention_form_dose_duration": "Categorias de duração de sono",
+        "outcome_and_followup": "Início/recorrência de depressão e relação bidirecional",
+        "HA_ASD_ADHD_identification": "Não estabelecida nos materiais extraídos; não usados para comparação diagnóstica",
+        "shared_sample_or_reports": []
+      },
+      "extraction": {
+        "access_level": "Título e resultados do resumo indexado no PubMed",
+        "source_locator": "Abstract / Methods / Results conforme registro de acesso",
+        "estimate": "Associações com sono curto; sem conversão de OR em pontos do escore",
+        "interval": "Não extraído para comparação quantitativa",
+        "adverse_events": "Não extraídos; ausência de extração não significa ausência de eventos",
+        "risk_of_bias_tool": "Avaliação formal não realizada",
+        "risk_of_bias_by_domain": {
+          "limitations": "Confundimento permanece possível; categorizações não harmonizadas."
+        }
+      },
+      "interpretation": {
+        "proposed_before_finding": false,
+        "relevance_to_finding": "Indireta: longitudinalidade e medida de depressão diferem do ciclo.",
+        "transport_to_HA_ASD_ADHD": "Não estabelecido",
+        "candidate_mechanism": "Não identificado por esta comparação",
+        "rival_explanations": [
+          "Diferenças de população, mensuração e ajuste",
+          "Confundimento ou seleção nas análises observacionais"
+        ],
+        "discriminating_prediction": "Reavaliar associação após harmonizar exposição, desfecho e covariáveis; usar dados temporais para direção",
+        "next_discriminating_test": "Replicação harmonizada em dados independentes; não agrupar efeitos incompatíveis"
+      }
+    },
+    {
+      "schema_version": 1,
+      "id": "maastricht-2022",
+      "status": "comparison_for_article",
+      "hypothesis_id": "H2",
+      "finding_artifact": "research/discoveries/cycle-001/results.json",
+      "study": {
+        "pmid": "36114702",
+        "primary_url": "https://pubmed.ncbi.nlm.nih.gov/36114702/",
+        "design": "Observacional com seguimento; Maastricht Study",
+        "population_and_group_identification": "5.582; idade média 59,9; 50,3% mulheres",
+        "intervention_form_dose_duration": "Atividade e sedentarismo por activPAL3",
+        "outcome_and_followup": "PHQ-9 basal/anual; seguimento mediano 5,1 anos",
+        "HA_ASD_ADHD_identification": "Não estabelecida nos materiais extraídos; não usados para comparação diagnóstica",
+        "shared_sample_or_reports": []
+      },
+      "extraction": {
+        "access_level": "Resumo indexado no PubMed",
+        "source_locator": "Abstract / Methods / Results conforme registro de acesso",
+        "estimate": "Sintomas prevalentes acompanharam maior sedentarismo",
+        "interval": "Não extraído para comparação quantitativa",
+        "adverse_events": "Não extraídos; ausência de extração não significa ausência de eventos",
+        "risk_of_bias_tool": "Avaliação formal não realizada",
+        "risk_of_bias_by_domain": {
+          "limitations": "Doença e comportamento podem ter causas comuns; não inferir efeito de intervenção."
+        }
+      },
+      "interpretation": {
+        "proposed_before_finding": false,
+        "relevance_to_finding": "Convergência qualitativa; medidas objetivas e temporais não equivalem ao autorrelato transversal.",
+        "transport_to_HA_ASD_ADHD": "Não estabelecido",
+        "candidate_mechanism": "Não identificado por esta comparação",
+        "rival_explanations": [
+          "Diferenças de população, mensuração e ajuste",
+          "Confundimento ou seleção nas análises observacionais"
+        ],
+        "discriminating_prediction": "Reavaliar associação após harmonizar exposição, desfecho e covariáveis; usar dados temporais para direção",
+        "next_discriminating_test": "Replicação harmonizada em dados independentes; não agrupar efeitos incompatíveis"
+      }
+    },
+    {
+      "schema_version": 1,
+      "id": "nhanes-magnesium-2025",
+      "status": "comparison_for_article",
+      "hypothesis_id": "H3",
+      "finding_artifact": "research/discoveries/cycle-001/results.json",
+      "study": {
+        "pmid": null,
+        "primary_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11799047/",
+        "design": "Transversal, NHANES 2009–2018",
+        "population_and_group_identification": "21.840; subamostra suplementação 3.923",
+        "intervention_form_dose_duration": "Ingestão alimentar por categorias; suplementar dividida em grupos",
+        "outcome_and_followup": "Duração de sono/transtorno autorrelatados; regressão logística ponderada",
+        "HA_ASD_ADHD_identification": "Não estabelecida nos materiais extraídos; não usados para comparação diagnóstica",
+        "shared_sample_or_reports": []
+      },
+      "extraction": {
+        "access_level": "Resumo e seções Methods recuperados por busca PMC; abertura direta retornou desafio de navegador",
+        "source_locator": "Abstract; Methods 2.1–2.3 recuperados na busca",
+        "estimate": "Associação alimentar detectada; suplementar não significativa",
+        "interval": "Não extraído para comparação quantitativa",
+        "adverse_events": "Não extraídos; ausência de extração não significa ausência de eventos",
+        "risk_of_bias_tool": "Avaliação formal não realizada",
+        "risk_of_bias_by_domain": {
+          "limitations": "Texto recuperado descreve ingestão em dois dias; processamento completo não auditado."
+        }
+      },
+      "interpretation": {
+        "proposed_before_finding": false,
+        "relevance_to_finding": "Parcial: estimandos, tamanho amostral e covariáveis diferentes; não há teste de diferença entre estudos.",
+        "transport_to_HA_ASD_ADHD": "Não estabelecido",
+        "candidate_mechanism": "Não identificado por esta comparação",
+        "rival_explanations": [
+          "Diferenças de população, mensuração e ajuste",
+          "Confundimento ou seleção nas análises observacionais"
+        ],
+        "discriminating_prediction": "Reavaliar associação após harmonizar exposição, desfecho e covariáveis; usar dados temporais para direção",
+        "next_discriminating_test": "Replicação harmonizada em dados independentes; não agrupar efeitos incompatíveis"
+      }
+    },
+    {
+      "schema_version": 1,
+      "id": "schuster-2025",
+      "status": "comparison_for_article",
+      "hypothesis_id": "H3",
+      "finding_artifact": "research/discoveries/cycle-001/results.json",
+      "study": {
+        "pmid": "40918053",
+        "primary_url": "https://pubmed.ncbi.nlm.nih.gov/40918053/",
+        "design": "Ensaio randomizado, duplo-cego, placebo",
+        "population_and_group_identification": "155 randomizados, 18–65 anos; número analisado e perdas não extraídos",
+        "intervention_form_dose_duration": "Bisglicinato, 250 mg/dia de magnésio elementar, quatro semanas; placebo",
+        "outcome_and_followup": "Insomnia Severity Index (ISI), semana 4",
+        "HA_ASD_ADHD_identification": "Não estabelecida nos materiais extraídos; não usados para comparação diagnóstica",
+        "shared_sample_or_reports": []
+      },
+      "extraction": {
+        "access_level": "Resumo PubMed, seção Abstract; declaração de conflitos",
+        "source_locator": "Abstract / Methods / Results conforme registro de acesso",
+        "estimate": "Mudanças −3,9 (IC95% −5,8 a −2,0) e −2,3 (−4,1 a −0,4); p=0,049; d=0,2",
+        "interval": "Intervalos das mudanças por grupo, registrados em estimate",
+        "adverse_events": "Não extraídos; ausência de extração não significa ausência de eventos",
+        "risk_of_bias_tool": "Avaliação formal não realizada",
+        "risk_of_bias_by_domain": {
+          "limitations": "Intervalos são das mudanças dos grupos, não do contraste; seguimento curto, medidas subjetivas; conflito profissional de um autor com setor nutracêutico declarado."
+        }
+      },
+      "interpretation": {
+        "proposed_before_finding": false,
+        "relevance_to_finding": "Indireta: formulação e população selecionadas, insônia em vez de horas habituais.",
+        "transport_to_HA_ASD_ADHD": "Não estabelecido",
+        "candidate_mechanism": "Não identificado por esta comparação",
+        "rival_explanations": [
+          "Diferenças de população, mensuração e ajuste",
+          "Confundimento ou seleção nas análises observacionais"
+        ],
+        "discriminating_prediction": "Reavaliar associação após harmonizar exposição, desfecho e covariáveis; usar dados temporais para direção",
+        "next_discriminating_test": "Replicação harmonizada em dados independentes; não agrupar efeitos incompatíveis"
+      }
+    }
+  ]
+}

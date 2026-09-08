@@ -184,6 +184,27 @@ class DiscoverySiteTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     build(self.root, self.root / "site")
 
+    def test_article_has_same_content_in_site_markdown_and_navigation(self):
+        path, _ = self.cycle()
+        (path.parent / "article.json").write_text(json.dumps({
+            "title": "Artigo de teste", "summary": "Resultados exploratórios",
+            "sections": [{"title": "Comparação", "paragraphs": ["<b>Não executar HTML</b>"],
+                          "table": {"headers": ["Medida", "Valor"], "rows": [["A", "1"]]},
+                          "links": [{"title": "Fonte", "url": "https://www.cdc.gov/"}]}]}))
+        build(self.root, self.root / "site", True)
+        destination = self.root / "site/cycles/cycle-001"
+        self.assertEqual((destination / "article.md").read_text(), (path.parent / "article.md").read_text())
+        body = (destination / "article.html").read_text()
+        self.assertIn("&lt;b&gt;", body)
+        self.assertNotIn("<b>", body)
+        self.assertIn("article.html", (destination / "index.html").read_text())
+        self.assertIn("article.html", (self.root / "site/index.html").read_text())
+        self.assertIn("article.md", (self.root / "README.md").read_text())
+        for html in (self.root / "site").rglob("*.html"):
+            parser = Links(); parser.feed(html.read_text())
+            for target in parser.targets:
+                self.assertTrue((html.parent / target).is_file(), (html, target))
+
 
 if __name__ == "__main__":
     unittest.main()

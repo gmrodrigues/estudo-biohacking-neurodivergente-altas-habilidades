@@ -23,6 +23,19 @@
       "title": "Objetivos e desenho",
       "sections": [
         {
+          "title": "Tese orientadora: capacidades encobertas e contexto",
+          "paragraphs": [
+            "Uma pergunta motivadora do projeto é se toda neurodivergência poderia representar altas habilidades prejudicadas por hábitos ou condições desfavoráveis. Essa é uma hipótese forte proposta, não um fato estabelecido. A formulação mais restrita investiga capacidades elevadas encobertas em alguns participantes e quanto o contexto modifica sua expressão.",
+            "Autismo e TDAH são condições do neurodesenvolvimento, não sinônimos de superdotação ou consequências estabelecidas de hábitos ruins. Melhorar funcionamento não prova a origem de uma condição. O estudo deve preservar alternativas, mensuração independente e resultados capazes de contrariar sua tese.",
+            "O ciclo 001 não mede capacidades elevadas nem identifica esses diagnósticos: não testa a tese. Rotina também pode ser afetada por sintomas, recursos e suporte; a pesquisa não atribui culpa individual."
+          ],
+          "links": [
+            {"title": "Proposições, alternativas e critérios de teste", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/FOUNDATIONAL_HYPOTHESIS.md"},
+            {"title": "NIMH: autismo e desenvolvimento", "url": "https://www.nimh.nih.gov/health/publications/autism-spectrum-disorder"},
+            {"title": "NIMH: TDAH", "url": "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know"}
+          ]
+        },
+        {
           "title": "Perguntas centrais",
           "items": [
             "Quais dimensões de sono, nutrição, atividade e contexto acompanham melhor funcionamento cognitivo, emocional e físico?",

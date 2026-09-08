@@ -52,6 +52,11 @@ plausibilidade mitocondrial não comprova benefício cognitivo/esportivo.
 
 ## Confrontar teoria e achado
 
+Para artigos voltados a decisões sobre suplementação, leia
+[comparação e decisão](references/comparison-and-decisions.md). Traduza achados
+em perguntas individuais mensuráveis, mantendo separadas magnitudes populacionais,
+resposta individual, necessidade nutricional e referências de segurança.
+
 Para cada relação, apresente mecanismo candidato, estudos que o sustentam,
 previsão discriminante e explicações rivais plausíveis: seleção, usuário saudável,
 causalidade reversa, medicação, sobreposição de medidas ou contexto. Registre se a

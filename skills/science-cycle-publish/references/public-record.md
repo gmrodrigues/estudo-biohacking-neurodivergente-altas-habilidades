@@ -12,6 +12,20 @@ Em cada ciclo mantenha `public-dossier.json` com `sections` e, quando necessári
 é documentação editorial posterior quando não houver registro anterior verificável.
 Os manifestos antigos continuam válidos, mas novos ciclos devem incluir o dossiê.
 
+## Artigos por ciclo
+
+Use `article.json` no diretório do ciclo, com `title`, `summary` e `sections`
+no mesmo formato editorial. O gerador cria `article.html` e `article.md` no site,
+inclui acesso no índice e na página do ciclo e, com `--update-readmes`, gera o
+Markdown no repositório e links nos READMEs. Edite o JSON como fonte única.
+
+O artigo interpreta resultados existentes: não o conte como novo ciclo empírico.
+Inclua público-alvo, comparação com estudos, particularidades/limites,
+quantificação e implicações para decisões. Notas de revisão do ciclo também devem
+aparecer no artigo antes dos resultados afetados. Mantenha fichas de comparação
+em `article-evidence.yaml` e marque seleção posterior aos resultados.
+Para suplementação, siga a referência de comparação e decisão da skill de síntese.
+
 ## Conteúdo que permite acompanhar a pesquisa
 
 - Objetivos: perguntas, construtos, comparadores, estratos pretendidos e limites

@@ -82,6 +82,28 @@ def study_navigation(pages, prefix=""):
         f"<a href='{prefix}{p['id']}.html'>{escape(p['title'])}</a>" for p in pages) + "</nav>"
 
 
+def article_markdown(article):
+    """Export the same editorial source used by the HTML article."""
+    lines = [f"# {text_field(article, 'title')}", "", text_field(article, "summary"), ""]
+    for section in article["sections"]:
+        lines += [f"## {section['title']}", ""]
+        for paragraph in section.get("paragraphs", []):
+            lines += [paragraph, ""]
+        for item in section.get("items", []):
+            lines += [f"- {item}"]
+        if section.get("table"):
+            table = section["table"]
+            def row(values):
+                return "| " + " | ".join(x.replace("|", "\\|") for x in values) + " |"
+            lines += [row(table["headers"]), row(["---"] * len(table["headers"]))]
+            lines += [row(values) for values in table["rows"]]
+        if section.get("links"):
+            lines += [""]
+        lines += [f"- [{link['title']}]({link['url']})" for link in section.get("links", [])]
+        lines += [""]
+    return "\n".join(lines)
+
+
 def load_study(root):
     path = root / "research/site/study.json"
     if not path.exists():
@@ -215,6 +237,23 @@ def build(root, output, write_readmes=False):
         target = output / "cycles" / cycle_id
         target.mkdir(parents=True)
         nav = ["<a href='../../index.html'>Todos os ciclos</a>"]
+        article_file = directory / "article.json"
+        article_link = ""
+        if article_file.exists():
+            article = json.loads(article_file.read_text(encoding="utf-8"))
+            article_body = study_navigation(study["pages"], "../../")
+            article_body += "<p><a href='index.html'>Resultados, gráficos e métodos completos do ciclo</a></p>"
+            article_body += f"<h1>{escape(text_field(article, 'title'))}</h1>"
+            article_body += f"<p>{escape(text_field(article, 'summary'))}</p>"
+            article_body += render_sections(article["sections"])
+            article_body += "<p><a href='article.md'>Baixar artigo em Markdown</a></p>"
+            (target / "article.html").write_text(page(article["title"], article_body), encoding="utf-8")
+            markdown = article_markdown(article)
+            (target / "article.md").write_text(markdown, encoding="utf-8")
+            if write_readmes:
+                (directory / "article.md").write_text(markdown, encoding="utf-8")
+            nav.append("<a href='article.html'>Ler artigo do ciclo</a>")
+            article_link = f"<p><a href='cycles/{cycle_id}/article.html'>Ler artigo: {escape(article['title'])}</a></p>"
         for neighbor, label in ((index - 1, "Ciclo anterior"), (index + 1, "Próximo ciclo")):
             if 0 <= neighbor < len(cycles):
                 other_id = cycles[neighbor][0]["id"]
@@ -232,6 +271,8 @@ def build(root, output, write_readmes=False):
                 "<div class='table-wrap'><table><thead><tr><th>Pergunta</th><th>Estimativa</th>"
                 "<th>Incerteza</th><th>Amostra</th><th>Interpretação</th></tr></thead><tbody>")
         readme = [f"## {cycle['title']}", "", cycle["summary"], "", f"População: {cycle['population']}"]
+        if article_file.exists():
+            readme += ["", "[Ler artigo do ciclo](article.md)"]
         if dossier.exists():
             if narrative.get("review_note"):
                 readme += ["", "> " + narrative["review_note"]]
@@ -262,8 +303,10 @@ def build(root, output, write_readmes=False):
         (target / "index.html").write_text(page(cycle["title"], body), encoding="utf-8")
         (target / "cycle.json").write_text(json.dumps(cycle, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         cards.append(f"<article><p>{escape(cycle['completed_at'])}</p><h2><a href='cycles/{cycle_id}/index.html'>"
-                     f"{escape(cycle['title'])}</a></h2><p>{escape(cycle['summary'])}</p></article>")
+                     f"{escape(cycle['title'])}</a></h2><p>{escape(cycle['summary'])}</p>{article_link}</article>")
         root_links.append(f"- [{cycle['title']}](research/discoveries/{cycle_id}/README.md) — {cycle['completed_at']}")
+        if article_file.exists():
+            root_links.append(f"- [Artigo: {article['title']}](research/discoveries/{cycle_id}/article.md)")
         if write_readmes:
             update_readme(directory / "README.md", "# Resultados do ciclo\n", "\n".join(readme))
     intro = "<h1>Resultados por ciclo</h1><p>Explore perguntas, estimativas, gráficos, fontes e limites de cada rodada.</p>"

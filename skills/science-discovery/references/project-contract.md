@@ -21,6 +21,15 @@ skill instalada no perfil do usuário.
 
 ## Construtos, pessoas e comparações
 
+Ao discutir a tese do projeto, leia
+[`FOUNDATIONAL_HYPOTHESIS.md`](../../../catalog/data-sources/FOUNDATIONAL_HYPOTHESIS.md).
+Distinga a proposta universal (toda neurodivergência seria HA encoberta) de
+hipóteses sobre alguns subgrupos e efeitos do contexto. Não a trate como fato nem
+reinterprete o ciclo 001 como seu teste. Mantenha critérios independentes de HA,
+alternativas e resultados que poderiam contrariar a tese. Melhora funcional não
+prova etiologia; dificuldades de rotina podem ser consequência de sintomas ou
+barreiras. Não atribua culpa ou condicione necessidades de suporte à presença de HA.
+
 O foco é HA com validação em ASD, ADHD, referência operacional NT e combinações
 isoladas, duplas e triplas. Leia `CORE_STUDY_DESIGN.md` quando houver comparação
 de grupos. `unknown`, `not_assessed`, `not_applicable` e ausência confirmada são

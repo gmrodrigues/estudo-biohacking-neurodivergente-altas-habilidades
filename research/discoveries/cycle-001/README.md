@@ -7,6 +7,8 @@ Primeiro ciclo exploratório com adultos da NHANES 2021–2023. Testa três fam�
 
 População: Adultos de 20–80 anos com dados completos nos módulos NHANES utilizados; grupos de superdotação, autismo e TDAH não foram identificados nesta rodada.
 
+[Ler artigo do ciclo](article.md)
+
 > Nota de revisão: os resultados de H2 foram calculados com sono ≤7 h versus >7 a ≤9 h, embora o registro e alguns rótulos originais digam <7 h versus 7–9 h. As estimativas abaixo são preservadas como execução original, com essa ressalva. Uma nova análise com a fronteira registrada permanece pendente. O alvo é uma soma modificada de oito itens sem sono, não o PHQ-8 convencional.
 
 [Métodos, decisões e fontes no site](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-001/index.html)

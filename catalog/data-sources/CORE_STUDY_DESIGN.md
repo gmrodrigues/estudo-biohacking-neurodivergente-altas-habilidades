@@ -6,6 +6,12 @@
 
 ## Objetivo
 
+A [tese orientadora e suas alternativas](FOUNDATIONAL_HYPOTHESIS.md) foram
+explicitadas após o ciclo 001: investigar capacidades elevadas potencialmente
+encobertas e modificação de funcionamento pelo contexto. A versão universal
+(toda neurodivergência seria HA prejudicada) permanece uma hipótese forte não
+demonstrada; não redefine grupos nem converte ausência de HA em HA presumida.
+
 Estudar altas habilidades como um perfil multidimensional e usar autismo e TDAH
 para testar quais achados são específicos de HA, compartilhados com outras formas
 de neurodivergência ou explicados por sintomas coexistentes. No sentido inverso,
