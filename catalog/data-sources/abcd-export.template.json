@@ -1,0 +1,35 @@
+{
+  "source": "ABCD",
+  "release": "7.0_candidate_not_ingested",
+  "mapping_status": "draft",
+  "missing_values": [
+    ""
+  ],
+  "keys": [
+    "participant_id",
+    "event"
+  ],
+  "roles": {
+    "capacity": [
+      "reasoning_score"
+    ],
+    "exposure": [
+      "sleep_measure"
+    ],
+    "outcome": [
+      "executive_score"
+    ],
+    "context": [
+      "age"
+    ],
+    "condition": [
+      "adhd_measure",
+      "autism_measure"
+    ]
+  },
+  "event_pair": [
+    "baseline",
+    "followup"
+  ],
+  "notes": "Canonical names are placeholders, not verified ABCD columns. Map reviewed codebook fields, normalize missing codes and choose an outcome independent of capacity before setting reviewed."
+}

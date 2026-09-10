@@ -5,6 +5,10 @@ ABCD 7.0/NBDC, requisitos HBN e campos públicos UK Biobank. A FAQ ABCD proíbe
 inserir dados em IA generativa: acesso individual não autoriza sua leitura por
 este assistente. Aqui, trabalhar com documentação pública e código sem microdados;
 a execução com dados exige fluxo compatível com o acordo.
+Esclarecimento operacional: download por ferramenta e execução local de script
+podem ser orquestrados sem inserir dados no modelo. Não é uma proibição geral
+de automação. O [fluxo ABCD](ABCD_LOCAL_WORKFLOW.md) mantém arquivos e relatórios
+locais e evita retorno de registros à conversa, condicionado ao acesso legítimo.
 Fonte: https://docs.abcdstudy.org/latest/info/faq.html
 As matrizes abaixo preservam a inspeção histórica de 07/09, não verificam o acesso
 individual atual.

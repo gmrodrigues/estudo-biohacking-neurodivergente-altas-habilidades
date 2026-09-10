@@ -117,6 +117,11 @@ seleção observável.
 
 ## Próxima rodada: fundação analítica ABCD
 
+Preparação seguinte entregue: [fluxo ABCD local](catalog/data-sources/ABCD_LOCAL_WORKFLOW.md),
+mapa de tabelas e scripts/audit_analytic_export.py. Quatro testes sintéticos passaram.
+Template permanece draft até revisão dos campos da release; nenhum microdado
+ABCD foi baixado. Pergunta sobre DUC/arquivos autorizados enviada ao pesquisador.
+
 E1 documental iniciada: [triagem de fontes](catalog/data-sources/SOURCE_FIT_AUDIT.md).
 Achados: ABCD 7.0/NBDC; autismo com seleção restrita/relato parental; dados ABCD
 não podem ser inseridos em IA generativa. UKB tem campos confirmados, N conjunto

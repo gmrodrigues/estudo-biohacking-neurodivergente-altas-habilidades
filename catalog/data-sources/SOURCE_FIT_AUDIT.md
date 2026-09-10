@@ -58,6 +58,11 @@ Fontes: [6155](https://biobank.ndph.ox.ac.uk/ukb/field.cgi?id=6155),
 
 ## Próximas aquisições com propósito definido
 
+Preparação executada: [fluxo ABCD e mapa tabular](ABCD_LOCAL_WORKFLOW.md), com
+auditor genérico testado em dados sintéticos. Download/execução local automatizados
+não equivalem por si só à inserção de dados em IA generativa; o fluxo evita
+retornar registros ao modelo. DUC, campos completos e microdados seguem pendentes.
+
 1. ABCD: dicionário de uma release fixa e mapeamento de capacidade, hábito,
    desfecho e condição; preparar execução externa compatível com o acordo.
 2. HBN: dicionário público/termos; avaliar se resolve a limitação de autismo do

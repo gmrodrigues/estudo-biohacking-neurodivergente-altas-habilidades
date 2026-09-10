@@ -12,6 +12,7 @@ temporalidade e as perdas permitem pequenas provas de conceito reprodutíveis.
 
 ## Comece aqui
 
+- [ABCD: mapa tabular e auditoria por script local](catalog/data-sources/ABCD_LOCAL_WORKFLOW.md)
 - [Triagem executada: adequação das fontes ao objetivo](catalog/data-sources/SOURCE_FIT_AUDIT.md)
 - [Planejamento da fase 1: base ampla e validada por POCs](catalog/data-sources/PHASE_1_PLAN.md)
 - [Programa científico e regras de inferência](catalog/PROGRAM.md)
