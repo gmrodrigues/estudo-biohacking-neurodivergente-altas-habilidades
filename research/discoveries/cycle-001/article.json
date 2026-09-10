@@ -115,7 +115,7 @@
       "paragraphs": [
         "Correção analítica de 2026-09-09: H2 foi reexecutada conforme o protocolo (<7 h, referência 7–9 h inclusive, >9 h). 686 participantes com exatamente 7 h passaram à referência, mantendo n=4.522. Os oito testes FDR foram recalculados. A comparação com a execução original está no dossiê do ciclo e no adendo; H1, H3 e previsão não mudaram. O alvo é o escore de sintomas sem sono (0–24), não o PHQ-8 convencional.",
         "O escore de sintomas é uma soma de oito itens do PHQ-9, excluindo o item de sono, de 0 a 24. Não é o PHQ-8 convencional e não herda seus cortes diagnósticos. Todos os intervalos abaixo são IC95%; q é o valor ajustado por múltiplos testes.",
-        "Auditoria posterior (ciclo 002): coeficientes e erros-padrão foram reproduzidos com svy no desenho completo. Os p/q e IC deste ciclo usam 15 graus de liberdade; com o padrão residual de svy (piso de 1), nenhum dos oito testes tem q<0,05. A concordância da variância não resolve essa sensibilidade ou a seleção por casos completos."
+        "Auditorias posteriores: o ciclo 002 reproduziu coeficientes e erros-padrão com svy. O ciclo 004 fixou 15 graus do desenho como convenção principal segundo o NCHS e preservou 1 grau residual como sensibilidade conservadora. A reponderação pela inclusão observável alterou H1/H2 em no máximo 3,3%; isso não elimina seleção não observada."
       ],
       "table": {
         "headers": [
@@ -369,7 +369,7 @@
     {
       "title": "O próximo ciclo deve testar as explicações, não apenas repetir os números",
       "paragraphs": [
-        "Após a correção de H2, o ciclo 002 auditou perdas e pesos e reproduziu a variância com svy. Encontrou dependência dos p-valores da convenção de graus de liberdade e seleção de casos completos. O ciclo 003 esclareceu os estados de ausência de magnésio por produto e antiácido. As próximas especificações devem justificar complexidade e inferência e avaliar seleção antes de testar novas formas das relações.",
+        "Após a correção de H2, o ciclo 002 auditou perdas, pesos e variância; o ciclo 003 esclareceu os estados de ausência de magnésio; e o ciclo 004 registrou a convenção de 15 graus do desenho e encontrou estabilidade de H1/H2 sob reponderação pela seleção observável. As próximas especificações devem tratar formas não lineares e buscar validação independente, preservando os limites por seleção não observada.",
         "A comparação com a literatura sugere testes concretos: harmonizar desfechos e ajustes com estudos NHANES anteriores; considerar consumo habitual e horário de cafeína; separar inadequação nutricional de dose suplementar; e validar previsão em outra onda ou com separação por unidades amostrais. Comparações de métodos harmonizados serão mais informativas do que confrontar p-valores.",
         "Para chegar a HA, autismo e TDAH, serão necessárias medidas cognitivas e diagnósticas apropriadas, além de amostras que sustentem comparações isoladas, duplas e triplas. Para desempenho em calistenia ou artes marciais, serão necessárias medidas físicas específicas. Este ciclo estabelece perguntas e um ponto de partida reproduzível, ainda distante de uma prescrição individual."
       ]

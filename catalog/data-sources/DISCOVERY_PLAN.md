@@ -99,3 +99,12 @@ usuários de qualquer suplemento com DSQTMAGN ausente; somente 6 tinham produto
 rotulado com magnésio e total ausente. A próxima especificação de H3 deve ser
 registrada antes dos efeitos e separar quantidade calculada, zero sustentado,
 produto não identificado, cálculo ausente e antiácido.
+
+### Atualização de 2026-09-10: ciclo 004
+
+A [auditoria de inferência e seleção](../../research/discoveries/cycle-004/data-audit.md)
+registrou 15 graus do desenho como convenção principal, conforme a definição do
+NCHS, mantendo 1 grau residual como sensibilidade conservadora. Dentro da
+população elegível, a retenção foi 87,8%, 74,6% e 87,4%. A reponderação pela
+inclusão observável alterou H1/H2 em no máximo 3,3%; H3 permaneceu inconclusiva.
+Seleção não observada, não linearidade e validação independente continuam abertas.

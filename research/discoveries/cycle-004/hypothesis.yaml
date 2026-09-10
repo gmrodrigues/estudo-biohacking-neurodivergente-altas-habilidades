@@ -1,0 +1,57 @@
+schema_version: 1
+id: cycle-004-selection-sensitivity
+status: registered_local_after_cycle001_results
+question: Os contrastes principais permanecem semelhantes após reponderar casos completos pela inclusão observável?
+created_at: "2026-09-10"
+data_already_inspected:
+  - cycle-001 coefficients and significance
+  - cycle-002 selection counts and degrees-of-freedom sensitivity
+  - cycle-003 magnesium measurement states
+external_registration: none
+population:
+  eligibility: NHANES 2021-2023, 20-80 anos, junções da hipótese, peso do componente positivo e desenho observado
+  age_range: [20, 80]
+  group_measurement: diagnostic groups not assessed
+  comparison_plan: [complete-case reference, inverse-probability weighted complete cases, p99-truncated sensitivity]
+data:
+  sources_and_versions: [NHANES August 2021-August 2023]
+  audit_path: research/discoveries/cycle-002/data-audit.md
+  exposure_fields: [DR1TCAFF, SLD012, PAD680, DR1TMAGN, DSQTMAGN]
+  outcome_fields: [SLD012, modified symptom score excluding DPQ030]
+  time_windows: cross-sectional; one-day dietary recall, usual weekday sleep, two-week symptoms, 30-day supplements
+estimand:
+  type: adjusted cross-sectional association under observable response reweighting
+  exposure_contrast: same eight contrasts as cycle 001
+  comparator: original complete-case estimates
+  outcome_and_unit: hours of sleep or points in modified symptom score
+  predicted_direction_or_range: no directional prediction for coefficient changes
+  smallest_effect_of_interest: none; report continuous coefficient changes and intervals
+  identification_limits: [unmeasured selection, exposure and outcome missingness, cross-sectional temporality]
+causal_structure:
+  dag: selection sensitivity only; no causal estimand identified
+  confounders: [age, sex, race_ethnicity, education, income, energy where registered]
+  mediators: []
+  effect_modifiers: [age only in registered H1 interaction]
+analysis:
+  primary_model: registered cycle-001 models with inverse-probability-of-complete-case weights
+  sampling_design: NHANES component weight, strata and PSU; primary df equals represented PSU minus strata
+  missing_data_strategy: response propensity from age, age squared, sex, race_ethnicity and stratum; inverse probability weighting
+  multiplicity_family: eight frozen primary contrasts
+  multiplicity_method: Benjamini-Hochberg
+  uncertainty_method: Taylor linearization treating estimated response weights as fixed; t with design df
+  sensitivity_analyses: [untruncated response weights, response weights truncated at p99, residual df from svy retained as prior sensitivity]
+  falsification_rule: large coefficient movement or poor propensity overlap weakens robustness to observed selection
+  replication_plan: independent NHANES wave or harmonized external dataset
+  evidence_selection_protocol: research/discoveries/cycle-004/protocol.md
+execution:
+  state: executed
+  command: MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-004/run_analysis.py
+  input_hashes:
+    DEMO_L.xpt: ca4374a158b493b8b0163e1388da21d57a18d1b9cecff2aa4e2fa2bec494fe23
+    DPQ_L.xpt: 25605a02685035fe997477b31a0991cca2776b0f72f24a8e61ac5b018456304b
+    DR1TOT_L.xpt: 73a3097aab64000f9c1d138367363ca605968b691e349981132bd6032ca6c9ef
+    DSQTOT_L.xpt: 8ee3e55578f56918a190100bb321a0b580f824ca3cc439901f2fd707dbe695f8
+    PAQ_L.xpt: de34acfed4523f10f52bea06e64ed33c8db973cb38d3539eeceb2b68039248c8
+    SLQ_L.xpt: 918c3258b2f466ac1cae55ea45330c736dbdc573ee4dc72306e3d2b222764741
+  code_revision: run_analysis.py sha256=1727e28af384636a8901bae6fc345fa77f1151f846cb1c6b310310a660471399
+  results_path: research/discoveries/cycle-004/results.json

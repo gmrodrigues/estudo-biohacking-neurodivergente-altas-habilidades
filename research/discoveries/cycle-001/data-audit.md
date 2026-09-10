@@ -40,6 +40,10 @@ Sono curto <7 h (n=943), referência 7–9 h inclusive (n=3.108), longo >9 h (n=
 
 ## Auditoria posterior do ciclo 002
 
-Auditoria posterior (ciclo 002): coeficientes e erros-padrão foram reproduzidos com svy no desenho completo. Os p/q e IC deste ciclo usam 15 graus de liberdade; com o padrão residual de svy (piso de 1), nenhum dos oito testes tem q<0,05. A concordância da variância não resolve essa sensibilidade ou a seleção por casos completos.
+Auditorias posteriores: o ciclo 002 reproduziu coeficientes e erros-padrão com
+svy no desenho completo. O [ciclo 004](../cycle-004/data-audit.md) registrou 15
+graus do desenho como convenção principal segundo o NCHS e manteve 1 grau
+residual como sensibilidade conservadora. A reponderação pela inclusão observável
+alterou H1/H2 em no máximo 3,3%, sem resolver seleção não observada.
 
 [Relatório completo](../cycle-002/data-audit.md).

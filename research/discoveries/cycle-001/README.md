@@ -9,7 +9,7 @@ População: Adultos de 20–80 anos com dados completos nos módulos NHANES uti
 
 [Ler artigo do ciclo](article.md)
 
-> Correção analítica de 2026-09-09: H2 foi reexecutada conforme o protocolo (<7 h, referência 7–9 h inclusive, >9 h). 686 participantes com exatamente 7 h passaram à referência, mantendo n=4.522. Os oito testes FDR foram recalculados. A comparação com a execução original está no dossiê abaixo e no adendo; H1, H3 e previsão não mudaram. O alvo é o escore de sintomas sem sono (0–24), não o PHQ-8 convencional. Auditoria posterior (ciclo 002): coeficientes e erros-padrão foram reproduzidos com svy no desenho completo. Os p/q e IC deste ciclo usam 15 graus de liberdade; com o padrão residual de svy (piso de 1), nenhum dos oito testes tem q<0,05. A concordância da variância não resolve essa sensibilidade ou a seleção por casos completos.
+> Correção analítica de 2026-09-09: H2 foi reexecutada conforme o protocolo (<7 h, referência 7–9 h inclusive, >9 h). 686 participantes com exatamente 7 h passaram à referência, mantendo n=4.522. Os oito testes FDR foram recalculados. A comparação com a execução original está no dossiê abaixo e no adendo; H1, H3 e previsão não mudaram. O alvo é o escore de sintomas sem sono (0–24), não o PHQ-8 convencional. Auditorias posteriores: o ciclo 002 reproduziu coeficientes e erros-padrão; o ciclo 003 corrigiu a semântica da ausência de magnésio; o ciclo 004 fixou 15 graus do desenho como convenção principal segundo o NCHS e encontrou estabilidade de H1/H2 sob reponderação pela seleção observável.
 
 [Métodos, decisões e fontes no site](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-001/index.html)
 

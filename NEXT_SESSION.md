@@ -95,13 +95,32 @@ indisponível; PNGs são conferidos diretamente e links do build são verificado
   1.613 participantes, DSQIMAGN × dias/30 reconstrói DSQTMAGN a até 0,05 mg.
 - Não houve imputação, novo modelo de sono, conclusão causal ou recomendação.
 
+## Ciclo 004 concluído localmente em 2026-09-10
+
+[Auditoria de inferência e seleção](research/discoveries/cycle-004/data-audit.md),
+[protocolo](research/discoveries/cycle-004/protocol.md),
+[hipótese registrada](research/discoveries/cycle-004/hypothesis.yaml) e
+[agregados](research/discoveries/cycle-004/results.json).
+
+- A convenção principal foi fixada em 15 graus do desenho, conforme o NCHS:
+  30 PSUs menos 15 estratos. O padrão residual de 1 grau permanece sensibilidade
+  conservadora; nenhum termo foi retirado ou selecionado por significância.
+- O denominador elegível foi refinado para 20–80 anos, peso do componente
+  positivo e desenho observado. Retenção: H1 87,8%, H2 74,6%, H3 87,4%.
+- A reponderação por probabilidade observável de caso completo reduziu o maior
+  desequilíbrio padronizado de 0,026/0,084/0,027 para menos de 0,003.
+- H1/H2 mudaram no máximo 3,3% em magnitude. H3 teve mudanças absolutas pequenas
+  e continuou inconclusiva. A interação cafeína×idade ficou em q=0,05088.
+- A análise não corrige seleção não observada e trata as propensões estimadas
+  como fixas nos intervalos.
+
 ## Próxima rodada
 
-1. Justificar complexidade e graus de liberdade, registrando a convenção antes
-   de novos ajustes; não reduzir covariáveis buscando significância.
-2. Registrar um adendo antes de modificar H3, separando zero sustentado,
+1. Registrar um adendo antes de modificar H3, separando zero sustentado,
    quantidade calculada, produto não identificado, cálculo ausente e antiácido.
-3. Registrar sensibilidades à seleção/dados ausentes e formas não lineares.
+2. Registrar formas não lineares sem reutilizar os resultados para escolher nós
+   ou termos; manter a família de testes explícita.
+3. Avaliar seleção não observada e incorporar incerteza dos pesos de resposta.
 4. Validar previsão por PSU/onda com intervalos; não reutilizar o holdout para
    selecionar especificações. Grupos diagnósticos continuam not_assessed.
 
@@ -144,6 +163,8 @@ MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python 
 MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-001/audit_h2_amendment.py
 MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-003/run_audit.py
 PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-003/render_audit.py
+MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-004/run_analysis.py
+PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-004/render_analysis.py
 MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python -m unittest discover -s tests -v
 PIPENV_VENV_IN_PROJECT=1 pipenv run python scripts/build_discovery_site.py --output /tmp/science-next-site --update-readmes
 ```

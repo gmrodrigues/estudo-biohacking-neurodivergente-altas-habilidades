@@ -12,8 +12,8 @@
       "title": "Estado do trabalho",
       "items": [
         "Executados: inventário e ciclo 001 corrigido; ciclo 002 com perdas, pesos e comparação independente de erros-padrão.",
-        "Achado de auditoria: variância reproduzida, mas inferência depende dos graus de liberdade; casos completos retêm 66–71% dos adultos após junções.",
-        "Próximo: justificar complexidade/inferência e registrar sensibilidades à seleção, formas não lineares e validação independente. A ausência de magnésio foi auditada no ciclo 003."
+        "Achado de auditoria: 15 graus do desenho foram registrados como convenção principal; reponderar pela seleção observável alterou H1/H2 em no máximo 3,3%.",
+        "Próximo: registrar formas não lineares, uma nova especificação de H3 e validação independente. Seleção não observada permanece como limite."
       ]
     }
   ],
@@ -221,7 +221,7 @@
             ]
           },
           "paragraphs": [
-            "A auditoria do ciclo 002 reproduziu os erros-padrão, mas constatou sensibilidade dos p/q à escolha de graus de liberdade. As interpretações dos testes do ciclo 001 são condicionais aos 15 graus usados ali."
+            "A auditoria do ciclo 002 reproduziu os erros-padrão e mostrou a sensibilidade dos p/q. O ciclo 004 registrou 15 graus do desenho como convenção principal conforme o NCHS, preservou 1 grau residual como sensibilidade e encontrou estabilidade de H1/H2 sob reponderação pela seleção observável."
           ]
         },
         {
@@ -477,6 +477,11 @@
                 "Ciclo 003 — 09/09/2026",
                 "DSQIDS_L, DSPI/DSII, antiácidos, reconstrução de totais e estados de ausência",
                 "Executado localmente; interpretação do indicador legado de H3 corrigida"
+              ],
+              [
+                "Ciclo 004 — 10/09/2026",
+                "Graus do desenho, elegibilidade e reponderação por probabilidade de caso completo",
+                "Executado localmente; H1/H2 estáveis à seleção observável, H3 inconclusiva"
               ]
             ]
           }
@@ -484,9 +489,8 @@
         {
           "title": "Pendências científicas",
           "items": [
-            "Justificar graus de liberdade e complexidade antes de novas regressões; distinguir o padrão svy do uso de 15 graus do desenho.",
             "Registrar nova especificação de H3 separando zero sustentado, quantidade calculada, produto não identificado, cálculo ausente e antiácido.",
-            "Avaliar seleção por casos completos e possíveis sensibilidades a dados ausentes.",
+            "Avaliar seleção não observada e métodos que incorporem a incerteza dos pesos de resposta.",
             "Registrar formas não lineares e validação por PSU/onda antes de executar novos testes.",
             "Preservar comparações diagnósticas como não avaliadas até obter medidas reais."
           ]
