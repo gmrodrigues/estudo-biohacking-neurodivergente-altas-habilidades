@@ -26,6 +26,10 @@ meça tempo e intervenção, não apenas de mais ajustes no mesmo corte transver
 
 ## Porta de entrada: fundação analítica antes de comparações
 
+O [plano da fase 1](../../catalog/data-sources/PHASE_1_PLAN.md) detalha E1–E6,
+POC-01 a POC-06 e critérios de encerramento. Sua publicação é planejamento;
+não representa execução ou aprovação empírica das bases.
+
 Esta fase não começa por uma análise de efeito. Ela começa quando uma fonte
 elegível tiver uma base analítica mínima viável: chaves participante-onda,
 medidas documentadas, temporalidade, perdas e pequenas provas de conceito. Mais

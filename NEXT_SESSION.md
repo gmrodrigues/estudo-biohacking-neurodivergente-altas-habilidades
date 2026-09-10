@@ -117,6 +117,11 @@ seleção observável.
 
 ## Próxima rodada: fundação analítica ABCD
 
+Executar E1 do [plano da fase 1](catalog/data-sources/PHASE_1_PLAN.md): matriz
+pergunta × campo × fonte × onda, seguida de aquisição e auditoria por fonte.
+O plano inclui seis POCs, precisão por pergunta e alternativas durante pendência
+de acesso; nenhuma dessas novas POCs foi executada nesta etapa de planejamento.
+
 A prioridade deixou de ser estimar mais associações em NHANES. Antes de qualquer
 modelo de efeito, montar a base analítica participante-onda e executar as quatro
 provas de conceito descritas em

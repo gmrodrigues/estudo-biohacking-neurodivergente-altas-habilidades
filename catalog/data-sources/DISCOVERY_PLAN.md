@@ -1,5 +1,8 @@
 # Plano de descobertas e skills
 
+Plano vigente da primeira fase: [base ampla e validada por POCs](PHASE_1_PLAN.md).
+A sequência NHANES abaixo é histórica e não define a prioridade atual.
+
 Data de origem: 2026-09-07. Estado atual: os ciclos 001–004 foram executados;
 este plano preserva a ordem inicial e o [mapa de estado](../../research/discoveries/STATUS_AND_STALENESS_MAP.md)
 define a sequência vigente até conclusões mais fortes.

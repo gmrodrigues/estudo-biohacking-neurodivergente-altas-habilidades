@@ -6,6 +6,8 @@ capacidade contínua e perfil neurocognitivo.
 
 ## Ordem de execução
 
+O [plano da fase 1](PHASE_1_PLAN.md) define entregas e critérios de suficiência.
+
 1. [Fundação analítica e provas de conceito](ANALYTIC_FOUNDATION.md).
 2. [Primeiro ciclo longitudinal ABCD](ABCD_FIRST_CYCLE.md).
 3. [Dicionário de construtos e harmonização](CONSTRUCT_DICTIONARY.md).

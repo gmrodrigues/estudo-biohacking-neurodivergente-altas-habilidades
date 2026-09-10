@@ -1,5 +1,8 @@
 # Fase inicial: base analítica e provas de conceito
 
+Plano operacional vigente: [Fase 1 — base ampla e POCs](PHASE_1_PLAN.md).
+O plano define etapas, cobertura, precisão, seis POCs e critérios de encerramento.
+
 Estado: `blocked_by_access` para microdados ABCD. O protocolo, os critérios e a
 auditoria de metadados podem ser concluídos agora; esta fase não estima benefício
 de hábito ou suplemento.
@@ -29,8 +32,9 @@ domínios estejam completos para toda a amostra.
 | POC-04 | Hábito em `t` pode ligar-se a função executiva em `t+1`? | janela, ordem temporal, ajuste mínimo e retenção verificados | exposição e desfecho ocupam a mesma janela |
 
 POC-01 a POC-03 são auditorias. POC-04 pode estimar associação longitudinal
-pré-registrada. Resultado nulo encerra a hipótese simples; não autoriza procurar
-interações até obter significância.
+pré-registrada. Resultado não significativo pode ser inconclusivo; descartar um
+efeito relevante exige precisão suficiente. Não procurar interações até obter
+significância.
 
 ## Esquema mínimo
 

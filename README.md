@@ -12,6 +12,7 @@ temporalidade e as perdas permitem pequenas provas de conceito reprodutíveis.
 
 ## Comece aqui
 
+- [Planejamento da fase 1: base ampla e validada por POCs](catalog/data-sources/PHASE_1_PLAN.md)
 - [Programa científico e regras de inferência](catalog/PROGRAM.md)
 - [Fase inicial: base analítica e provas de conceito](catalog/data-sources/ANALYTIC_FOUNDATION.md)
 - [Primeiro ciclo ABCD](catalog/data-sources/ABCD_FIRST_CYCLE.md)
