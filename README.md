@@ -1,21 +1,40 @@
-# Biohacking, neurodivergência e altas habilidades
+# Saúde cognitiva de precisão
 
-Projeto de pesquisa sobre relações entre cognição, sono, alimentação,
-suplementação, atividade física e contexto de vida, com foco em altas
-habilidades/superdotação e comparações com autismo, TDAH e pessoas neurotípicas
-quando essas características forem efetivamente avaliadas.
+Este repositório investiga como capacidade cognitiva, perfis neurocognitivos,
+sono, atividade, alimentação, biomarcadores e suplementação se relacionam ao
+funcionamento ao longo do tempo. Capacidade é modelada como contínuo: um percentil
+cognitivo elevado não é diagnóstico, e um diagnóstico não descreve sozinho a
+arquitetura cognitiva de uma pessoa.
 
-O objetivo é construir modelos multidimensionais, testar hipóteses e desenvolver
-preditores de desfechos que funcionem mesmo sem um diagnóstico conhecido. As
-análises distinguem associação, previsão e efeito causal, considerando também
-excepcionalidades isoladas, duplas e triplas.
+A primeira fase é montar e testar uma base analítica mínima viável. Antes de
+modelos de efeito, ela precisa demonstrar que as medidas, a elegibilidade, a
+temporalidade e as perdas permitem pequenas provas de conceito reprodutíveis.
+
+## Comece aqui
+
+- [Programa científico e regras de inferência](catalog/PROGRAM.md)
+- [Fase inicial: base analítica e provas de conceito](catalog/data-sources/ANALYTIC_FOUNDATION.md)
+- [Primeiro ciclo ABCD](catalog/data-sources/ABCD_FIRST_CYCLE.md)
+- [Dicionário de construtos](catalog/data-sources/CONSTRUCT_DICTIONARY.md)
+- [Mapa de fontes, amplitude e acesso](catalog/data-sources/DATA_MODEL_AND_SAMPLE_CAPACITY.md)
+- [Estado e mapa de desatualização](research/discoveries/STATUS_AND_STALENESS_MAP.md)
+
+## Linhas do programa
+
+| Linha | Papel | Estado atual |
+|---|---|---|
+| ABCD | Base longitudinal inicial: cognição, sintomas, sono, atividade e contexto | Acesso individual pendente; auditoria de metadados e especificação pronta |
+| Healthy Brain Network | Replicação transdiagnóstica e perfis 2e | Avaliar versão, termos e cobertura real |
+| UK Biobank | Adultos: dieta, suplementos, biomarcadores e cognição | Dossiê de acesso antes de qualquer estimativa |
+| NHANES | Linha de apoio para mensuração nutricional e biomarcadores | Quatro ciclos legados, sem HA/TDAH/autismo medidos |
+| Terman e SMPY | Validação conceitual de capacidade e realização | Fontes históricas; não estimam suplementação contemporânea |
 
 <!-- discovery-cycles:start -->
-## Resultados
+## Linha empírica legada: NHANES
 
 [Explorar gráficos e ciclos no site](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/)
 
-[Caminho até conclusões](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/conclusoes.html) · [Objetivos e desenho](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/objetivos.html) · [Ciclos e hipóteses](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/planejamento.html) · [Bases e evidências](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/fontes.html) · [Progresso e decisões](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/progresso.html)
+[Programa e fase inicial](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/programa.html) · [Caminho até conclusões](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/conclusoes.html) · [Métodos e salvaguardas](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/objetivos.html) · [Ciclos e hipóteses](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/planejamento.html) · [Fontes e linhas de apoio](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/fontes.html) · [Progresso e decisões](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/progresso.html)
 
 - [Inferência e seleção: estabilidade dos resultados sob reponderação](research/discoveries/cycle-004/README.md) — 2026-09-10
 - [Magnésio por produto: o que a ausência em DSQTMAGN realmente significa](research/discoveries/cycle-003/README.md) — 2026-09-09
@@ -28,77 +47,24 @@ excepcionalidades isoladas, duplas e triplas.
 Instale as dependências com `PIPENV_VENV_IN_PROJECT=1 pipenv sync --dev`.
 <!-- discovery-cycles:end -->
 
-## Métodos e dados
+## Regras científicas
 
-- [Catálogo e acesso às fontes](catalog/data-sources/README.md).
-- [Viabilidade e dados já inspecionados](catalog/data-sources/INITIAL_FEASIBILITY_ANALYSIS.md).
-- [Metodologia multidimensional e preditiva](catalog/data-sources/MULTIDIMENSIONAL_HYPOTHESIS_PREDICTION_METHODOLOGY.md).
-- [Desenho dos grupos e comparações](catalog/data-sources/CORE_STUDY_DESIGN.md).
-- [Estratificação demográfica e contexto de vida](catalog/data-sources/STRATIFICATION_MODEL.md).
-- [Hipóteses de suplementação](catalog/data-sources/SUPPLEMENTATION_HYPOTHESES.md).
-- [Caminho até as conclusões e mapa de atualização](research/discoveries/STATUS_AND_STALENESS_MAP.md).
-- [Arquitetura de estudos paralelos](catalog/data-sources/NEURODIVERSITY_STUDY_ARCHITECTURE.md) e [auditoria de dados para HA](catalog/data-sources/HIGH_ABILITY_DATA_AUDIT.md).
-- [Auditoria de bases abertas para neurodesenvolvimento](catalog/data-sources/OPEN_NEURODEVELOPMENT_DATA_AUDIT.md).
-- [Modelo de dados e capacidade amostral das fontes](catalog/data-sources/DATA_MODEL_AND_SAMPLE_CAPACITY.md).
-- [Modelo de dados e capacidade para suplementação e hábitos](catalog/data-sources/SUPPLEMENT_HABITS_DATA_CAPACITY.md).
-- [Prioridade imediata: fase HA, TDAH e autismo](catalog/data-sources/HA_NEURODEVELOPMENT_PRIORITY.md).
-
-Os insumos públicos locais incluem componentes do NHANES 2021–2023 e registros
-do ClinicalTrials.gov. O NHANES selecionado permite estudar relações em adultos,
-mas não identifica adequadamente altas habilidades. Registros de ensaios não
-equivalem, por si só, a evidência de eficácia. Esses limites orientam quais
-perguntas podem ser respondidas em cada ciclo.
+1. Associação de nutriente ou hábito não recomenda suplementação. Uma hipótese de
+   consolidação de hábito requer acompanhamento ou intervenção registrados.
+2. Clusters e perfis latentes são descrições que exigem estabilidade e validação;
+   eles não criam diagnósticos.
+3. Bases independentes não são unidas por semelhança. A comparação é uma síntese
+   de construtos, estimandos, incerteza e limites.
+4. Resultados sobre dupla excepcionalidade exigem medidas independentes de
+   capacidade, TDAH e autismo na mesma coorte.
 
 ## Executar
 
-Requisitos: Python 3.14 e Pipenv. Execute os comandos na raiz do repositório.
-Todas as dependências e execuções Python são gerenciadas pelo Pipenv.
-
 ```bash
 PIPENV_VENV_IN_PROJECT=1 pipenv sync --dev
-```
-
-Reproduzir o perfil descritivo dos dados NHANES locais:
-
-```bash
-PIPENV_VENV_IN_PROJECT=1 pipenv run python catalog/data-sources/analyze_nhanes.py
-```
-
-Verificar as ferramentas de publicação:
-
-```bash
 PIPENV_VENV_IN_PROJECT=1 pipenv run python -m unittest discover -s tests -v
+PIPENV_VENV_IN_PROJECT=1 pipenv run python scripts/build_discovery_site.py --output /tmp/science-site --update-readmes
 ```
 
-## Ciclos e publicação
-
-As análises de cada ciclo ficam em `research/discoveries/<cycle-id>/`, com
-manifesto `cycle.json`, relatório e gráficos. O
-[contrato de publicação](skills/science-cycle-publish/references/cycle-format.md)
-define os campos e critérios para concluir um ciclo.
-
-Para gerar o site e atualizar a seção de resultados deste README, use um
-diretório de saída vazio:
-
-```bash
-PIPENV_VENV_IN_PROJECT=1 pipenv run python scripts/build_discovery_site.py --output _site --update-readmes
-```
-
-Se `_site` já contiver um build, escolha outra pasta vazia. O
-[workflow de publicação](.github/workflows/discovery-pages.yml) utiliza GitHub
-Actions e requer Pages habilitado no repositório. Cada página terá navegação
-entre ciclos, gráficos e dados agregados. Rascunhos não são publicados.
-
-## Skills do estudo
-
-| Skill | Uso |
-|---|---|
-| [science-discovery](skills/science-discovery/SKILL.md) | conduzir uma rodada de descobertas |
-| [science-data-audit](skills/science-data-audit/SKILL.md) | verificar cobertura e validade dos dados |
-| [science-hypothesis-test](skills/science-hypothesis-test/SKILL.md) | registrar e testar hipóteses |
-| [science-predictive-model](skills/science-predictive-model/SKILL.md) | prever desfechos sem diagnóstico conhecido |
-| [science-evidence-synthesis](skills/science-evidence-synthesis/SKILL.md) | confrontar achados com estudos e teorias |
-| [science-cycle-publish](skills/science-cycle-publish/SKILL.md) | gerar gráficos, documentação e páginas por ciclo |
-
-Para iniciar a primeira rodada no Codex com as skills instaladas:
-“Use `$science-discovery` para investigar cafeína e sono, começando pela auditoria.”
+Dados individuais ABCD, HBN e UK Biobank só são acessados pelos canais legítimos
+de cada fonte. O repositório não contorna credenciais nem publica microdados.

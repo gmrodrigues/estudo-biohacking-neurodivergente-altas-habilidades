@@ -4,20 +4,74 @@
     {
       "title": "O que este estudo procura entender",
       "paragraphs": [
-        "Investigar como cognição, sono, nutrição, suplementação, atividade física e contexto de vida se relacionam com funcionamento e bem-estar, com foco em altas habilidades/superdotação (HA). Autismo, TDAH, suas combinações e uma referência neurotípica explicitamente avaliada fazem parte do desenho comparativo.",
-        "A primeira rodada usa dados populacionais de adultos sem identificação desses grupos. Ela testa a viabilidade de perguntas e de previsão sem diagnóstico; ainda não produz conclusões específicas para HA. O planejamento, as fontes e o registro das decisões estão nas páginas de navegação."
+        "Investigar como capacidade cognitiva contínua, perfis neurocognitivos, sono, atividade, nutrição, biomarcadores e contexto se relacionam com funcionamento ao longo do tempo. Alta capacidade não é tratada como diagnóstico, e diagnósticos não resumem a arquitetura cognitiva individual.",
+        "A fase inicial monta e testa uma base analítica mínima viável. Antes de modelos de efeito, ela audita medidas, elegibilidade, ondas, perdas e pequenas provas de conceito. ABCD é a primeira coorte longitudinal candidata; os ciclos NHANES permanecem como linha nutricional de apoio e não medem HA, TDAH ou autismo."
       ]
     },
     {
       "title": "Estado do trabalho",
       "items": [
-        "Executados: inventário e ciclo 001 corrigido; ciclo 002 com perdas, pesos e comparação independente de erros-padrão.",
-        "Achado de auditoria: 15 graus do desenho foram registrados como convenção principal; reponderar pela seleção observável alterou H1/H2 em no máximo 3,3%.",
-        "Prioridade imediata: iniciar auditorias paralelas de HA/capacidade, TDAH e autismo em fontes abertas adequadas a cada frente; HBN e ABCD/NDA seguem por termos e acesso legítimo. H3, não linearidade e validação NHANES seguem como manutenção metodológica."
+        "Fundação inicial: protocolo para uma tabela participante-onda, dicionário de construtos e quatro provas de conceito para cobertura, temporalidade e perfis sem rótulos automáticos.",
+        "ABCD é a primeira entrada longitudinal; HBN, UK Biobank e NHANES respondem partes complementares. Dados individuais controlados continuam dependentes de acesso legítimo.",
+        "Os ciclos NHANES 001–004 são preservados como linha empírica legada de mensuração nutricional e auditoria; não guiam mais a pergunta central."
       ]
     }
   ],
   "pages": [
+    {
+      "id": "programa",
+      "title": "Programa e fase inicial",
+      "sections": [
+        {
+          "title": "A pergunta",
+          "paragraphs": [
+            "A pergunta não é qual suplemento é adequado a um rótulo. O programa investiga se fatores modificáveis se associam a trajetórias de funcionamento de modo diferente ao longo da capacidade cognitiva e de perfis neurocognitivos medidos independentemente.",
+            "Capacidade é contínua. Percentis altos podem ser usados como sensibilidade, mas não substituem avaliação de altas habilidades; perfis latentes são descrições a validar e não diagnósticos."
+          ]
+        },
+        {
+          "title": "Fundação antes de descobertas",
+          "table": {
+            "headers": ["Prova", "Pergunta", "Produto", "Se falhar"],
+            "rows": [
+              ["POC-01", "As chaves formam trajetórias participante-onda sem duplicação?", "Fluxo de elegibilidade, cardinalidade e perdas", "Parar perguntas longitudinais"],
+              ["POC-02", "A cobertura sustenta capacidade contínua por onda?", "Mapa de instrumentos, escalas e ausência", "Não criar índice ou percentis"],
+              ["POC-03", "Capacidade e sintomas podem ser descritos sem rótulo automático?", "Contagens e incerteza por medida/informante", "Não formar estratos de condição"],
+              ["POC-04", "Hábito em t antecede função executiva em t+1?", "Protocolo longitudinal mínimo e resultado agregados", "Restringir a transversal ou needs_data"]
+            ]
+          }
+        },
+        {
+          "title": "Fontes complementares",
+          "table": {
+            "headers": ["Fonte", "Papel", "Limite"],
+            "rows": [
+              ["ABCD", "Base longitudinal inicial: cognição, desenvolvimento, sono, atividade e contexto", "Dados individuais requerem acesso legítimo"],
+              ["Healthy Brain Network", "Replicação transdiagnóstica e heterogeneidade 2e", "Termos, versão e cobertura precisam de auditoria"],
+              ["UK Biobank", "Exposições adultas, dieta, suplementos, biomarcadores e cognição", "Acesso e população não equivalem a ABCD"],
+              ["NHANES", "Medição nutricional e biomarcadores em adultos", "Não mede HA, TDAH ou autismo para esta comparação"],
+              ["Terman e SMPY", "Validação conceitual de capacidade versus realização", "Coortes históricas sem exposição contemporânea detalhada"]
+            ]
+          }
+        },
+        {
+          "title": "Da associação à intervenção",
+          "paragraphs": [
+            "A associação longitudinal de sono, atividade ou nutriente com funcionamento pode priorizar uma hipótese. Ela não demonstra que suplementação consolida um hábito. Essa alegação exige um produto, dose, janela, adesão, segurança e acompanhamento definidos em estudo prospectivo ou intervenção.",
+            "A comparação entre fontes é uma síntese de construtos e estimandos compatíveis. Participantes de bases diferentes nunca são unidos por idade, diagnóstico ou semelhança de perfil."
+          ]
+        },
+        {
+          "title": "Documentos operacionais",
+          "links": [
+            {"title": "Programa científico", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/PROGRAM.md"},
+            {"title": "Fundação analítica", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/ANALYTIC_FOUNDATION.md"},
+            {"title": "Primeiro ciclo ABCD", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/ABCD_FIRST_CYCLE.md"},
+            {"title": "Dicionário de construtos", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/CONSTRUCT_DICTIONARY.md"}
+          ]
+        }
+      ]
+    },
     {
       "id": "conclusoes",
       "title": "Caminho até conclusões",
@@ -91,7 +145,7 @@
     },
     {
       "id": "objetivos",
-      "title": "Objetivos e desenho",
+      "title": "Métodos e salvaguardas",
       "sections": [
         {
           "title": "Tese orientadora: capacidades encobertas e contexto",
@@ -242,14 +296,14 @@
                 "H1/H2 estáveis nesta sensibilidade; seleção não observada e incerteza dos pesos seguem como limites"
               ],
               [
-                "Fases paralelas HA, TDAH e autismo — auditorias abertas",
-                "Prioridade principal; Project Talent, ABIDE II, ADHD-200 e NSCH podem ser auditados sem credencial adicional",
-                "Auditar separadamente capacidade/HA, TDAH, autismo, sono, funcionamento, grupos e ondas; comparar somente construtos harmonizados",
-                "Dossiês por fonte, definição operacional e cobertura por grupo; HBN/ABCD por termos legítimos; NHANES não é pré-requisito"
+                "Fase 0 — fundação analítica ABCD",
+                "Prioridade principal; auditoria de metadados já pode começar, microdados dependem de acesso legítimo",
+                "Construir tabela participante-onda, mapa campo→construto e POC-01 a POC-04 antes de modelos de perfil ou efeito",
+                "Versão, acesso, chaves, cobertura, temporalidade e perdas documentados; resultado pode ser needs_data"
               ],
               [
                 "Nova especificação de H3",
-                "Manutenção metodológica; não bloqueia a fase HA/TDAH/autismo",
+                "Linha NHANES legada; não bloqueia a fundação ABCD",
                 "Separar estados de magnésio definidos pelo ciclo 003 antes de estimar associação com sono",
                 "Protocolo, auditoria de cobertura e decisão de multiplicidade antes dos efeitos"
               ],
@@ -272,10 +326,10 @@
                 "Resultados publicados e critérios explícitos; deduplicação de registros"
               ],
               [
-                "Comparação HA/autismo/TDAH",
-                "Dependente de dados",
-                "Comparar isolados, duplas e tripla; testar especificidade versus dimensões compartilhadas",
-                "Cognição e condições efetivamente medidas; acesso autorizado quando necessário"
+                "Perfis e dupla excepcionalidade",
+                "Posterior à fundação",
+                "Testar estabilidade de perfis e sua distribuição por medidas independentes de condição",
+                "POC-01 a POC-03 aprovadas; não atribuir diagnóstico por cluster"
               ],
               [
                 "Validação prospectiva",
@@ -357,7 +411,7 @@
     },
     {
       "id": "fontes",
-      "title": "Bases e evidências",
+      "title": "Fontes e linhas de apoio",
       "sections": [
         {
           "title": "O que foi consultado e o que entrou nas análises",

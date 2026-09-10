@@ -114,6 +114,16 @@ class DiscoverySiteTests(unittest.TestCase):
             number = int(cycle["id"].split("-")[1])
             self.assertIn(f"Ciclo {number:03d}", rendered)
 
+    def test_real_program_page_keeps_analytic_foundation_visible(self):
+        """The public portal must not demote the analytic foundation to a legacy cycle."""
+        project = Path(__file__).resolve().parents[1]
+        study = json.loads((project / "research/site/study.json").read_text())
+        program = next(page for page in study["pages"] if page["id"] == "programa")
+        rendered = json.dumps(program, ensure_ascii=False)
+        self.assertIn("Fundação antes de descobertas", rendered)
+        self.assertIn("POC-04", rendered)
+        self.assertIn("ABCD", rendered)
+
     def test_invalid_publication_inputs_rejected(self):
         path, data = self.cycle()
         variants = []

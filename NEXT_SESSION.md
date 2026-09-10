@@ -1,7 +1,7 @@
 # Retomada da próxima sessão
 
 Estado atualizado em 2026-09-10. Os ciclos 001–004, o artigo comparativo e o
-portal foram enviados ao remoto. O commit mais recente é `e6ab784`; a página
+portal foram enviados ao remoto. O último marco é `fcfb14e`; a página
 “Ciclos e hipóteses” deve ser conferida após cada deploy porque seu roteiro é
 editorial e pode ficar defasado mesmo quando os artefatos do ciclo estão corretos:
 
@@ -115,22 +115,26 @@ seleção observável.
 - A análise não corrige seleção não observada e trata as propensões estimadas
   como fixas nos intervalos.
 
-## Próxima rodada
+## Próxima rodada: fundação analítica ABCD
+
+A prioridade deixou de ser estimar mais associações em NHANES. Antes de qualquer
+modelo de efeito, montar a base analítica participante-onda e executar as quatro
+provas de conceito descritas em
+[`catalog/data-sources/ANALYTIC_FOUNDATION.md`](catalog/data-sources/ANALYTIC_FOUNDATION.md).
+O [primeiro ciclo ABCD](catalog/data-sources/ABCD_FIRST_CYCLE.md) define a
+pergunta longitudinal mínima. Sem acesso legítimo aos microdados, a saída correta
+é terminar o dossiê de acesso/metadados e manter `blocked_by_access`.
+
+## Linha NHANES legada
 
 Consulte primeiro o [mapa de estado e desatualização](research/discoveries/STATUS_AND_STALENESS_MAP.md): ele relaciona cada pendência aos documentos que precisam ser sincronizados depois de uma execução.
 
-1. **Prioridade principal:** executar a [auditoria de entrada para HA, TDAH e
-   autismo](catalog/data-sources/HA_NEURODEVELOPMENT_PRIORITY.md), começando por
-   [estudos paralelos](catalog/data-sources/NEURODIVERSITY_STUDY_ARCHITECTURE.md):
-   ABIDE II (autismo), ADHD-200 (TDAH), Project Talent (HA/capacidade) e NSCH
-   (TDAH+autismo) estão disponíveis para auditoria pública; HBN/ABCD seguem por
-   termos/acesso legítimo. Não esperar H3, não linearidade ou validação NHANES.
-2. Registrar um adendo antes de modificar H3, separando zero sustentado,
+1. Registrar um adendo antes de modificar H3, separando zero sustentado,
    quantidade calculada, produto não identificado, cálculo ausente e antiácido.
-3. Registrar formas não lineares sem reutilizar os resultados para escolher nós
+2. Registrar formas não lineares sem reutilizar os resultados para escolher nós
    ou termos; manter a família de testes explícita.
-4. Avaliar seleção não observada e incorporar incerteza dos pesos de resposta.
-5. Validar previsão por PSU/onda com intervalos; não reutilizar o holdout para
+3. Avaliar seleção não observada e incorporar incerteza dos pesos de resposta.
+4. Validar previsão por PSU/onda com intervalos; não reutilizar o holdout para
    selecionar especificações. Grupos diagnósticos continuam not_assessed.
 
 Reprodução da auditoria:

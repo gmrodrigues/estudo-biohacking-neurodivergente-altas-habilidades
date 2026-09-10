@@ -24,25 +24,23 @@ permanecem inconclusivas ou não mensuradas. A conclusão sobre grupos clínicos
 HA depende de outra fonte de dados; a conclusão causal depende de desenho que
 meça tempo e intervenção, não apenas de mais ajustes no mesmo corte transversal.
 
-## Porta de entrada para a fase HA, autismo e TDAH
+## Porta de entrada: fundação analítica antes de comparações
 
-Esta fase não começa em uma data prevista: começa quando uma fonte elegível for
-obtida. Mais ciclos no NHANES podem aprimorar o método para sono, alimentação e
-previsão, mas não convertem a base em uma coorte de HA/autismo/TDAH.
+Esta fase não começa por uma análise de efeito. Ela começa quando uma fonte
+elegível tiver uma base analítica mínima viável: chaves participante-onda,
+medidas documentadas, temporalidade, perdas e pequenas provas de conceito. Mais
+ciclos NHANES podem aprimorar mensuração nutricional, mas não convertem a base em
+coorte de capacidade, TDAH ou autismo.
 
-1. **Fonte e governança:** identificar coorte e acesso autorizados; confirmar que
-   mede capacidade/HA e condições de neurodesenvolvimento independentemente,
-   além de idade, contexto, funcionamento e exposições de interesse.
-2. **Auditoria de medida:** registrar a definição operacional de HA, origem e
-   validade das medidas de autismo/TDAH, combinação de condições, perdas,
-   confidencialidade e número elegível em cada grupo. Ausência de registro não
-   cria um grupo neurotípico.
-3. **Primeiro ciclo comparativo:** antes dos efeitos, registrar estimandos,
-   contrastes entre grupos isolados/coexistentes, covariáveis e regra de
-   multiplicidade. Relatar limitações de representatividade e de medida.
-4. **Conclusões:** limitar resultados à coorte, às medidas e ao desenho. Mesmo
-   associações estáveis não demonstram que hábitos causem, expliquem ou eliminem
-   uma condição.
+1. **Fonte e governança:** ABCD é a entrada longitudinal; registrar versão,
+   acesso autorizado e estruturas antes de baixar microdados.
+2. **Fundação analítica:** auditar chaves, ondas, campo→construto, informantes,
+   unidades, ausência, perdas e cobertura; executar POC-01 a POC-03.
+3. **Prova longitudinal mínima:** registrar um hábito em t e função executiva em
+   t+1; POC-04 pode terminar em `needs_data` ou resultado nulo.
+4. **Perfis e comparação:** somente após fundação, testar estabilidade de perfis
+   e medidas independentes de condição. Mesmo associação longitudinal não prova
+   que hábito cause, explique ou elimine uma condição.
 
 ## Dados, inferências e efeito no roteiro
 
@@ -67,7 +65,7 @@ previsão, mas não convertem a base em uma coorte de HA/autismo/TDAH.
 
 | Prioridade | Estado | Dependência mínima | Produto antes de estimar | Critério para atualizar documentos anteriores |
 |---|---|---|---|---|
-| **Fases paralelas HA, TDAH e autismo: auditoria aberta** | **Prioridade principal; ABIDE/ADHD-200/Project Talent/NSCH iniciam sem credencial adicional** | Fenótipos públicos ou acesso legítimo; definição prévia de HA/capacidade e medidas independentes de TDAH/autismo | Auditorias separadas campo→construto, cobertura, grupos e perdas; dicionário de construtos para síntese | Atualizar plano, fontes, acesso, portal e README; só comparar estimandos harmonizados, sem juntar participantes |
+| **Fundação analítica ABCD** | **Prioridade principal; microdados exigem acesso legítimo** | Release, termos, chaves participante-onda, cognição, sintomas, sono/atividade e desfecho posterior | POC-01 a POC-04, dicionário de construtos e decisão `estimable`/`needs_data` | Atualizar plano, fontes, acesso, portal e README; não avançar a clusters, interações ou suplementação sem base aprovada |
 | H3 com estados de magnésio | Proposto | DSQIDS/DSPI/DSII já auditados | Adendo datado, população, regra de classificação, estimando, contraste e multiplicidade | Atualizar ciclo 001, 003, 004, plano, portal e README se houver novo resultado |
 | Formas não lineares de H1/H2 | Proposto | Dados atuais e decisão prévia de nós/forma | Protocolo com forma funcional, efeitos de interesse, família FDR e diagnóstico | Atualizar apenas após execução; não tratar gráfico exploratório como confirmação |
 | Seleção não observada | Needs data/método | Premissas externas ou modelo que incorpore incerteza dos pesos | Protocolo de análise de sensibilidade e parâmetros justificados | Acrescentar limite ou resultado ao ciclo 004; não reescrever seus achados |

@@ -373,3 +373,56 @@ sources:
       - Diagnóstico, protocolo e completude variam entre centros.
     privacy_ethics: Usar somente arquivos liberados e respeitar termos de acesso do INDI/NITRC.
     last_verified: "2026-09-10"
+
+  - id: uk-biobank
+    name: UK Biobank
+    organization: UK Biobank
+    url: https://www.ukbiobank.ac.uk/about-our-data/types-of-data/demographic-and-lifestyle-data/
+    access: controlled
+    geography: United Kingdom
+    population: Coorte adulta de aproximadamente 500 mil participantes.
+    topics: [cognition, diet, supplements, biomarkers, sleep, physical-activity, genetics]
+    modalities: [questionnaires, dietary-recall, physical-measures, biomarkers, genetics, imaging]
+    formats: [tabular, imaging, genomic]
+    suggested_uses:
+      - Replicar associações entre hábitos, biomarcadores, suplementos e cognição em adultos.
+      - Avaliar interações pré-registradas por capacidade contínua, sem pressupor causalidade.
+    limitations:
+      - Acesso individual exige aplicação; a população e medidas não equivalem às de ABCD.
+      - Diagnóstico, suplementação e cognição têm janelas e completude próprias.
+    privacy_ethics: Cumprir o acordo UK Biobank e não tentar reidentificar participantes.
+    last_verified: "2026-09-10"
+
+  - id: terman-life-cycle
+    name: Terman Life-Cycle Study of Children with High Ability
+    organization: Stanford University / ICPSR
+    url: https://www.icpsr.umich.edu/web/ICPSR/studies/8092
+    access: registered
+    geography: United States
+    population: 1.528 participantes identificados com alta capacidade no início do estudo histórico.
+    topics: [high-ability, cognition, education, occupation, health, longitudinal]
+    modalities: [assessments, questionnaires, historical-follow-ups]
+    formats: [documentation, archival-data]
+    suggested_uses:
+      - Validar conceitualmente a distinção entre capacidade inicial e realização ao longo da vida.
+    limitations:
+      - Coorte histórica; não mede exposições nutricionais contemporâneas nem perfis diagnósticos atuais.
+    privacy_ethics: Observar os termos do arquivo e limites de divulgação histórica.
+    last_verified: "2026-09-10"
+
+  - id: smpy
+    name: Study of Mathematically Precocious Youth
+    organization: Vanderbilt University
+    url: https://my.vanderbilt.edu/smpy/
+    access: registered
+    geography: United States
+    population: Mais de 5 mil participantes intelectualmente talentosos em cinco coortes.
+    topics: [high-ability, mathematical-reasoning, educational-attainment, career, longitudinal]
+    modalities: [ability-assessments, surveys, follow-ups]
+    formats: [documentation, researcher-access]
+    suggested_uses:
+      - Validar hipóteses conceituais sobre capacidade, ambiente e realização.
+    limitations:
+      - Não há microdados abertos confirmados neste repositório; não é base inicial para suplementos.
+    privacy_ethics: Consultar a equipe SMPY para acesso e não inferir dados individuais de publicações.
+    last_verified: "2026-09-10"

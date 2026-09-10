@@ -309,16 +309,21 @@ def build(root, output, write_readmes=False):
             root_links.append(f"- [Artigo: {article['title']}](research/discoveries/{cycle_id}/article.md)")
         if write_readmes:
             update_readme(directory / "README.md", "# Resultados do ciclo\n", "\n".join(readme))
-    intro = "<h1>Resultados por ciclo</h1><p>Explore perguntas, estimativas, gráficos, fontes e limites de cada rodada.</p>"
+    intro = ("<h1>Saúde cognitiva de precisão</h1>"
+             "<p>Capacidade cognitiva contínua, perfis neurocognitivos e fatores modificáveis "
+             "estudados sem confundir diagnóstico, associação e intervenção.</p>")
     intro = study_navigation(study["pages"]) + intro + render_sections(study["intro"])
     if not cycles:
         intro += "<article><h2>Primeiro ciclo em preparação</h2><p>Ainda não há resultados de ciclos concluídos.</p></article>"
-    (output / "index.html").write_text(page("Resultados por ciclo", intro + "".join(reversed(cards))), encoding="utf-8")
+    if cycles:
+        intro += ("<h2>Linha empírica legada: NHANES</h2>"
+                  "<p>Os ciclos abaixo apoiam a mensuração nutricional, mas não identificam alta capacidade, TDAH ou autismo.</p>")
+    (output / "index.html").write_text(page("Saúde cognitiva de precisão", intro + "".join(reversed(cards))), encoding="utf-8")
     (output / "cycles.json").write_text(json.dumps([{"id": c["id"], "title": c["title"],
         "completed_at": c["completed_at"]} for c, _ in cycles], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if write_readmes and cycles:
-        update_readme(root / "README.md", "# Estudo de biohacking, neurodivergência e altas habilidades\n",
-                      f"## Resultados\n\n[Explorar gráficos e ciclos no site]({PAGES_URL})\n\n" +
+        update_readme(root / "README.md", "# Saúde cognitiva de precisão\n",
+                      f"## Linha empírica legada: NHANES\n\n[Explorar gráficos e ciclos no site]({PAGES_URL})\n\n" +
                       " · ".join(f"[{p['title']}]({PAGES_URL}{p['id']}.html)" for p in study["pages"]) + "\n\n" +
                       "\n".join(reversed(root_links)) +
                       "\n\n[Métodos e fontes](catalog/data-sources/README.md)\n\n" +
