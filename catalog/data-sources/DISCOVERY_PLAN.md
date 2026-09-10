@@ -1,6 +1,8 @@
 # Plano de descobertas e skills
 
-Data: 2026-09-07. Estado: plano operacional; nenhum efeito novo estimado nesta etapa.
+Data de origem: 2026-09-07. Estado atual: os ciclos 001–004 foram executados;
+este plano preserva a ordem inicial e o [mapa de estado](../../research/discoveries/STATUS_AND_STALENESS_MAP.md)
+define a sequência vigente até conclusões mais fortes.
 
 ## Primeira rodada
 
@@ -76,7 +78,9 @@ marcadas como `draft`/`proposed` e `not_run`; não são motores estatísticos.
 
 ## Retomada da próxima sessão
 
-Consulte [`NEXT_SESSION.md`](../../NEXT_SESSION.md) antes de alterar o ciclo 001.
+Consulte [`NEXT_SESSION.md`](../../NEXT_SESSION.md) e o
+[mapa de estado e desatualização](../../research/discoveries/STATUS_AND_STALENESS_MAP.md)
+antes de alterar o ciclo 001.
 O documento registra o estado publicado e a correção local de H2 em 2026-09-09,
 o adendo e a comparação histórica executados, a próxima auditoria de robustez e as
 perguntas de suplementação cafeína–magnésio. A tese sobre capacidades encobertas
@@ -108,3 +112,15 @@ NCHS, mantendo 1 grau residual como sensibilidade conservadora. Dentro da
 população elegível, a retenção foi 87,8%, 74,6% e 87,4%. A reponderação pela
 inclusão observável alterou H1/H2 em no máximo 3,3%; H3 permaneceu inconclusiva.
 Seleção não observada, não linearidade e validação independente continuam abertas.
+O mapa vigente explicita o que cada uma pode e não pode concluir.
+
+### Atualização de 2026-09-10: prioridade por condição e capacidade
+
+A evolução do estudo deixa de depender de uma única coorte para HA, TDAH e
+autismo. As frentes serão auditadas em paralelo: Project Talent para
+HA/capacidade, ABIDE II para autismo, ADHD-200 para TDAH e NSCH para contexto
+populacional e coexistência. A comparação será uma síntese de estimandos e
+construtos harmonizados, nunca uma junção de participantes. Consultar a
+[arquitetura de estudos paralelos](NEURODIVERSITY_STUDY_ARCHITECTURE.md), a
+[capacidade amostral e o modelo de dados](DATA_MODEL_AND_SAMPLE_CAPACITY.md) e
+o [mapa de suplementação e hábitos](SUPPLEMENT_HABITS_DATA_CAPACITY.md).

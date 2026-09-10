@@ -1,8 +1,9 @@
 # Retomada da próxima sessão
 
-Estado atualizado em 2026-09-09. O primeiro ciclo, o artigo comparativo e o
-portal foram publicados. O site confirmou a publicação do artigo após o deploy
-do commit `8cd3875`:
+Estado atualizado em 2026-09-10. Os ciclos 001–004, o artigo comparativo e o
+portal foram enviados ao remoto. O commit mais recente é `e6ab784`; a página
+“Ciclos e hipóteses” deve ser conferida após cada deploy porque seu roteiro é
+editorial e pode ficar defasado mesmo quando os artefatos do ciclo estão corretos:
 
 - [portal do estudo](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/)
 - [artigo do ciclo 001](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-001/article.html)
@@ -22,7 +23,7 @@ do commit `8cd3875`:
 - O gerador do site, o registro editorial e as skills foram ampliados; dez testes
   de publicação passaram.
 
-## Correção H2 concluída localmente em 2026-09-09
+## Correção H2 concluída e enviada em 2026-09-09
 
 O [adendo](research/discoveries/cycle-001/amendments/h2-boundary-2026-09-09/protocol.md)
 foi registrado antes da reexecução corrigida, após conhecimento dos resultados
@@ -42,15 +43,15 @@ os resultados originais. Só os três q-valores de H2 mudaram. `results-original
 preserva o agregado anterior; código e figuras anteriores estão no commit
 `3a4eec48a45e1d29ac670663ae4187cbe9a2e087` e ancestrais.
 
-Código, figura, manifesto, dossiê, artigo e planejamento foram atualizados. A
-correção é local; não houve commit, push ou novo deploy nesta retomada.
+A correção, código, figura, manifesto, dossiê, artigo e planejamento foram
+enviados no commit `321408f` e posteriormente complementados pelo ciclo 004.
 A correção não constitui replicação nem validação externa da variância.
 Validação: 12 testes passaram; seis skills válidas; JSON/YAML parseados; sete
 páginas e 50 links locais verificados. PNGs conferidos visualmente. Build em
 `/tmp/science-h2-reviewed-20260909`; navegador integrado indisponível, então a
 conferência visual de páginas largas/estreitas permanece pendente.
 
-## Ciclo 002 concluído localmente em 2026-09-09
+## Ciclo 002 concluído e enviado em 2026-09-09
 
 [Auditoria completa](research/discoveries/cycle-002/data-audit.md),
 [protocolo](research/discoveries/cycle-002/protocol.md) e
@@ -73,11 +74,11 @@ conferência visual de páginas largas/estreitas permanece pendente.
   analíticos existentes mantiveram versões. 13 testes passaram, incluindo
   fixture analítica em que um domínio esvazia uma PSU.
 
-Relatório, gráficos, manifesto e planejamento estão atualizados localmente.
-Não houve commit, push ou deploy desta rodada. Navegador integrado permanece
-indisponível; PNGs são conferidos diretamente e links do build são verificados.
+Relatório, gráficos, manifesto e planejamento foram enviados no commit `321408f`.
+O ciclo 004 adicionou uma atualização posterior da convenção de inferência e da
+seleção observável.
 
-## Ciclo 003 concluído localmente em 2026-09-09
+## Ciclo 003 concluído e enviado em 2026-09-09
 
 [Auditoria por produto](research/discoveries/cycle-003/data-audit.md),
 [protocolo](research/discoveries/cycle-003/protocol.md) e
@@ -95,7 +96,7 @@ indisponível; PNGs são conferidos diretamente e links do build são verificado
   1.613 participantes, DSQIMAGN × dias/30 reconstrói DSQTMAGN a até 0,05 mg.
 - Não houve imputação, novo modelo de sono, conclusão causal ou recomendação.
 
-## Ciclo 004 concluído localmente em 2026-09-10
+## Ciclo 004 concluído e enviado em 2026-09-10
 
 [Auditoria de inferência e seleção](research/discoveries/cycle-004/data-audit.md),
 [protocolo](research/discoveries/cycle-004/protocol.md),
@@ -116,12 +117,20 @@ indisponível; PNGs são conferidos diretamente e links do build são verificado
 
 ## Próxima rodada
 
-1. Registrar um adendo antes de modificar H3, separando zero sustentado,
+Consulte primeiro o [mapa de estado e desatualização](research/discoveries/STATUS_AND_STALENESS_MAP.md): ele relaciona cada pendência aos documentos que precisam ser sincronizados depois de uma execução.
+
+1. **Prioridade principal:** executar a [auditoria de entrada para HA, TDAH e
+   autismo](catalog/data-sources/HA_NEURODEVELOPMENT_PRIORITY.md), começando por
+   [estudos paralelos](catalog/data-sources/NEURODIVERSITY_STUDY_ARCHITECTURE.md):
+   ABIDE II (autismo), ADHD-200 (TDAH), Project Talent (HA/capacidade) e NSCH
+   (TDAH+autismo) estão disponíveis para auditoria pública; HBN/ABCD seguem por
+   termos/acesso legítimo. Não esperar H3, não linearidade ou validação NHANES.
+2. Registrar um adendo antes de modificar H3, separando zero sustentado,
    quantidade calculada, produto não identificado, cálculo ausente e antiácido.
-2. Registrar formas não lineares sem reutilizar os resultados para escolher nós
+3. Registrar formas não lineares sem reutilizar os resultados para escolher nós
    ou termos; manter a família de testes explícita.
-3. Avaliar seleção não observada e incorporar incerteza dos pesos de resposta.
-4. Validar previsão por PSU/onda com intervalos; não reutilizar o holdout para
+4. Avaliar seleção não observada e incorporar incerteza dos pesos de resposta.
+5. Validar previsão por PSU/onda com intervalos; não reutilizar o holdout para
    selecionar especificações. Grupos diagnósticos continuam not_assessed.
 
 Reprodução da auditoria:

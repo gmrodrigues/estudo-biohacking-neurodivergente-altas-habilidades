@@ -15,7 +15,7 @@ excepcionalidades isoladas, duplas e triplas.
 
 [Explorar gráficos e ciclos no site](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/)
 
-[Objetivos e desenho](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/objetivos.html) · [Ciclos e hipóteses](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/planejamento.html) · [Bases e evidências](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/fontes.html) · [Progresso e decisões](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/progresso.html)
+[Caminho até conclusões](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/conclusoes.html) · [Objetivos e desenho](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/objetivos.html) · [Ciclos e hipóteses](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/planejamento.html) · [Bases e evidências](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/fontes.html) · [Progresso e decisões](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/progresso.html)
 
 - [Inferência e seleção: estabilidade dos resultados sob reponderação](research/discoveries/cycle-004/README.md) — 2026-09-10
 - [Magnésio por produto: o que a ausência em DSQTMAGN realmente significa](research/discoveries/cycle-003/README.md) — 2026-09-09
@@ -36,6 +36,12 @@ Instale as dependências com `PIPENV_VENV_IN_PROJECT=1 pipenv sync --dev`.
 - [Desenho dos grupos e comparações](catalog/data-sources/CORE_STUDY_DESIGN.md).
 - [Estratificação demográfica e contexto de vida](catalog/data-sources/STRATIFICATION_MODEL.md).
 - [Hipóteses de suplementação](catalog/data-sources/SUPPLEMENTATION_HYPOTHESES.md).
+- [Caminho até as conclusões e mapa de atualização](research/discoveries/STATUS_AND_STALENESS_MAP.md).
+- [Arquitetura de estudos paralelos](catalog/data-sources/NEURODIVERSITY_STUDY_ARCHITECTURE.md) e [auditoria de dados para HA](catalog/data-sources/HIGH_ABILITY_DATA_AUDIT.md).
+- [Auditoria de bases abertas para neurodesenvolvimento](catalog/data-sources/OPEN_NEURODEVELOPMENT_DATA_AUDIT.md).
+- [Modelo de dados e capacidade amostral das fontes](catalog/data-sources/DATA_MODEL_AND_SAMPLE_CAPACITY.md).
+- [Modelo de dados e capacidade para suplementação e hábitos](catalog/data-sources/SUPPLEMENT_HABITS_DATA_CAPACITY.md).
+- [Prioridade imediata: fase HA, TDAH e autismo](catalog/data-sources/HA_NEURODEVELOPMENT_PRIORITY.md).
 
 Os insumos públicos locais incluem componentes do NHANES 2021–2023 e registros
 do ClinicalTrials.gov. O NHANES selecionado permite estudar relações em adultos,

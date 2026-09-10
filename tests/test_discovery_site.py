@@ -104,6 +104,16 @@ class DiscoverySiteTests(unittest.TestCase):
         path.write_text(json.dumps(data))
         self.assertEqual(load_cycles(self.root), [])
 
+    def test_real_planning_lists_every_completed_cycle(self):
+        """Keep the editorial roadmap synchronized with completed artifacts."""
+        project = Path(__file__).resolve().parents[1]
+        study = json.loads((project / "research/site/study.json").read_text())
+        planning = next(page for page in study["pages"] if page["id"] == "planejamento")
+        rendered = json.dumps(planning, ensure_ascii=False)
+        for cycle, _ in load_cycles(project):
+            number = int(cycle["id"].split("-")[1])
+            self.assertIn(f"Ciclo {number:03d}", rendered)
+
     def test_invalid_publication_inputs_rejected(self):
         path, data = self.cycle()
         variants = []

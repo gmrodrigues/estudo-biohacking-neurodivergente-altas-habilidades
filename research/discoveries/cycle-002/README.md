@@ -3,11 +3,11 @@
 <!-- discovery-cycles:start -->
 ## Auditoria de perdas, pesos e variância do ciclo 001
 
-Reconstituição das amostras e comparação Taylor com svy: erros-padrão reproduzidos, perdas de 29–34% após junções e inferência sensível aos graus de liberdade.
+Reconstituição das amostras e comparação Taylor com svy: erros-padrão reproduzidos e perdas após junções. Os ciclos 003–004 registram atualizações posteriores de mensuração e inferência.
 
 População: NHANES 2021–2023: 6.337 adultos após junções por hipótese, 4.194–4.522 casos completos de 20–80 anos; HA/autismo/TDAH não avaliados.
 
-> Auditoria de implementação e seleção, não replicação. Erros-padrão coincidem com svy; p-valores não coincidem por padrão porque as convenções de graus de liberdade diferem. Consulte a sensibilidade abaixo.
+> Auditoria de implementação e seleção, não replicação. Erros-padrão coincidem com svy; p-valores não coincidem por padrão porque as convenções de graus de liberdade diferem. Atualização posterior: os ciclos 003 e 004 trataram, respectivamente, a mensuração de magnésio e a convenção de inferência/seleção observável.
 
 [Métodos, decisões e fontes no site](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-002/index.html)
 

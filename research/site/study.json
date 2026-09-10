@@ -13,11 +13,82 @@
       "items": [
         "Executados: inventário e ciclo 001 corrigido; ciclo 002 com perdas, pesos e comparação independente de erros-padrão.",
         "Achado de auditoria: 15 graus do desenho foram registrados como convenção principal; reponderar pela seleção observável alterou H1/H2 em no máximo 3,3%.",
-        "Próximo: registrar formas não lineares, uma nova especificação de H3 e validação independente. Seleção não observada permanece como limite."
+        "Prioridade imediata: iniciar auditorias paralelas de HA/capacidade, TDAH e autismo em fontes abertas adequadas a cada frente; HBN e ABCD/NDA seguem por termos e acesso legítimo. H3, não linearidade e validação NHANES seguem como manutenção metodológica."
       ]
     }
   ],
   "pages": [
+    {
+      "id": "conclusoes",
+      "title": "Caminho até conclusões",
+      "sections": [
+        {
+          "title": "O que já pode ser dito, e o que ainda não",
+          "paragraphs": [
+            "Os ciclos 001–004 não foram uma sequência de resultados independentes: o ciclo 001 estimou associações e uma previsão interna; os ciclos 002–004 verificaram perdas, variância, mensuração e seleção observável. Essa fundação torna os limites explícitos, mas não transforma associações transversais em efeitos causais nem mede altas habilidades, autismo ou TDAH.",
+            "A conclusão atual desta rodada é operacional: algumas perguntas sobre sono, cafeína, sintomas e magnésio podem ser examinadas em adultos NHANES; H3 continua inconclusiva e os grupos HA/autismo/TDAH não foram avaliados. Cada conclusão mais forte depende da etapa listada abaixo."
+          ]
+        },
+        {
+          "title": "Trilha de decisão",
+          "table": {
+            "headers": ["Conclusão pretendida", "Evidência já obtida", "Próxima etapa", "Regra para concluir"],
+            "rows": [
+              ["Associações H1/H2", "Modelos executados, variância auditada e sensibilidade à seleção observável", "Registrar não linearidade e replicar em dados compatíveis", "Direção e magnitude estáveis em análise registrada e replicação; linguagem permanece associativa"],
+              ["Associação H3", "Taxonomia de produto/antiácido e ausência auditada; resultado atual inconclusivo", "Registrar nova especificação, cobertura e multiplicidade antes de estimar", "Estimando definido, mensuração suficiente e resultado reproduzível ou nulo claramente interpretável"],
+              ["Previsão sem diagnóstico", "Ridge interno com R² aproximadamente 0,09", "Separar validação por PSU/onda ou usar nova onda; avaliar calibração", "Superar referência na amostra reservada, com intervalo e sem escolher modelo no holdout"],
+              ["HA, autismo e TDAH", "Nenhum grupo foi mensurado no NHANES usado", "Obter coorte com cognição e condições avaliadas independentemente", "Auditoria de medida, critérios de grupo e análise registrada; sem usar proxies"],
+              ["Efeito de rotina ou suplemento", "Nenhum efeito causal foi estimado", "Desenho longitudinal ou intervenção registrada com acompanhamento", "Comparação temporal/intervenção que sustente contrafactual e segurança" ]
+            ]
+          }
+        },
+        {
+          "title": "Base de dados e alcance das inferências",
+          "table": {
+            "headers": ["Dados", "O que sustentam", "O que não sustentam", "Efeito no roteiro"],
+            "rows": [
+              ["NHANES 2021–2023 em adultos: dieta, suplementos, sono, sedentarismo, sintomas, demografia e desenho amostral", "Associações populacionais ajustadas e previsão interna", "Causalidade, efeito individual ou recomendação de dose", "H1/H2 seguem como associações; exigem replicação e formas registradas"],
+              ["Produtos, ingredientes e antiácidos de suplementos", "Classificar estados de mensuração de magnésio", "Supor que total ausente é dose desconhecida, ingestão ou adesão", "H3 foi mantida inconclusiva até nova especificação"],
+              ["Pesos, 15 estratos, 30 PSUs e padrão de dados completos", "Auditar variância e seleção observável", "Excluir seleção não observada", "Ciclos 002–004 refinaram inferência; H1/H2 mudaram até 3,3% nesta sensibilidade"],
+              ["Ausência de medida de HA, autismo, TDAH e referência neurotípica avaliada", "Registrar os grupos como não avaliados", "Comparar grupos ou usar proxies diagnósticos", "Essa linha depende de outra coorte, não de mais ajustes no NHANES" ]
+            ]
+          }
+        },
+        {
+          "title": "Porta para a fase HA, autismo e TDAH",
+          "paragraphs": [
+            "A fase comparativa começa somente quando existir uma coorte elegível. Não há uma data de calendário que substitua essa condição. Enquanto ela não existir, ciclos com NHANES podem melhorar métodos de sono, nutrição e previsão, mas não respondem perguntas entre HA, autismo, TDAH ou combinações.",
+            "A coorte precisa medir HA/capacidade cognitiva e condições de neurodesenvolvimento de modo independente; registrar idade, sexo/gênero conforme instrumento, contexto, sono, nutrição, funcionamento e tratamentos relevantes; permitir identificar grupos isolados e coexistentes sem inferir rótulos por proxy. Antes dos efeitos, uma auditoria deve mostrar cobertura, perdas, critérios, confidencialidade e tamanho suficiente por grupo.",
+            "A execução será feita por estudos paralelos de HA/capacidade, TDAH, autismo e coexistências. Cada um preserva sua população e medidas; os resultados serão comparados por construtos, estimandos e incerteza harmonizados, sem juntar participantes de bases diferentes."
+          ],
+          "items": [
+            "Entrada: fonte de dados identificada, acesso e uso autorizados, variáveis documentadas e protocolo de proteção de dados.",
+            "Auditoria: definição operacional de HA e condições, validade das medidas, participantes elegíveis, tamanhos de HA, autismo, TDAH e combinações, além de dados ausentes.",
+            "Primeiro ciclo comparativo: estimandos e contrastes registrados para dimensões compartilhadas e específicas; sem chamar ausência de diagnóstico de neurotipicidade.",
+            "Conclusão: limitada à coorte e às medidas usadas; associação não prova que hábitos causem, expliquem ou eliminem uma condição."
+          ],
+          "links": [
+            {"title": "Arquitetura de estudos paralelos", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/NEURODIVERSITY_STUDY_ARCHITECTURE.md"},
+            {"title": "Auditoria de dados para altas habilidades", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/HIGH_ABILITY_DATA_AUDIT.md"},
+            {"title": "Auditoria de bases abertas para neurodesenvolvimento", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/OPEN_NEURODEVELOPMENT_DATA_AUDIT.md"},
+            {"title": "Modelo de dados e capacidade amostral", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/DATA_MODEL_AND_SAMPLE_CAPACITY.md"},
+            {"title": "Modelo de dados para suplementação e hábitos", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/SUPPLEMENT_HABITS_DATA_CAPACITY.md"}
+          ]
+        },
+        {
+          "title": "Registro que mantém essa trilha atualizada",
+          "paragraphs": [
+            "Antes de cada etapa, o protocolo define população, medida, estimando, contraste, incerteza e regra de multiplicidade. Depois, o ciclo acrescenta código, resultados agregados, figuras e uma leitura limitada. O resultado novo é adicionado como atualização posterior, sem apagar a leitura histórica.",
+            "O mapa de desatualização vincula cada pendência aos documentos que deverão mudar quando uma etapa for executada. Se a dependência for uma medida indisponível, a etapa permanece bloqueada em vez de ser preenchida com inferência."
+          ],
+          "links": [
+            {"title": "Prioridade imediata: fase HA, TDAH e autismo", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/HA_NEURODEVELOPMENT_PRIORITY.md"},
+            {"title": "Mapa de estado e desatualização no repositório", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/STATUS_AND_STALENESS_MAP.md"},
+            {"title": "Ciclos e hipóteses", "url": "https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/planejamento.html"}
+          ]
+        }
+      ]
+    },
     {
       "id": "objetivos",
       "title": "Objetivos e desenho",
@@ -133,9 +204,10 @@
       "title": "Ciclos e hipóteses",
       "sections": [
         {
-          "title": "Sequência proposta, condicionada aos dados",
+          "title": "Ciclos executados e próximos testes condicionados aos dados",
           "paragraphs": [
-            "O ciclo 001 é o único executado. As etapas seguintes são planejamento editorial atualizado a partir das lacunas encontradas, sem cronograma garantido ou resultados antecipados. Cada nova rodada deve registrar perguntas e decisões antes dos novos ajustes."
+            "Os ciclos 001–004 foram executados em NHANES 2021–2023. Os ciclos 002–004 são auditorias posteriores ao ciclo 001: validam implementação, mensuração e sensibilidade; não constituem replicação independente nem novas estimativas causais.",
+            "As etapas seguintes são propostas condicionadas aos dados e sem cronograma garantido. Cada nova rodada deve registrar pergunta, estimando, regras de mensuração e família de testes antes de ajustar novos modelos. Consulte também o mapa de desatualização e dependências na página de progresso."
           ],
           "table": {
             "headers": [
@@ -155,7 +227,37 @@
                 "Ciclo 002 — auditoria",
                 "Executado em 09/09/2026",
                 "Perdas, pesos, variância Taylor e graus de liberdade",
-                "Resultados de auditoria revisados; próxima especificação deve justificar inferência e mensuração"
+                "Erros-padrão reproduzidos; convenção de inferência e seleção observável foram tratadas no ciclo 004"
+              ],
+              [
+                "Ciclo 003 — auditoria de mensuração",
+                "Executado em 09/09/2026",
+                "Produtos, antiácidos e estados de ausência em DSQTMAGN",
+                "Nova especificação de H3 deve separar zero sustentado, quantidade calculada, produto não identificado, cálculo ausente e antiácido"
+              ],
+              [
+                "Ciclo 004 — auditoria de inferência e seleção",
+                "Executado em 10/09/2026",
+                "Graus do desenho, população elegível e reponderação por inclusão observável",
+                "H1/H2 estáveis nesta sensibilidade; seleção não observada e incerteza dos pesos seguem como limites"
+              ],
+              [
+                "Fases paralelas HA, TDAH e autismo — auditorias abertas",
+                "Prioridade principal; Project Talent, ABIDE II, ADHD-200 e NSCH podem ser auditados sem credencial adicional",
+                "Auditar separadamente capacidade/HA, TDAH, autismo, sono, funcionamento, grupos e ondas; comparar somente construtos harmonizados",
+                "Dossiês por fonte, definição operacional e cobertura por grupo; HBN/ABCD por termos legítimos; NHANES não é pré-requisito"
+              ],
+              [
+                "Nova especificação de H3",
+                "Manutenção metodológica; não bloqueia a fase HA/TDAH/autismo",
+                "Separar estados de magnésio definidos pelo ciclo 003 antes de estimar associação com sono",
+                "Protocolo, auditoria de cobertura e decisão de multiplicidade antes dos efeitos"
+              ],
+              [
+                "Não linearidade e validação preditiva",
+                "Proposto; ainda não executado",
+                "Formas não lineares registradas e validação por PSU/onda sem reutilizar o holdout",
+                "Nós, família de testes, separação de validação e dados compatíveis definidos antes da execução"
               ],
               [
                 "Replicação e estratos",
@@ -493,6 +595,18 @@
             "Avaliar seleção não observada e métodos que incorporem a incerteza dos pesos de resposta.",
             "Registrar formas não lineares e validação por PSU/onda antes de executar novos testes.",
             "Preservar comparações diagnósticas como não avaliadas até obter medidas reais."
+          ]
+        },
+        {
+          "title": "Mapa de desatualização e dependências",
+          "paragraphs": [
+            "O mapa separa o que está concluído, o que exige atualização editorial após um ciclo, o que depende de nova mensuração e o que depende de acesso controlado. Ele não cria resultados nem datas futuras."
+          ],
+          "links": [
+            {
+              "title": "Mapa de desatualização para os próximos ciclos",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/STATUS_AND_STALENESS_MAP.md"
+            }
           ]
         },
         {

@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: "2026-09-07"
+last_updated: "2026-09-10"
 
 access_levels:
   open: Dados públicos sem aprovação individual, embora termos de uso possam valer.
@@ -25,7 +25,7 @@ sources:
       - Dados individuais normalmente exigem qualificação e aprovação de acesso.
       - Coorte adolescente; não representa diretamente atletas adultos.
     privacy_ethics: Não tentar reidentificar participantes; respeitar os termos do NDA.
-    last_verified: "2026-09-07"
+    last_verified: "2026-09-10"
 
   - id: openneuro
     name: OpenNeuro
@@ -297,3 +297,79 @@ sources:
       - Notificações espontâneas não fornecem incidência nem causalidade.
     privacy_ethics: Tratar relatos como sinais de vigilância, não como diagnósticos causais.
     last_verified: "2026-09-07"
+
+  - id: project-talent
+    name: Project Talent Base Year Data, 1960
+    organization: American Institutes for Research / ICPSR
+    url: https://www.icpsr.umich.edu/web/NACDA/studies/33341
+    access: open
+    geography: United States
+    population: 377.016 estudantes do ensino médio em 1960, com acompanhamentos históricos.
+    topics: [cognition, academic-aptitude, education, personality, health, longitudinal]
+    modalities: [cognitive-assessments, questionnaires, follow-ups]
+    formats: [tabular, documentation]
+    suggested_uses:
+      - Auditar capacidade cognitiva e trajetórias de educação, trabalho e saúde.
+      - Desenvolver uma frente de capacidade medida sem inferir diagnóstico clínico.
+    limitations:
+      - Não é uma coorte contemporânea de HA, TDAH ou autismo.
+      - Coorte histórica; não transporta automaticamente resultados para populações atuais.
+    privacy_ethics: Usar somente os arquivos públicos e não tentar reidentificar participantes históricos.
+    last_verified: "2026-09-10"
+
+  - id: nsch
+    name: National Survey of Children's Health
+    organization: US Census Bureau / HRSA Maternal and Child Health Bureau
+    url: https://www.census.gov/programs-surveys/nsch/data/datasets.html
+    access: open
+    geography: United States
+    population: Crianças não institucionalizadas de 0–17 anos; 51.375 respostas nacionais em 2024.
+    topics: [ADHD, autism, sleep, physical-activity, child-health, family-context]
+    modalities: [parent-caregiver-questionnaires, complex-survey-weights]
+    formats: [SAS, Stata, CSV, documentation]
+    suggested_uses:
+      - Estimar contexto populacional e coexistência de TDAH/autismo relatados.
+      - Estudar hábitos sem confundir relato de diagnóstico com avaliação clínica independente.
+    limitations:
+      - Não fornece medida individual válida de HA nem produto/dose de suplementos.
+      - Transversal e baseado em relato de cuidador para muitas condições.
+    privacy_ethics: Usar pesos e não publicar células pequenas potencialmente identificáveis.
+    last_verified: "2026-09-10"
+
+  - id: abide-ii
+    name: Autism Brain Imaging Data Exchange II
+    organization: International Neuroimaging Data-sharing Initiative
+    url: https://fcon_1000.projects.nitrc.org/indi/abide/abide_II.html
+    access: open
+    geography: International multi-site
+    population: 1.114 conjuntos, 521 participantes autistas e 593 controles, 5–64 anos.
+    topics: [autism, cognition, IQ, neuroimaging, behavior]
+    modalities: [MRI, fMRI, phenotypic-data]
+    formats: [NIfTI, CSV, documentation]
+    suggested_uses:
+      - Auditoria separada de autismo e capacidade cognitiva medida por centro.
+      - Replicação externa de achados de neuroimagem, preservando heterogeneidade de aquisição.
+    limitations:
+      - Não é coorte de HA ou TDAH e instrumentos cognitivos variam por centro.
+      - Qualidade de imagem e dados completos reduzem o N analítico.
+    privacy_ethics: Dados anonimizados; seguir termos do repositório e não tentar reidentificação.
+    last_verified: "2026-09-10"
+
+  - id: adhd-200
+    name: ADHD-200 Sample
+    organization: International Neuroimaging Data-sharing Initiative
+    url: https://fcon_1000.projects.nitrc.org/indi/adhd200/index.html
+    access: open
+    geography: International multi-site
+    population: 776 participantes rotulados na competição, 285 TDAH e 491 controles, 7–21 anos.
+    topics: [ADHD, cognition, IQ, neuroimaging]
+    modalities: [MRI, resting-state-fMRI, phenotypic-data]
+    formats: [NIfTI, CSV, documentation]
+    suggested_uses:
+      - Auditoria separada de TDAH e capacidade medida.
+      - Avaliar heterogeneidade e generalização por centro.
+    limitations:
+      - Não mede autismo ou HA como eixos completos.
+      - Diagnóstico, protocolo e completude variam entre centros.
+    privacy_ethics: Usar somente arquivos liberados e respeitar termos de acesso do INDI/NITRC.
+    last_verified: "2026-09-10"

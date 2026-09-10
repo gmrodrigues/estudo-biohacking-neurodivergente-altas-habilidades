@@ -94,7 +94,9 @@ Foram conferidos totais do codebook DSQTOT_L: 3.762 usuários, 2.969 não usuár
 
 H1, H2 e H3: estimable_with_limits para associações na amostra de casos completos, com estimadores e erros-padrão conferidos. A robustez da inferência depende da escolha de graus, da seleção e da mensuração. Os grupos HA, autismo e TDAH continuam not_assessed.
 
-Prioridades: definir complexidade e graus de liberdade antes de novas especificações; auditar composição de suplementos/antiácidos e códigos de ausência; avaliar seleção/dados ausentes; só então registrar formas não lineares e validação por PSU/onda. Não executar uma busca de especificações que produzam significância.
+Estado na data desta auditoria: definir complexidade e graus de liberdade antes de novas especificações; auditar composição de suplementos/antiácidos e códigos de ausência; avaliar seleção/dados ausentes; só então registrar formas não lineares e validação por PSU/onda. Não executar uma busca de especificações que produzam significância.
+
+Atualização posterior: o ciclo 003 auditou produtos e antiácidos; o ciclo 004 registrou 15 graus do desenho como convenção principal segundo o NCHS e testou reponderação pela seleção observável. As pendências atuais são a nova especificação de H3, seleção não observada, formas não lineares e validação independente.
 
 ## H1 — perdas sequenciais (ordem explícita)
 
