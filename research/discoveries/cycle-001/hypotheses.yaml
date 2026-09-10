@@ -46,3 +46,13 @@ hypotheses:
     limits: [different_exposure_windows, supplement_form_unknown, nutrient_amount_missing_for_some_users, antacids_included]
 replication_plan: new_NHANES_cycle_or_independent_cohort
 causal_claim: not_identified
+
+amendments:
+  - id: H2_sleep_boundary_2026_09_09
+    registered_at: "2026-09-09"
+    timing: after_original_results_before_corrected_fit
+    protocol: amendments/h2-boundary-2026-09-09/protocol.md
+    comparison: amendments/h2-boundary-2026-09-09/comparison.json
+    sleep_categories: {short: "<7 h", recommended: "7-9 h inclusive", long: ">9 h"}
+    multiplicity: same_eight_primary_terms_Benjamini_Hochberg
+    outcome_public_name: escore_de_sintomas_sem_sono_0_24

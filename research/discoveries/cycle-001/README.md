@@ -3,13 +3,13 @@
 <!-- discovery-cycles:start -->
 ## Cafeína, sono, sedentarismo, magnésio e predição diagnóstico-agnóstica
 
-Primeiro ciclo exploratório com adultos da NHANES 2021–2023. Testa três famílias de hipóteses registradas e um modelo Ridge que prevê PHQ-8 sem usar rótulos diagnósticos.
+Primeiro ciclo exploratório em adultos da NHANES 2021–2023: três hipóteses e previsão do escore de sintomas sem sono (0–24). Inclui correção documentada da fronteira de sono de H2 em 2026-09-09.
 
 População: Adultos de 20–80 anos com dados completos nos módulos NHANES utilizados; grupos de superdotação, autismo e TDAH não foram identificados nesta rodada.
 
 [Ler artigo do ciclo](article.md)
 
-> Nota de revisão: os resultados de H2 foram calculados com sono ≤7 h versus >7 a ≤9 h, embora o registro e alguns rótulos originais digam <7 h versus 7–9 h. As estimativas abaixo são preservadas como execução original, com essa ressalva. Uma nova análise com a fronteira registrada permanece pendente. O alvo é uma soma modificada de oito itens sem sono, não o PHQ-8 convencional.
+> Correção analítica de 2026-09-09: H2 foi reexecutada conforme o protocolo (<7 h, referência 7–9 h inclusive, >9 h). 686 participantes com exatamente 7 h passaram à referência, mantendo n=4.522. Os oito testes FDR foram recalculados. A comparação com a execução original está no dossiê abaixo e no adendo; H1, H3 e previsão não mudaram. O alvo é o escore de sintomas sem sono (0–24), não o PHQ-8 convencional. Auditoria posterior (ciclo 002): coeficientes e erros-padrão foram reproduzidos com svy no desenho completo. Os p/q e IC deste ciclo usam 15 graus de liberdade; com o padrão residual de svy (piso de 1), nenhum dos oito testes tem q<0,05. A concordância da variância não resolve essa sensibilidade ou a seleção por casos completos.
 
 [Métodos, decisões e fontes no site](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-001/index.html)
 
@@ -25,21 +25,21 @@ Sinal compatível com menor duração de sono, mas transversal e não causal; a 
 
 ### Sono curto/longo e sedentarismo se associam a sintomas depressivos sem reutilizar o item de sono?
 
-Sono curto +0,838 PHQ-8; sono longo +1,276; sedentarismo +0,1165 por hora
-IC95% curto +0,582 a +1,094; longo +0,619 a +1,934; sedentarismo +0,0854 a +0,1476; p-FDR <0,003
-n=4.522; PHQ-8 excluindo DPQ030; WLS com pesos de exame
+Sono curto (<7 h) +1,120 pontos; sono longo (>9 h) +1,214; sedentarismo +0,1178 ponto por hora/dia
+IC95% curto +0,718 a +1,521; longo +0,561 a +1,868; sedentarismo +0,0871 a +0,1485; q curto=0,00010891; longo=0,00336216; sedentarismo=0,00000520
+n=4.522; referência 7–9 h inclusive; escore de sintomas sem sono (0–24); WLS com pesos de exame
 
-Associações robustas na amostra, compatíveis com hipóteses de sono/atividade, mas também com causalidade reversa e confusão por saúde.
+Associações positivas após corrigir a fronteira registrada; causalidade reversa e confusão por saúde permanecem possíveis. A correção não é uma replicação.
 
 ### Magnésio alimentar ou suplementar se associa à duração do sono?
 
 +0,0173 hora por 100 mg dietético; +0,0300 por 100 mg suplementar
 IC95% dietético -0,0317 a +0,0662; suplementar -0,0429 a +0,1029; p-FDR=0,4634
-n=4.194; suplemento não quantificado modelado separadamente; WLS com peso de dieta
+n=4.194; indicador legado de qualquer suplemento com total de magnésio ausente; WLS com peso de dieta
 
 Evidência inconclusiva; o intervalo inclui efeitos pequenos em ambas as direções e não sustenta protocolo de suplementação.
 
-### É possível prever PHQ-8 sem conhecer o diagnóstico?
+### É possível prever o escore de sintomas sem sono (0–24) sem conhecer o diagnóstico?
 
 Ridge: MAE 2,903; RMSE 3,945; R² 0,090
 Holdout interno único: n treino=3.391, teste=1.131; sem validação externa/temporal
@@ -51,13 +51,13 @@ Prova de conceito de previsão dimensional modesta; contexto demográfico contri
 
 H1: estimativas e IC95% para cafeína e interação com idade.
 
-![Coeficientes ajustados de sono e sedentarismo para PHQ-8](figures/sleep-sedentary-depression.png)
+![Diferenças ajustadas no escore de sintomas sem sono (0–24), após correção H2](figures/sleep-sedentary-depression.png)
 
-H2: categorias de sono e horas sedentárias associadas ao PHQ-8 sem o item de sono.
+H2 corrigida: sono <7 h e >9 h versus 7–9 h inclusive; sedentarismo por hora/dia. Adultos NHANES 2021–2023, n=4.522, peso WTMEC2YR, IC95% por estratos/PSUs; associação transversal.
 
 ![Coeficientes ajustados de magnésio e sono](figures/magnesium-sleep.png)
 
-H3: magnésio alimentar, suplementar e dose suplementar não quantificada.
+H3: magnésio alimentar, suplementar e indicador legado de qualquer suplemento com total de magnésio ausente; o ciclo 003 corrigiu sua interpretação.
 
 ![Comparação de previsão Ridge e baseline](figures/prediction-calibration.png)
 
@@ -84,7 +84,7 @@ Predição diagnóstico-agnóstica no holdout interno e ablações por domínio.
 ```json
 {
   "command": "MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-001/run_analysis.py",
-  "code_revision": "working-tree; see run_analysis.py and hypotheses.yaml",
+  "code_revision": "base 3a4eec48a45e1d29ac670663ae4187cbe9a2e087 + adendo H2 2026-09-09; run_analysis.py sha256=a7aff23ae817c7c0ff5745dc1ed5d2fa6e3c3e1424148c0a6d6bf017157c8492",
   "input_sha256": {
     "DEMO_L.xpt": "ca4374a158b493b8b0163e1388da21d57a18d1b9cecff2aa4e2fa2bec494fe23",
     "DPQ_L.xpt": "25605a02685035fe997477b31a0991cca2776b0f72f24a8e61ac5b018456304b",

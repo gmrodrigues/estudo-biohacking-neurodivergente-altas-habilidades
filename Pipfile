@@ -11,6 +11,7 @@ scikit-learn = "*"
 [dev-packages]
 pyyaml = "*"
 matplotlib = "*"
+svy = "*"
 
 [requires]
 python_version = "3.14"

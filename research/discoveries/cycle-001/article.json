@@ -1,6 +1,6 @@
 {
   "title": "Cafeína e magnésio: o que os dados ajudam a decidir sobre suplementação",
-  "summary": "Artigo para pessoas neurodivergentes interessadas em suplementação · Ciclo 001, NHANES 2021–2023 · Comparação com estudos humanos, quantificação das associações e orientação para avaliar exposições. Análise exploratória, sem validação individual; H2 possui ressalva metodológica.",
+  "summary": "Artigo para pessoas neurodivergentes interessadas em suplementação · Ciclo 001, NHANES 2021–2023 · Comparação com estudos humanos, quantificação das associações e orientação para avaliar exposições. Análise exploratória, sem validação individual; H2 corrigida com adendo em 2026-09-09.",
   "sections": [
     {
       "title": "Antes de personalizar, precisamos saber o que conseguimos medir",
@@ -10,29 +10,29 @@
         "O alcance desses achados depende da população. Não identificamos HA, autismo ou TDAH neste recorte do NHANES. Os participantes também não constituem um grupo neurotípico confirmado. A rodada informa relações populacionais que poderão orientar estudos posteriores; ainda não permite escolher uma rotina específica para superdotados."
       ]
     },
-  {
-    "title": "A tese orientadora: capacidades encobertas ou condições distintas?",
-    "paragraphs": [
-      "A motivação do projeto inclui uma hipótese forte: seria toda neurodivergência uma expressão de altas habilidades prejudicadas por hábitos ou condições desfavoráveis? Registramos essa formulação como pergunta, não como conclusão. Ela é diferente de perguntar se algumas pessoas têm capacidades elevadas cuja expressão é limitada por sono, estresse, saúde ou barreiras ambientais.",
-      "Autismo e TDAH são condições do neurodesenvolvimento, com participação de fatores genéticos e de desenvolvimento. A literatura clínica não os define como consequências de hábitos inadequados nem como sinônimos de superdotação. Melhorar sono ou funcionamento não demonstra que uma condição era apenas uma alta habilidade oculta. Apoio adequado pode beneficiar pessoas com diferentes perfis de capacidade.",
-      "Para testar a ideia, precisamos medir capacidades e dificuldades de forma independente, definir previamente o que conta como alta habilidade e acompanhar mudanças no contexto. As alternativas incluem capacidades elevadas encobertas em alguns participantes, coexistência de HA com condições distintas, e melhora funcional sem HA. Todas devem permanecer possíveis.",
-      "O primeiro ciclo não mede essas capacidades ou diagnósticos; portanto, não confirma nem refuta a tese. Ele apenas investiga algumas exposições que podem orientar perguntas posteriores. Dificuldades de rotina também podem ser consequência de sintomas, limitações materiais ou falta de suporte: a pesquisa não deve convertê-las em culpa individual."
-    ],
-    "links": [
-      {
-        "title": "NIMH: autismo, desenvolvimento, diversidade de necessidades e forças",
-        "url": "https://www.nimh.nih.gov/health/publications/autism-spectrum-disorder"
-      },
-      {
-        "title": "NIMH: TDAH e fatores envolvidos",
-        "url": "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know"
-      },
-      {
-        "title": "Tese, alternativas e critérios de teste do projeto",
-        "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/FOUNDATIONAL_HYPOTHESIS.md"
-      }
-    ]
-  } ,
+    {
+      "title": "A tese orientadora: capacidades encobertas ou condições distintas?",
+      "paragraphs": [
+        "A motivação do projeto inclui uma hipótese forte: seria toda neurodivergência uma expressão de altas habilidades prejudicadas por hábitos ou condições desfavoráveis? Registramos essa formulação como pergunta, não como conclusão. Ela é diferente de perguntar se algumas pessoas têm capacidades elevadas cuja expressão é limitada por sono, estresse, saúde ou barreiras ambientais.",
+        "Autismo e TDAH são condições do neurodesenvolvimento, com participação de fatores genéticos e de desenvolvimento. A literatura clínica não os define como consequências de hábitos inadequados nem como sinônimos de superdotação. Melhorar sono ou funcionamento não demonstra que uma condição era apenas uma alta habilidade oculta. Apoio adequado pode beneficiar pessoas com diferentes perfis de capacidade.",
+        "Para testar a ideia, precisamos medir capacidades e dificuldades de forma independente, definir previamente o que conta como alta habilidade e acompanhar mudanças no contexto. As alternativas incluem capacidades elevadas encobertas em alguns participantes, coexistência de HA com condições distintas, e melhora funcional sem HA. Todas devem permanecer possíveis.",
+        "O primeiro ciclo não mede essas capacidades ou diagnósticos; portanto, não confirma nem refuta a tese. Ele apenas investiga algumas exposições que podem orientar perguntas posteriores. Dificuldades de rotina também podem ser consequência de sintomas, limitações materiais ou falta de suporte: a pesquisa não deve convertê-las em culpa individual."
+      ],
+      "links": [
+        {
+          "title": "NIMH: autismo, desenvolvimento, diversidade de necessidades e forças",
+          "url": "https://www.nimh.nih.gov/health/publications/autism-spectrum-disorder"
+        },
+        {
+          "title": "NIMH: TDAH e fatores envolvidos",
+          "url": "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know"
+        },
+        {
+          "title": "Tese, alternativas e critérios de teste do projeto",
+          "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/FOUNDATIONAL_HYPOTHESIS.md"
+        }
+      ]
+    },
     {
       "title": "Por que começar por cafeína e magnésio",
       "paragraphs": [
@@ -113,8 +113,9 @@
     {
       "title": "O retrato numérico do ciclo",
       "paragraphs": [
-        "H2 exige uma ressalva antes da leitura dos números: a implementação usou sono ≤7 horas, referência >7 a ≤9 horas e sono >9 horas. O protocolo previa <7 horas e referência 7–9 horas. A tabela abaixo descreve o que foi efetivamente calculado; a análise com a fronteira originalmente registrada permanece pendente.",
-        "O escore de sintomas é uma soma de oito itens do PHQ-9, excluindo o item de sono, de 0 a 24. Não é o PHQ-8 convencional e não herda seus cortes diagnósticos. Todos os intervalos abaixo são IC95%; q é o valor ajustado por múltiplos testes."
+        "Correção analítica de 2026-09-09: H2 foi reexecutada conforme o protocolo (<7 h, referência 7–9 h inclusive, >9 h). 686 participantes com exatamente 7 h passaram à referência, mantendo n=4.522. Os oito testes FDR foram recalculados. A comparação com a execução original está no dossiê do ciclo e no adendo; H1, H3 e previsão não mudaram. O alvo é o escore de sintomas sem sono (0–24), não o PHQ-8 convencional.",
+        "O escore de sintomas é uma soma de oito itens do PHQ-9, excluindo o item de sono, de 0 a 24. Não é o PHQ-8 convencional e não herda seus cortes diagnósticos. Todos os intervalos abaixo são IC95%; q é o valor ajustado por múltiplos testes.",
+        "Auditoria posterior (ciclo 002): coeficientes e erros-padrão foram reproduzidos com svy no desenho completo. Os p/q e IC deste ciclo usam 15 graus de liberdade; com o padrão residual de svy (piso de 1), nenhum dos oito testes tem q<0,05. A concordância da variância não resolve essa sensibilidade ou a seleção por casos completos."
       ],
       "table": {
         "headers": [
@@ -131,22 +132,22 @@
             "0,0072"
           ],
           [
-            "Sono ≤7 h, versus >7 a ≤9 h (H2 com ressalva)",
-            "+0,838 ponto no escore modificado",
-            "+0,582 a +1,094",
-            "<0,001"
+            "Sono <7 h versus 7–9 h inclusive (H2 corrigida)",
+            "+1,120 ponto no escore de sintomas sem sono (0–24)",
+            "+0,718 a +1,521",
+            "0,00010891"
           ],
           [
-            "Sono >9 h, mesma referência (H2 com ressalva)",
-            "+1,276 ponto",
-            "+0,619 a +1,934",
-            "0,0023"
+            "Sono >9 h versus 7–9 h inclusive (H2 corrigida)",
+            "+1,214 ponto no escore de sintomas sem sono (0–24)",
+            "+0,561 a +1,868",
+            "0,00336216"
           ],
           [
-            "Sedentarismo: +1 h/dia (modelo H2 com ressalva)",
-            "+0,1165 ponto",
-            "+0,0854 a +0,1476",
-            "<0,001"
+            "Sedentarismo: +1 h/dia (H2 corrigida)",
+            "+0,1178 ponto no escore de sintomas sem sono (0–24)",
+            "+0,0871 a +0,1485",
+            "0,00000520"
           ],
           [
             "Magnésio alimentar: +100 mg",
@@ -170,6 +171,10 @@
         {
           "title": "Gráficos, métodos e nota de revisão",
           "url": "https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-001/"
+        },
+        {
+          "title": "Ciclo 002: perdas, pesos e sensibilidade da inferência",
+          "url": "https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-002/index.html"
         }
       ]
     },
@@ -195,7 +200,7 @@
     {
       "title": "Sono e sedentarismo: convergência observacional, sem direção causal definida",
       "paragraphs": [
-        "Os dois grupos extremos de duração de sono apresentaram escores de sintomas maiores que a categoria intermediária usada na execução. Isso é compatível com uma relação não linear, mas três categorias não identificam uma curva nem uma duração ótima de sono. A fronteira de 7 horas precisa ser reconciliada antes de tratar H2 como teste do protocolo.",
+        "Após a correção para <7 h e >9 h versus 7–9 h inclusive, os dois grupos extremos apresentaram escores de sintomas maiores que a referência. Isso é compatível com uma relação não linear, mas três categorias não identificam uma curva nem uma duração ótima de sono. A correção alinha a execução ao protocolo; não é replicação independente.",
         "O estudo longitudinal de 2018 sobre sono e depressão em pessoas de meia-idade e idosas encontrou relações bidirecionais. Ele ajuda a compreender por que nosso retrato transversal admite explicações nos dois sentidos. Porém, categorias de sono, instrumento e desfecho longitudinal diferem: não cabe comparar suas razões de chances diretamente com nossos pontos no escore modificado.",
         "No Maastricht Study, 5.582 participantes tiveram atividade medida por acelerômetro e sintomas acompanhados com PHQ-9. Pessoas com sintomas prevalentes apresentaram mais tempo sedentário; o acompanhamento mediano foi de 5,1 anos. Nosso sinal é qualitativamente compatível, mas usa autorrelato de sedentarismo e uma única observação. A instrumentação e o seguimento do comparador oferecem informação que nosso ciclo não tem.",
         "Excluir o item de sono do alvo reduz a sobreposição direta entre preditor e desfecho. Essa escolha tem um custo: cria uma medida menos comparável às escalas clínicas publicadas. É uma particularidade útil para investigar a associação, não uma validação de um novo instrumento."
@@ -217,7 +222,7 @@
         "Não encontramos uma associação estatisticamente discernível entre magnésio e duração de sono sob as especificações utilizadas. Os intervalos admitem associações pequenas em ambas as direções. Isso não comprova ausência de benefício e tampouco confirma eficácia de suplementação.",
         "Um estudo de NHANES 2009–2018 com 21.840 participantes relatou associação entre magnésio alimentar e duração de sono; entre 3.923 participantes com dados de suplementação, não encontrou associação significativa para os grupos de magnésio suplementar. Nosso resultado suplementar é compatível com essa incerteza, enquanto o alimentar não reproduz a detecção relatada. O comparador usou categorias de ingestão e regressão logística, com outro conjunto de ajustes; aqui usamos uma relação linear em horas. Diferenças de significância, sozinhas, não demonstram que os efeitos sejam diferentes.",
         "Já o ensaio de Schuster e colaboradores (2025) randomizou 155 adultos com sono ruim para bisglicinato de magnésio ou placebo. Em quatro semanas houve uma melhora pequena no índice de gravidade de insônia, com tamanho de efeito d=0,2. Isso responde a uma pergunta diferente: uma formulação específica, num grupo selecionado, com um desfecho de insônia.",
-        "Nosso total de nutrientes não distingue formulações, inclui informações de suplementos/antiácidos e não mede adesão ou estado basal de magnésio. Precisamos de análises por adequação nutricional e sensibilidade ao tratamento de quantidades ausentes antes de atribuir a discrepância a uma característica biológica."
+        "Nosso total de nutrientes não distingue formulações, inclui informações de suplementos/antiácidos e não mede adesão ou estado basal de magnésio. A auditoria posterior do ciclo 003 mostrou que o indicador legado de total ausente não equivale a magnésio de dose desconhecida: somente 6 dos 1.401 participantes marcados tinham produto rotulado com magnésio e total ausente. Precisamos de análises por adequação nutricional e de uma especificação registrada para estados de mensuração antes de atribuir a discrepância a uma característica biológica."
       ],
       "links": [
         {
@@ -364,7 +369,7 @@
     {
       "title": "O próximo ciclo deve testar as explicações, não apenas repetir os números",
       "paragraphs": [
-        "A primeira prioridade é corrigir a fronteira de sono em H2 por meio de um adendo explícito, preservando a versão original e recalculando os testes afetados, inclusive a correção múltipla. Em seguida vêm a decomposição das perdas, a auditoria independente da variância e análises de sensibilidade à forma das relações e aos dados ausentes.",
+        "Após a correção de H2, o ciclo 002 auditou perdas e pesos e reproduziu a variância com svy. Encontrou dependência dos p-valores da convenção de graus de liberdade e seleção de casos completos. O ciclo 003 esclareceu os estados de ausência de magnésio por produto e antiácido. As próximas especificações devem justificar complexidade e inferência e avaliar seleção antes de testar novas formas das relações.",
         "A comparação com a literatura sugere testes concretos: harmonizar desfechos e ajustes com estudos NHANES anteriores; considerar consumo habitual e horário de cafeína; separar inadequação nutricional de dose suplementar; e validar previsão em outra onda ou com separação por unidades amostrais. Comparações de métodos harmonizados serão mais informativas do que confrontar p-valores.",
         "Para chegar a HA, autismo e TDAH, serão necessárias medidas cognitivas e diagnósticas apropriadas, além de amostras que sustentem comparações isoladas, duplas e triplas. Para desempenho em calistenia ou artes marciais, serão necessárias medidas físicas específicas. Este ciclo estabelece perguntas e um ponto de partida reproduzível, ainda distante de uma prescrição individual."
       ]
@@ -372,7 +377,7 @@
     {
       "title": "Nota editorial, fontes e reprodução",
       "paragraphs": [
-        "Este artigo interpreta a execução original do ciclo 001 e sua nota de revisão. Não acrescenta nova análise de microdados. Os estudos comparadores foram selecionados por proximidade temática e metodológica, incluindo resultados positivos e inconclusivos; a busca não é uma revisão sistemática nem uma avaliação formal completa de risco de viés.",
+        "Este artigo incorpora a correção analítica de H2 de 2026-09-09, documentada no adendo com comparação à execução original. Não constitui um novo ciclo ou replicação independente. Os estudos comparadores foram selecionados anteriormente por proximidade temática e metodológica, incluindo resultados positivos e inconclusivos; a busca não é uma revisão sistemática nem uma avaliação formal completa de risco de viés.",
         "As fichas de comparação identificam acesso por resumo ou trechos do artigo, desenhos e limites de transporte. O código e os resultados originais permanecem versionados. Execução e testes do projeto usam Pipenv."
       ],
       "links": [

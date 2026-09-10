@@ -1,0 +1,159 @@
+{
+  "date": "2026-09-09",
+  "scope": "measurement_audit_no_outcome_model",
+  "diagnostic_groups": "not_assessed",
+  "file_inventory": {
+    "DEMO_L": {
+      "rows": 11933,
+      "columns": 27,
+      "sha256": "ca4374a158b493b8b0163e1388da21d57a18d1b9cecff2aa4e2fa2bec494fe23"
+    },
+    "DR1TOT_L": {
+      "rows": 8860,
+      "columns": 168,
+      "sha256": "73a3097aab64000f9c1d138367363ca605968b691e349981132bd6032ca6c9ef"
+    },
+    "DSQTOT_L": {
+      "rows": 8860,
+      "columns": 40,
+      "sha256": "8ee3e55578f56918a190100bb321a0b580f824ca3cc439901f2fd707dbe695f8"
+    },
+    "SLQ_L": {
+      "rows": 8501,
+      "columns": 7,
+      "sha256": "918c3258b2f466ac1cae55ea45330c736dbdc573ee4dc72306e3d2b222764741"
+    },
+    "DSQIDS_L": {
+      "rows": 11375,
+      "columns": 45,
+      "sha256": "807aedb121f96c5326dffd64d7930a7fce370b4c0545160fe70d08257e4a196d"
+    },
+    "DSPI": {
+      "rows": 20235,
+      "columns": 18,
+      "sha256": "2b8854be8d0f1d959677b8689ea992c1b594e36c68d4a54a2767c4b19473d914"
+    },
+    "DSII": {
+      "rows": 188552,
+      "columns": 12,
+      "sha256": "ef28499e937207533600bb082b05d50a1f0ce9abc1dd9a6ac71af886337aeaff"
+    },
+    "DSBI": {
+      "rows": 37061,
+      "columns": 6,
+      "sha256": "007f3eee960ae65e758fa21b9b3ca57c08edfbc871e1b3bd67e48c7815527720"
+    }
+  },
+  "joins": {
+    "DSPI_unique_DSDPID": true,
+    "DSQIDS_rows": 11375,
+    "DSQIDS_participants": 4017,
+    "DSQIDS_unique_products": 3417,
+    "product_match_rows": 11210,
+    "product_unmatched_rows": 165,
+    "ingredient_match_rows": 11210
+  },
+  "codebook_totals": {
+    "records_non_antacid": 10461,
+    "records_antacid_supplement_section": 5,
+    "records_antacid_antacid_section": 909,
+    "exact_near_exact_match": 6165,
+    "no_match": 158,
+    "dont_know_match": 7,
+    "individual_magnesium_present": 1985
+  },
+  "reconstruction": {
+    "both_present_n": 1613,
+    "exact_before_rounding_n": 1249,
+    "within_half_of_0_1_unit_n": 1613,
+    "max_absolute_difference_before_rounding": 0.05000000000001137
+  },
+  "h3": {
+    "n": 4194,
+    "state_counts": {
+      "reported_products_no_magnesium_identified": 1522,
+      "quantified_magnesium": 1348,
+      "no_released_product_record": 1271,
+      "no_magnesium_identified_with_unmatched_product": 47,
+      "magnesium_label_but_total_missing": 6
+    },
+    "legacy_unquantified_indicator_n": 1401,
+    "magnesium_label_but_total_missing_n": 6,
+    "DSD010_no_but_magnesium_quantified_n": 28,
+    "DSD010_no_but_magnesium_quantified_all_antacid": true,
+    "record_level_magnesium_label_amount_missing_n": 4,
+    "record_level_ambiguity": [
+      {
+        "antacid": false,
+        "valid_days": true,
+        "valid_quantity": true,
+        "serving_ratio_present": false,
+        "no_or_unknown_match": false,
+        "n": 1
+      },
+      {
+        "antacid": false,
+        "valid_days": true,
+        "valid_quantity": true,
+        "serving_ratio_present": true,
+        "no_or_unknown_match": false,
+        "n": 3
+      }
+    ],
+    "classification_by_DSD010": [
+      {
+        "DSD010": 1,
+        "state": "magnesium_label_but_total_missing",
+        "n": 6
+      },
+      {
+        "DSD010": 1,
+        "state": "no_magnesium_identified_with_unmatched_product",
+        "n": 46
+      },
+      {
+        "DSD010": 1,
+        "state": "quantified_magnesium",
+        "n": 1320
+      },
+      {
+        "DSD010": 1,
+        "state": "reported_products_no_magnesium_identified",
+        "n": 1349
+      },
+      {
+        "DSD010": 2,
+        "state": "no_magnesium_identified_with_unmatched_product",
+        "n": 1
+      },
+      {
+        "DSD010": 2,
+        "state": "no_released_product_record",
+        "n": 1271
+      },
+      {
+        "DSD010": 2,
+        "state": "quantified_magnesium",
+        "n": 28
+      },
+      {
+        "DSD010": 2,
+        "state": "reported_products_no_magnesium_identified",
+        "n": 173
+      }
+    ]
+  },
+  "limitations": [
+    "Dados de rótulo não comprovam ingestão ou adesão.",
+    "Nomes de ingredientes com magnésio não fornecem, sozinhos, a quantidade elementar.",
+    "Nomes comerciais não são apropriados para prevalência e não são publicados aqui.",
+    "Misturas foram inventariadas, sem inferir magnésio oculto.",
+    "Mesmos participantes e onda do ciclo 001; sem novo modelo de desfecho ou replicação."
+  ],
+  "provenance_sha256": {
+    "research/discoveries/cycle-003/run_audit.py": "a5c1841416564487dc7729155dcb88140c2dca21d6fec20a0d877df8f2fc0b33",
+    "research/discoveries/cycle-003/protocol.md": "b48376f34c171b37a268002d542f0bfbad875c643704583e355f348cdaadfacc",
+    "research/discoveries/cycle-001/run_analysis.py": "06954eedebedc8de120fafe82687ba3bd59ad4d05c35b78f9895da9e2b014fa2",
+    "research/discoveries/cycle-001/results.json": "3009e248d9290252313aeb41a7dd745144484a00261d305ec873f3aaaebad620"
+  }
+}

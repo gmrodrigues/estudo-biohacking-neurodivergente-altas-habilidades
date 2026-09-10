@@ -17,8 +17,10 @@ excepcionalidades isoladas, duplas e triplas.
 
 [Objetivos e desenho](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/objetivos.html) · [Ciclos e hipóteses](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/planejamento.html) · [Bases e evidências](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/fontes.html) · [Progresso e decisões](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/progresso.html)
 
+- [Magnésio por produto: o que a ausência em DSQTMAGN realmente significa](research/discoveries/cycle-003/README.md) — 2026-09-09
+- [Auditoria de perdas, pesos e variância do ciclo 001](research/discoveries/cycle-002/README.md) — 2026-09-09
 - [Artigo: Cafeína e magnésio: o que os dados ajudam a decidir sobre suplementação](research/discoveries/cycle-001/article.md)
-- [Cafeína, sono, sedentarismo, magnésio e predição diagnóstico-agnóstica](research/discoveries/cycle-001/README.md) — 2026-09-08
+- [Cafeína, sono, sedentarismo, magnésio e predição diagnóstico-agnóstica](research/discoveries/cycle-001/README.md) — 2026-09-09
 
 [Métodos e fontes](catalog/data-sources/README.md)
 

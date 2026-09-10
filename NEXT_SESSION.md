@@ -1,6 +1,6 @@
 # Retomada da próxima sessão
 
-Estado registrado em 2026-09-08. O primeiro ciclo, o artigo comparativo e o
+Estado atualizado em 2026-09-09. O primeiro ciclo, o artigo comparativo e o
 portal foram publicados. O site confirmou a publicação do artigo após o deploy
 do commit `8cd3875`:
 
@@ -22,38 +22,95 @@ do commit `8cd3875`:
 - O gerador do site, o registro editorial e as skills foram ampliados; dez testes
   de publicação passaram.
 
-## Pendência científica imediata: H2
+## Correção H2 concluída localmente em 2026-09-09
 
-O protocolo escreveu `short_sleep` como `<7 h` e `recommended` como `7–9 h`, mas
-o código atualmente usa `pd.cut(..., right=True)`. Assim, os resultados publicados
-de H2 representam `≤7 h` versus `>7 a ≤9 h` e `>9 h`. A divergência está visível
-no dossiê e no artigo; não ocultar ou substituir os números antigos.
+O [adendo](research/discoveries/cycle-001/amendments/h2-boundary-2026-09-09/protocol.md)
+foi registrado antes da reexecução corrigida, após conhecimento dos resultados
+originais. A convenção registrada foi aplicada: `<7 h`, `7–9 h inclusive`, `>9 h`.
+Exatamente 686 pessoas com 7 h passaram à referência; n=4.522 preservado.
 
-Na próxima sessão:
+- Curto: +1,120 ponto, IC95% +0,718 a +1,521; q=0,00010891.
+- Longo: +1,214 ponto, IC95% +0,561 a +1,868; q=0,00336216.
+- Sedentarismo: +0,1178 ponto/hora, IC95% +0,0871 a +0,1485; q=0,00000520.
 
-1. Fazer um adendo explícito no ciclo 001.
-2. Decidir, antes de rerodar, a convenção final (`<7`, `7–9`, `>9`) e aplicá-la
-   ao código, rótulos da figura, `results.json`, `cycle.json`, dossiê e artigo.
-3. Rerodar H2 e a família FDR de oito termos; registrar o impacto sobre todos os
-   q-valores e atualizar os hashes apenas se algum insumo mudar.
-4. Comparar a execução antiga e nova em uma tabela de auditoria, mantendo a
-   execução antiga identificável no histórico Git.
+O alvo é o **escore de sintomas sem sono (0–24)**; o identificador interno
+legado `PHQ8_NOSLEEP` não denota o PHQ-8 convencional. A
+[auditoria comparativa](research/discoveries/cycle-001/amendments/h2-boundary-2026-09-09/audit.md)
+preserva coeficientes, IC, p e q anteriores e corrigidos dos oito termos.
+H1, sua sensibilidade, H3, previsão e hashes de insumos reproduziram exatamente
+os resultados originais. Só os três q-valores de H2 mudaram. `results-original.json`
+preserva o agregado anterior; código e figuras anteriores estão no commit
+`3a4eec48a45e1d29ac670663ae4187cbe9a2e087` e ancestrais.
 
-## Próximo ciclo recomendado
+Código, figura, manifesto, dossiê, artigo e planejamento foram atualizados. A
+correção é local; não houve commit, push ou novo deploy nesta retomada.
+A correção não constitui replicação nem validação externa da variância.
+Validação: 12 testes passaram; seis skills válidas; JSON/YAML parseados; sete
+páginas e 50 links locais verificados. PNGs conferidos visualmente. Build em
+`/tmp/science-h2-reviewed-20260909`; navegador integrado indisponível, então a
+conferência visual de páginas largas/estreitas permanece pendente.
 
-Depois de resolver H2, executar uma rodada de robustez:
+## Ciclo 002 concluído localmente em 2026-09-09
 
-- decompor perdas por variável, peso e motivo observável;
-- auditar distribuição dos pesos e a variância por estrato/PSU com método externo;
-- testar sono contínuo, spline ou categorias pré-especificadas sem procurar apenas
-  significância;
-- analisar cafeína por faixas e, quando possível, horário/uso habitual;
-- separar magnésio alimentar, suplementar e dose ausente, distinguindo magnésio
-  elementar de peso do composto;
-- avaliar não linearidade e sensibilidade a dados ausentes;
-- repetir previsão com validação por onda/PSU ou base externa, com intervalos para
-  MAE/RMSE/R² e calibração;
-- manter os grupos HA, autismo e TDAH como `not_assessed` até haver medidas reais.
+[Auditoria completa](research/discoveries/cycle-002/data-audit.md),
+[protocolo](research/discoveries/cycle-002/protocol.md) e
+[agregados](research/discoveries/cycle-002/results.json).
+
+- Reproduzidos participantes e estimativas H1/H2/H3. Retenção pós-junções:
+  66,45%, 71,36%, 66,18%. Os 273 adultos 18–19 não têm escolaridade 20+.
+- Kish: 2.460,2 / 2.957,1 / 2.450,7; apenas desigualdade dos pesos.
+- svy 0.28.0 no desenho completo reproduz coeficientes e erros-padrão
+  (diferenças relativas de SE <2e-13). Todas as 30 PSUs continuam representadas.
+- **Inferência exige cuidado:** o ciclo 001 usa 15 graus do desenho; svy aplica
+  max(1, 15−(k−1)), resultando em 1 para k=17/17/18. Com o padrão svy nenhum
+  q<0,05; com 15 graus os testes anteriores são reproduzidos. Não escolher
+  convenção por significância. O piso de 1 é comportamento do pacote, não uma
+  conclusão de que seja a escolha correta. R não foi executado.
+- Em H3, 1.401 usuários de algum suplemento têm DSQTMAGN ausente. O ciclo 003
+  auditou a composição e mostrou que o indicador não significa magnésio com
+  dose desconhecida.
+- Pipfile/lock acrescentam svy como dependência de desenvolvimento; pacotes
+  analíticos existentes mantiveram versões. 13 testes passaram, incluindo
+  fixture analítica em que um domínio esvazia uma PSU.
+
+Relatório, gráficos, manifesto e planejamento estão atualizados localmente.
+Não houve commit, push ou deploy desta rodada. Navegador integrado permanece
+indisponível; PNGs são conferidos diretamente e links do build são verificados.
+
+## Ciclo 003 concluído localmente em 2026-09-09
+
+[Auditoria por produto](research/discoveries/cycle-003/data-audit.md),
+[protocolo](research/discoveries/cycle-003/protocol.md) e
+[agregados](research/discoveries/cycle-003/results.json).
+
+- DSQIDS_L contém 11.375 ocorrências de 4.017 participantes; 11.210 ligaram a
+  DSPI/DSII e 165 ficaram sem produto correspondente.
+- Na amostra H3 (n=4.194), há 1.348 pessoas com magnésio quantificado, 1.522 com
+  produtos sem magnésio identificado, 47 com produto sem correspondência, 6
+  com rótulo de magnésio e total ausente, e 1.271 sem registro liberado.
+- O indicador legado marca 1.401 usuários de qualquer suplemento com total
+  ausente; somente 6 têm evidência de produto rotulado com magnésio e cálculo
+  ausente. Nome e interpretação públicos do ciclo 001 foram corrigidos.
+- Os 28 casos com DSD010=2 e magnésio quantificado têm antiácido. Em 1.613 de
+  1.613 participantes, DSQIMAGN × dias/30 reconstrói DSQTMAGN a até 0,05 mg.
+- Não houve imputação, novo modelo de sono, conclusão causal ou recomendação.
+
+## Próxima rodada
+
+1. Justificar complexidade e graus de liberdade, registrando a convenção antes
+   de novos ajustes; não reduzir covariáveis buscando significância.
+2. Registrar um adendo antes de modificar H3, separando zero sustentado,
+   quantidade calculada, produto não identificado, cálculo ausente e antiácido.
+3. Registrar sensibilidades à seleção/dados ausentes e formas não lineares.
+4. Validar previsão por PSU/onda com intervalos; não reutilizar o holdout para
+   selecionar especificações. Grupos diagnósticos continuam not_assessed.
+
+Reprodução da auditoria:
+
+```bash
+MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-002/run_audit.py
+PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-002/render_audit.py
+```
 
 ## Perguntas de suplementação para a próxima especificação
 
@@ -84,6 +141,9 @@ Da raiz do projeto:
 ```bash
 PIPENV_VENV_IN_PROJECT=1 pipenv sync --dev
 MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-001/run_analysis.py
+MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-001/audit_h2_amendment.py
+MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-003/run_audit.py
+PIPENV_VENV_IN_PROJECT=1 pipenv run python research/discoveries/cycle-003/render_audit.py
 MPLCONFIGDIR=/tmp/science-matplotlib PIPENV_VENV_IN_PROJECT=1 pipenv run python -m unittest discover -s tests -v
 PIPENV_VENV_IN_PROJECT=1 pipenv run python scripts/build_discovery_site.py --output /tmp/science-next-site --update-readmes
 ```

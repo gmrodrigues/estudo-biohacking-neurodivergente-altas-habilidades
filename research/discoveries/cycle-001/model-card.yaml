@@ -2,6 +2,8 @@ schema_version: 1
 model_id: cycle-001-ridge-phq8
 task: prediction
 target: PHQ8_NOSLEEP_0_24_cross_sectional
+target_public_name: escore_de_sintomas_sem_sono_0_24
+target_definition: sum_DPQ010_DPQ020_DPQ040_to_DPQ090_complete_not_standard_PHQ8
 population: NHANES 2021-2023 adults with complete predictor and target data
 diagnostic_labels_used: false
 features:

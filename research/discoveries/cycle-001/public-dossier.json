@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_note": "Nota de revisão: os resultados de H2 foram calculados com sono ≤7 h versus >7 a ≤9 h, embora o registro e alguns rótulos originais digam <7 h versus 7–9 h. As estimativas abaixo são preservadas como execução original, com essa ressalva. Uma nova análise com a fronteira registrada permanece pendente. O alvo é uma soma modificada de oito itens sem sono, não o PHQ-8 convencional.",
+  "review_note": "Correção analítica de 2026-09-09: H2 foi reexecutada conforme o protocolo (<7 h, referência 7–9 h inclusive, >9 h). 686 participantes com exatamente 7 h passaram à referência, mantendo n=4.522. Os oito testes FDR foram recalculados. A comparação com a execução original está no dossiê abaixo e no adendo; H1, H3 e previsão não mudaram. O alvo é o escore de sintomas sem sono (0–24), não o PHQ-8 convencional. Auditoria posterior (ciclo 002): coeficientes e erros-padrão foram reproduzidos com svy no desenho completo. Os p/q e IC deste ciclo usam 15 graus de liberdade; com o padrão residual de svy (piso de 1), nenhum dos oito testes tem q<0,05. A concordância da variância não resolve essa sensibilidade ou a seleção por casos completos.",
   "sections": [
     {
       "title": "Pergunta e justificativa do ciclo",
@@ -71,7 +71,7 @@
     {
       "title": "Modelos estatísticos e leitura da incerteza",
       "paragraphs": [
-        "As regressões usam mínimos quadrados ponderados, com covariância calculada por agregação dos escores por PSU e estrato. Foram registrados 15 estratos, 30 PSUs e 15 graus de liberdade. H1/H3 usam WTDRD1; H2 usa WTMEC2YR. A implementação da variância está disponível para auditoria e ainda requer confronto independente com análise de domínio do desenho completo.",
+        "As regressões usam mínimos quadrados ponderados, com covariância por PSU e estrato: 15 estratos, 30 PSUs e 15 graus na inferência do ciclo 001. H1/H3 usam WTDRD1; H2 usa WTMEC2YR. O ciclo 002 conferiu os erros-padrão com svy no desenho completo e identificou a sensibilidade dos testes à convenção de graus.",
         "Os ajustes incluem idade centrada em 45 anos, termo quadrático, sexo registrado, raça/etnia, escolaridade e razão renda/pobreza. H1/H3 acrescentam energia alimentar. Ajustar variáveis observadas não elimina causas comuns não medidas nem define a direção do efeito.",
         "IC95% descreve incerteza amostral sob as premissas do modelo; não cobre automaticamente viés de seleção ou erro de autorrelato. FDR se refere à família de oito testes, não à probabilidade de uma hipótese individual ser verdadeira. Não foram definidos limiares numéricos prévios de relevância prática."
       ]
@@ -94,14 +94,14 @@
       "title": "H2 — sono, sedentarismo e sintomas",
       "paragraphs": [
         "O alvo soma DPQ010, DPQ020 e DPQ040–DPQ090, aceitando 0–3 em todos os oito itens: escala de 0 a 24, removendo DPQ030 para reduzir a sobreposição com sono. Esse escore derivado não herda cortes diagnósticos do PHQ-9 nem do PHQ-8 convencional.",
-        "Desvio identificado: pd.cut com right=True inclui 7 h no grupo curto. Os valores publicados (+0,838, +1,276 e +0,1165 por hora sedentária) correspondem a ≤7 h, >9 h e sedentarismo, com referência >7 a ≤9 h. Os rótulos originais da tabela e da figura precisam ser lidos à luz desta nota; não houve novo ajuste nesta atualização editorial.",
-        "A relação pode ser bidirecional: sintomas podem afetar sono e movimento; saúde, medicação e trabalho também podem influenciar os três. Uma nova análise deve corrigir a fronteira registrada, examinar sono contínuo/não linear e comparar a estabilidade das estimativas."
+        "Execução original: sono ≤7 h versus >7 a ≤9 h, com contrastes +0,838 e +1,276 pontos e +0,1165 ponto por hora sedentária. Em 2026-09-09 foi aplicado o protocolo <7 h, 7–9 h inclusive, >9 h. Os contrastes corrigidos são +1,120, +1,214 e +0,1178; a tabela do adendo preserva intervalos, p e q das duas versões.",
+        "A relação pode ser bidirecional: sintomas podem afetar sono e movimento; saúde, medicação e trabalho também podem influenciar os três. Próximos testes devem examinar sono contínuo/não linear e estabilidade sob dados ausentes; a correção atual não resolveu esses limites."
       ]
     },
     {
       "title": "H3 — magnésio alimentar e suplementar",
       "paragraphs": [
-        "DR1TMAGN e DSQTMAGN entram por 100 mg, com energia e contexto. Há um indicador separado para usuários de suplementos cuja quantidade de magnésio está ausente. O código preenche a quantidade ausente com zero e usa esse indicador quando DSD010=1; essa decisão precisa de análise de sensibilidade.",
+        "DR1TMAGN e DSQTMAGN entram por 100 mg, com energia e contexto. O modelo legado preenche o total ausente com zero e marca DSD010=1. A auditoria posterior do ciclo 003 mostrou que esse marcador significa qualquer suplemento relatado com total de magnésio ausente; ele não comprova uso de magnésio com dose desconhecida.",
         "Totais de nutrientes e antiácidos não identificam glicinato, treonato ou outra forma. Ausência de quantidade não confirma ausência de ingestão. O modelo não incorpora concentração sérica, adesão ou indicação clínica.",
         "Ambos os intervalos incluem zero. Isso é inconclusivo, não comprovação de equivalência nem teste adequado de resposta a uma formulação. O ensaio selecionado de bisglicinato avaliou sintomas de insônia; esse desfecho e a exposição não coincidem com duração habitual de sono e ingestão observacional."
       ]
@@ -128,17 +128,17 @@
     {
       "title": "Documentos, reprodução e próximos testes",
       "paragraphs": [
-        "Os resultados e PNGs são os da execução já publicada; esta ampliação acrescenta contexto e notas de revisão. Para reproduzir, instale o lock com Pipenv e execute o comando no rodapé. Os hashes dos seis XPT permitem conferir insumos.",
-        "Prioridade seguinte: reconciliar protocolo e H2, registrar um adendo, rerodar os testes afetados e atualizar todos os artefatos em conjunto; depois quantificar perdas, auditar pesos/variância e replicar o preditor. A revisão de H2 também pode afetar q-valores da família FDR.",
+        "Os resultados e PNGs incorporam a correção H2 de 2026-09-09. A execução anterior permanece identificável no histórico Git e no agregado original do adendo. Para reproduzir, instale o lock com Pipenv e execute o comando no rodapé. Os hashes dos seis XPT permitem conferir os insumos preservados.",
+        "Correção H2 concluída; o ciclo 002 auditou perdas, pesos e erros-padrão, e o ciclo 003 auditou produtos, antiácidos e ausência de magnésio. Próximas prioridades: justificar complexidade/graus de liberdade e avaliar seleção, formas não lineares e previsão em dados independentes.",
         "As explicações aqui são hipóteses científicas resumidas, baseadas nos dados e estudos citados. Nenhum resultado estabelece uma dieta ou protocolo individual de suplementação."
       ],
       "links": [
         {
-          "title": "Código analítico publicado",
+          "title": "Código analítico do ciclo",
           "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/run_analysis.py"
         },
         {
-          "title": "Auditoria original (consulte as ressalvas desta página)",
+          "title": "Auditoria de dados e adendo de H2",
           "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/data-audit.md"
         },
         {
@@ -148,6 +148,84 @@
         {
           "title": "CDC — desenho e ponderação NHANES",
           "url": "https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx"
+        }
+      ]
+    },
+    {
+      "title": "Adendo H2 — comparação entre execução original e corrigida (2026-09-09)",
+      "paragraphs": [
+        "Decisão registrada localmente antes da reexecução, após conhecimento dos efeitos originais; não constitui pré-registro independente. A única mudança analítica foi atribuir exatamente 7 h à referência prevista no protocolo.",
+        "Contagens originais: curto 1.629, referência 2.422, longo 471. Corrigidas: curto 943, referência 3.108, longo 471. Amostra preservada: 4.522. H1, sua sensibilidade, H3, previsão e hashes dos dados reproduziram exatamente os resultados originais. Apenas os três q-valores de H2 mudaram.",
+        "Unidades: H1/H3 em horas de sono; H2 em pontos no escore de sintomas sem sono (0–24); sedentarismo por hora/dia. IC95% pelo desenho implementado, ainda sem validação externa da variância."
+      ],
+      "table": {
+        "headers": [
+          "Termo",
+          "Original: estimativa [IC95%]",
+          "Corrigido: estimativa [IC95%]",
+          "q original → corrigido"
+        ],
+        "rows": [
+          [
+            "H1_caffeine",
+            "-0,0537 [-0,0869; -0,0205]",
+            "-0,0537 [-0,0869; -0,0205]",
+            "0,00724286 → 0,00724286"
+          ],
+          [
+            "H1_caffeine_x_age",
+            "+0,0234 [+0,0018; +0,0449]",
+            "+0,0234 [+0,0018; +0,0449]",
+            "0,05642812 → 0,05642812"
+          ],
+          [
+            "H2_short_sleep",
+            "+0,8380 [+0,5818; +1,0943]",
+            "+1,1196 [+0,7177; +1,5215]",
+            "0,00001797 → 0,00010891"
+          ],
+          [
+            "H2_long_sleep",
+            "+1,2764 [+0,6190; +1,9337]",
+            "+1,2145 [+0,5606; +1,8684]",
+            "0,00233303 → 0,00336216"
+          ],
+          [
+            "H2_sedentary",
+            "+0,1165 [+0,0854; +0,1476]",
+            "+0,1178 [+0,0871; +0,1485]",
+            "0,00000715 → 0,00000520"
+          ],
+          [
+            "H3_diet_magnesium",
+            "+0,0173 [-0,0317; +0,0662]",
+            "+0,0173 [-0,0317; +0,0662]",
+            "0,46341455 → 0,46341455"
+          ],
+          [
+            "H3_supplement_magnesium",
+            "+0,0300 [-0,0429; +0,1029]",
+            "+0,0300 [-0,0429; +0,1029]",
+            "0,46341455 → 0,46341455"
+          ],
+          [
+            "H3_supplement_unquantified",
+            "+0,0518 [-0,0834; +0,1871]",
+            "+0,0518 [-0,0834; +0,1871]",
+            "0,46341455 → 0,46341455"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Auditoria posterior — ciclo 002",
+      "paragraphs": [
+        "Auditoria posterior (ciclo 002): coeficientes e erros-padrão foram reproduzidos com svy no desenho completo. Os p/q e IC deste ciclo usam 15 graus de liberdade; com o padrão residual de svy (piso de 1), nenhum dos oito testes tem q<0,05. A concordância da variância não resolve essa sensibilidade ou a seleção por casos completos."
+      ],
+      "links": [
+        {
+          "title": "Ciclo 002: perdas, pesos e sensibilidade da inferência",
+          "url": "https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-002/index.html"
         }
       ]
     }

@@ -11,9 +11,9 @@
     {
       "title": "Estado do trabalho",
       "items": [
-        "Executado: inventário de fontes, inspeção de NHANES, consultas de ensaios, grafo inicial e ciclo 001 com três famílias de hipóteses e uma prova de conceito preditiva.",
-        "Revisão pendente: fronteira das categorias de sono de H2 e alinhamento entre documentação, código e gráficos. Veja a nota na página do ciclo.",
-        "Planejado: replicação, validação por estratos, síntese de intervenções e comparação entre HA, autismo e TDAH quando houver medidas adequadas."
+        "Executados: inventário e ciclo 001 corrigido; ciclo 002 com perdas, pesos e comparação independente de erros-padrão.",
+        "Achado de auditoria: variância reproduzida, mas inferência depende dos graus de liberdade; casos completos retêm 66–71% dos adultos após junções.",
+        "Próximo: justificar complexidade/inferência e registrar sensibilidades à seleção, formas não lineares e validação independente. A ausência de magnésio foi auditada no ciclo 003."
       ]
     }
   ],
@@ -30,9 +30,18 @@
             "O ciclo 001 não mede capacidades elevadas nem identifica esses diagnósticos: não testa a tese. Rotina também pode ser afetada por sintomas, recursos e suporte; a pesquisa não atribui culpa individual."
           ],
           "links": [
-            {"title": "Proposições, alternativas e critérios de teste", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/FOUNDATIONAL_HYPOTHESIS.md"},
-            {"title": "NIMH: autismo e desenvolvimento", "url": "https://www.nimh.nih.gov/health/publications/autism-spectrum-disorder"},
-            {"title": "NIMH: TDAH", "url": "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know"}
+            {
+              "title": "Proposições, alternativas e critérios de teste",
+              "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/FOUNDATIONAL_HYPOTHESIS.md"
+            },
+            {
+              "title": "NIMH: autismo e desenvolvimento",
+              "url": "https://www.nimh.nih.gov/health/publications/autism-spectrum-disorder"
+            },
+            {
+              "title": "NIMH: TDAH",
+              "url": "https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know"
+            }
           ]
         },
         {
@@ -138,15 +147,15 @@
             "rows": [
               [
                 "Ciclo 001",
-                "Executado; H2 com ressalva de revisão",
+                "Executado; H2 corrigida por adendo em 2026-09-09",
                 "Cafeína–sono; sono/sedentarismo–sintomas; magnésio–sono; Ridge sem diagnóstico",
-                "Reconciliar rótulos e fronteira de 7 horas antes de usar H2 como confirmação do protocolo"
+                "Fronteira registrada aplicada; avançar para auditoria de perdas, pesos e variância e replicação independente"
               ],
               [
-                "Próximo ciclo: robustez",
-                "Proposto",
-                "Repetir definições, perdas por variável, não linearidade e sensibilidade de magnésio",
-                "Registrar correções como nova versão; não substituir silenciosamente os achados"
+                "Ciclo 002 — auditoria",
+                "Executado em 09/09/2026",
+                "Perdas, pesos, variância Taylor e graus de liberdade",
+                "Resultados de auditoria revisados; próxima especificação deve justificar inferência e mensuração"
               ],
               [
                 "Replicação e estratos",
@@ -195,7 +204,7 @@
                 "H2",
                 "Sono curto e mais sedentarismo associados a mais sintomas",
                 "Sono categórico e horas sedentárias em um único modelo",
-                "Associações observadas; execução usa ≤7 h, divergente do <7 h registrado"
+                "Associações positivas após correção: <7 h e >9 h versus 7–9 h inclusive; não causal"
               ],
               [
                 "H3",
@@ -210,7 +219,10 @@
                 "R² interno ≈0,09; sem validação externa"
               ]
             ]
-          }
+          },
+          "paragraphs": [
+            "A auditoria do ciclo 002 reproduziu os erros-padrão, mas constatou sensibilidade dos p/q à escolha de graus de liberdade. As interpretações dos testes do ciclo 001 são condicionais aos 15 graus usados ali."
+          ]
         },
         {
           "title": "Hipóteses ainda não testadas",
@@ -449,12 +461,22 @@
               [
                 "Ciclo 001 — 08/09/2026",
                 "results.json, código, quatro gráficos, relatório e cartão do modelo",
-                "Executado; revisão editorial identificou divergência em H2"
+                "Executado; H2 corrigida em 2026-09-09, com oito testes FDR recalculados e comparação histórica"
               ],
               [
                 "Ampliação do portal",
                 "Objetivos, roteiro de ciclos, fontes, métodos e registro de decisões",
                 "Documentação vinculada aos artefatos; não acrescenta novos participantes ou efeitos"
+              ],
+              [
+                "Ciclo 002 — 09/09/2026",
+                "Auditoria, svy 0.28.0, perdas por campo/PSU, dois gráficos e hashes",
+                "Executado localmente; variância reproduzida e sensibilidade da inferência documentada"
+              ],
+              [
+                "Ciclo 003 — 09/09/2026",
+                "DSQIDS_L, DSPI/DSII, antiácidos, reconstrução de totais e estados de ausência",
+                "Executado localmente; interpretação do indicador legado de H3 corrigida"
               ]
             ]
           }
@@ -462,12 +484,11 @@
         {
           "title": "Pendências científicas",
           "items": [
-            "Resolver o limite de 7 horas de H2: código atual inclui exatamente 7 h no grupo curto; protocolo prevê esse valor na referência.",
-            "Revisar descrições da amostra por hipótese: as junções são específicas, não uma única coorte obrigatória de seis tabelas.",
-            "Padronizar o nome do escore como soma modificada de oito itens sem sono; não aplicar cortes clínicos do PHQ-8 convencional.",
-            "Auditar seleção por dados completos, distribuição dos pesos, células pequenas e compatibilidade da variância com o desenho completo.",
-            "Estimar incerteza das métricas preditivas, validar por PSU/onda e replicar sem reutilizar o teste para escolher especificações.",
-            "Extrair desfechos e qualidade dos ensaios antes de qualquer síntese de eficácia."
+            "Justificar graus de liberdade e complexidade antes de novas regressões; distinguir o padrão svy do uso de 15 graus do desenho.",
+            "Registrar nova especificação de H3 separando zero sustentado, quantidade calculada, produto não identificado, cálculo ausente e antiácido.",
+            "Avaliar seleção por casos completos e possíveis sensibilidades a dados ausentes.",
+            "Registrar formas não lineares e validação por PSU/onda antes de executar novos testes.",
+            "Preservar comparações diagnósticas como não avaliadas até obter medidas reais."
           ]
         },
         {

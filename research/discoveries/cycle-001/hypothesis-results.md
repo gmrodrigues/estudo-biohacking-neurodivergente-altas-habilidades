@@ -1,18 +1,26 @@
 # Resultados das hipóteses — ciclo 001
 
-Todos os efeitos abaixo são associações ajustadas; intervalos são IC95% derivados do desenho amostral. Os oito testes primários foram corrigidos por Benjamini–Hochberg (FDR).
+Correção H2 executada em 2026-09-09. [Adendo e comparação histórica](amendments/h2-boundary-2026-09-09/audit.md).
 
-| Hipótese | Estimativa principal | IC95% | p ajustado | Leitura |
-|---|---:|---:|---:|---|
-| H1: cafeína e sono | −0,0537 h por 100 mg | −0,0869 a −0,0205 | 0,0072 | associação com menos sono; não é efeito causal |
-| H1: interação cafeína×idade | +0,0234 h por década/100 mg | +0,0018 a +0,0449 | 0,0564 | sinal limítrofe; perde força na sensibilidade sem consumo >800 mg |
-| H2: sono curto (<7 h) e PHQ-8 | +0,838 pontos | +0,582 a +1,094 | <0,001 | associação com maior sintomatologia |
-| H2: sono longo (>9 h) e PHQ-8 | +1,276 pontos | +0,619 a +1,934 | 0,0023 | associação; pode refletir doença, recuperação ou confusão |
-| H2: sedentarismo | +0,1165 PHQ-8/hora | +0,0854 a +0,1476 | <0,001 | associação dose–resposta exploratória |
-| H3: magnésio alimentar | +0,0173 h/100 mg | −0,0317 a +0,0662 | 0,4634 | inconclusivo |
-| H3: magnésio suplementar quantificado | +0,0300 h/100 mg | −0,0429 a +0,1029 | 0,4634 | inconclusivo |
-| H3: suplemento com dose não quantificada | +0,0518 h | −0,0834 a +0,1871 | 0,4634 | inconclusivo |
+Associações ajustadas transversais; IC95% por estratos/PSUs e q por Benjamini–Hochberg nos mesmos oito termos. H2 compara <7 h e >9 h com 7–9 h inclusive; o escore de sintomas sem sono (0–24) não é o PHQ-8 convencional. A variância ainda aguarda confronto externo.
+
+| Hipótese | Estimativa | IC95% | q |
+|---|---:|---:|---:|
+| H1: cafeína (h/100 mg, aos 45 anos) | -0,0537 | -0,0869 a -0,0205 | 0,00724286 |
+| H1: cafeína×idade (h/década/100 mg) | +0,0234 | +0,0018 a +0,0449 | 0,05642812 |
+| H2: sono curto <7 h (pontos) | +1,1196 | +0,7177 a +1,5215 | 0,00010891 |
+| H2: sono longo >9 h (pontos) | +1,2145 | +0,5606 a +1,8684 | 0,00336216 |
+| H2: sedentarismo (ponto/hora) | +0,1178 | +0,0871 a +0,1485 | 0,00000520 |
+| H3: magnésio alimentar (h/100 mg) | +0,0173 | -0,0317 a +0,0662 | 0,46341455 |
+| H3: magnésio suplementar (h/100 mg) | +0,0300 | -0,0429 a +0,1029 | 0,46341455 |
+| H3: qualquer suplemento; total de magnésio ausente (h, indicador legado) | +0,0518 | -0,0834 a +0,1871 | 0,46341455 |
+
+Auditoria posterior do ciclo 003 mostrou que esse indicador legado não comprova
+uso de magnésio com dose desconhecida: somente 6 dos 1.401 participantes marcados
+tinham produto rotulado com magnésio e total ausente.
+
+H2 mantém associações positivas; H1 mantém associação com menos sono e interação limítrofe após FDR. H3 permanece inconclusiva. Ajuste estatístico não estabelece causalidade.
 
 ## Predição diagnóstico-agnóstica
 
-Um Ridge com separação interna aleatória 75/25 previu PHQ-8 sem conhecer diagnóstico. O MAE foi 2,90 e RMSE 3,94, contra 3,07 e 4,14 para a média ponderada; R² fora da amostra foi 0,090. Remover sono aumentou RMSE em 0,009, remover sedentarismo em 0,039 e remover contexto demográfico em 0,168. É uma prova de conceito, sem validação externa ou temporal.
+Um Ridge com separação interna aleatória 75/25 previu o escore de sintomas sem sono (0–24) sem conhecer diagnóstico. O MAE foi 2,90 e RMSE 3,94, contra 3,07 e 4,14 para a média ponderada; R² fora da amostra foi 0,090. Remover sono aumentou RMSE em 0,009, remover sedentarismo em 0,039 e remover contexto demográfico em 0,168. É uma prova de conceito, sem validação externa ou temporal.

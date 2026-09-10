@@ -77,8 +77,25 @@ marcadas como `draft`/`proposed` e `not_run`; não são motores estatísticos.
 ## Retomada da próxima sessão
 
 Consulte [`NEXT_SESSION.md`](../../NEXT_SESSION.md) antes de alterar o ciclo 001.
-O documento registra o estado publicado, a divergência de fronteira de sono em H2,
-o adendo que precisa ser decidido antes de rerodar, a auditoria de robustez e as
+O documento registra o estado publicado e a correção local de H2 em 2026-09-09,
+o adendo e a comparação histórica executados, a próxima auditoria de robustez e as
 perguntas de suplementação cafeína–magnésio. A tese sobre capacidades encobertas
 está em [`FOUNDATIONAL_HYPOTHESIS.md`](FOUNDATIONAL_HYPOTHESIS.md) e permanece
 hipótese, não conclusão do ciclo 001.
+
+### Atualização de 2026-09-09: ciclo 002
+
+A auditoria de perdas, pesos e variância foi executada e está em
+[cycle-002/data-audit.md](../../research/discoveries/cycle-002/data-audit.md).
+Coeficientes e erros-padrão foram reproduzidos; testes dependem da convenção de
+graus de liberdade. Antes de novas sensibilidades, justificar inferência e
+esclarecer ausência de magnésio por produtos/antiácidos. Ver NEXT_SESSION.md.
+
+### Atualização de 2026-09-09: ciclo 003
+
+A [auditoria por produto e antiácido](../../research/discoveries/cycle-003/data-audit.md)
+separou cinco estados de mensuração em H3. O indicador legado marcava 1.401
+usuários de qualquer suplemento com DSQTMAGN ausente; somente 6 tinham produto
+rotulado com magnésio e total ausente. A próxima especificação de H3 deve ser
+registrada antes dos efeitos e separar quantidade calculada, zero sustentado,
+produto não identificado, cálculo ausente e antiácido.

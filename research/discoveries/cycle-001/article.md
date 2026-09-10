@@ -1,6 +1,6 @@
 # Cafeína e magnésio: o que os dados ajudam a decidir sobre suplementação
 
-Artigo para pessoas neurodivergentes interessadas em suplementação · Ciclo 001, NHANES 2021–2023 · Comparação com estudos humanos, quantificação das associações e orientação para avaliar exposições. Análise exploratória, sem validação individual; H2 possui ressalva metodológica.
+Artigo para pessoas neurodivergentes interessadas em suplementação · Ciclo 001, NHANES 2021–2023 · Comparação com estudos humanos, quantificação das associações e orientação para avaliar exposições. Análise exploratória, sem validação individual; H2 corrigida com adendo em 2026-09-09.
 
 ## Antes de personalizar, precisamos saber o que conseguimos medir
 
@@ -68,21 +68,24 @@ O registro local declara que as hipóteses foram escritas antes dos coeficientes
 
 ## O retrato numérico do ciclo
 
-H2 exige uma ressalva antes da leitura dos números: a implementação usou sono ≤7 horas, referência >7 a ≤9 horas e sono >9 horas. O protocolo previa <7 horas e referência 7–9 horas. A tabela abaixo descreve o que foi efetivamente calculado; a análise com a fronteira originalmente registrada permanece pendente.
+Correção analítica de 2026-09-09: H2 foi reexecutada conforme o protocolo (<7 h, referência 7–9 h inclusive, >9 h). 686 participantes com exatamente 7 h passaram à referência, mantendo n=4.522. Os oito testes FDR foram recalculados. A comparação com a execução original está no dossiê do ciclo e no adendo; H1, H3 e previsão não mudaram. O alvo é o escore de sintomas sem sono (0–24), não o PHQ-8 convencional.
 
 O escore de sintomas é uma soma de oito itens do PHQ-9, excluindo o item de sono, de 0 a 24. Não é o PHQ-8 convencional e não herda seus cortes diagnósticos. Todos os intervalos abaixo são IC95%; q é o valor ajustado por múltiplos testes.
+
+Auditoria posterior (ciclo 002): coeficientes e erros-padrão foram reproduzidos com svy no desenho completo. Os p/q e IC deste ciclo usam 15 graus de liberdade; com o padrão residual de svy (piso de 1), nenhum dos oito testes tem q<0,05. A concordância da variância não resolve essa sensibilidade ou a seleção por casos completos.
 
 | Relação | Estimativa ajustada | IC95% | q |
 | --- | --- | --- | --- |
 | Cafeína: +100 mg, aos 45 anos | −0,0537 h de sono | −0,0869 a −0,0205 | 0,0072 |
-| Sono ≤7 h, versus >7 a ≤9 h (H2 com ressalva) | +0,838 ponto no escore modificado | +0,582 a +1,094 | <0,001 |
-| Sono >9 h, mesma referência (H2 com ressalva) | +1,276 ponto | +0,619 a +1,934 | 0,0023 |
-| Sedentarismo: +1 h/dia (modelo H2 com ressalva) | +0,1165 ponto | +0,0854 a +0,1476 | <0,001 |
+| Sono <7 h versus 7–9 h inclusive (H2 corrigida) | +1,120 ponto no escore de sintomas sem sono (0–24) | +0,718 a +1,521 | 0,00010891 |
+| Sono >9 h versus 7–9 h inclusive (H2 corrigida) | +1,214 ponto no escore de sintomas sem sono (0–24) | +0,561 a +1,868 | 0,00336216 |
+| Sedentarismo: +1 h/dia (H2 corrigida) | +0,1178 ponto no escore de sintomas sem sono (0–24) | +0,0871 a +0,1485 | 0,00000520 |
 | Magnésio alimentar: +100 mg | +0,0173 h de sono | −0,0317 a +0,0662 | 0,4634 |
 | Magnésio suplementar: +100 mg | +0,0300 h de sono | −0,0429 a +0,1029 | 0,4634 |
 
 - [Resultados numéricos completos](https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/research/discoveries/cycle-001/results.json)
 - [Gráficos, métodos e nota de revisão](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-001/)
+- [Ciclo 002: perdas, pesos e sensibilidade da inferência](https://gmrodrigues.github.io/estudo-biohacking-neurodivergente-altas-habilidades/cycles/cycle-002/index.html)
 
 ## Cafeína: direção familiar, uma pergunta diferente da experimental
 
@@ -100,7 +103,7 @@ Uma explicação concorrente continua aberta: pessoas que dormem menos podem con
 
 ## Sono e sedentarismo: convergência observacional, sem direção causal definida
 
-Os dois grupos extremos de duração de sono apresentaram escores de sintomas maiores que a categoria intermediária usada na execução. Isso é compatível com uma relação não linear, mas três categorias não identificam uma curva nem uma duração ótima de sono. A fronteira de 7 horas precisa ser reconciliada antes de tratar H2 como teste do protocolo.
+Após a correção para <7 h e >9 h versus 7–9 h inclusive, os dois grupos extremos apresentaram escores de sintomas maiores que a referência. Isso é compatível com uma relação não linear, mas três categorias não identificam uma curva nem uma duração ótima de sono. A correção alinha a execução ao protocolo; não é replicação independente.
 
 O estudo longitudinal de 2018 sobre sono e depressão em pessoas de meia-idade e idosas encontrou relações bidirecionais. Ele ajuda a compreender por que nosso retrato transversal admite explicações nos dois sentidos. Porém, categorias de sono, instrumento e desfecho longitudinal diferem: não cabe comparar suas razões de chances diretamente com nossos pontos no escore modificado.
 
@@ -120,7 +123,7 @@ Um estudo de NHANES 2009–2018 com 21.840 participantes relatou associação en
 
 Já o ensaio de Schuster e colaboradores (2025) randomizou 155 adultos com sono ruim para bisglicinato de magnésio ou placebo. Em quatro semanas houve uma melhora pequena no índice de gravidade de insônia, com tamanho de efeito d=0,2. Isso responde a uma pergunta diferente: uma formulação específica, num grupo selecionado, com um desfecho de insônia.
 
-Nosso total de nutrientes não distingue formulações, inclui informações de suplementos/antiácidos e não mede adesão ou estado basal de magnésio. Precisamos de análises por adequação nutricional e sensibilidade ao tratamento de quantidades ausentes antes de atribuir a discrepância a uma característica biológica.
+Nosso total de nutrientes não distingue formulações, inclui informações de suplementos/antiácidos e não mede adesão ou estado basal de magnésio. A auditoria posterior do ciclo 003 mostrou que o indicador legado de total ausente não equivale a magnésio de dose desconhecida: somente 6 dos 1.401 participantes marcados tinham produto rotulado com magnésio e total ausente. Precisamos de análises por adequação nutricional e de uma especificação registrada para estados de mensuração antes de atribuir a discrepância a uma característica biológica.
 
 
 - [Dietary Magnesium Intake Is Associated With Self-Reported Short Sleep Duration but Not Self-Reported Sleep Disorder (2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11799047/)
@@ -190,7 +193,7 @@ Os dados deste ciclo não autorizam transpor essas referências para crianças o
 
 ## O próximo ciclo deve testar as explicações, não apenas repetir os números
 
-A primeira prioridade é corrigir a fronteira de sono em H2 por meio de um adendo explícito, preservando a versão original e recalculando os testes afetados, inclusive a correção múltipla. Em seguida vêm a decomposição das perdas, a auditoria independente da variância e análises de sensibilidade à forma das relações e aos dados ausentes.
+Após a correção de H2, o ciclo 002 auditou perdas e pesos e reproduziu a variância com svy. Encontrou dependência dos p-valores da convenção de graus de liberdade e seleção de casos completos. O ciclo 003 esclareceu os estados de ausência de magnésio por produto e antiácido. As próximas especificações devem justificar complexidade e inferência e avaliar seleção antes de testar novas formas das relações.
 
 A comparação com a literatura sugere testes concretos: harmonizar desfechos e ajustes com estudos NHANES anteriores; considerar consumo habitual e horário de cafeína; separar inadequação nutricional de dose suplementar; e validar previsão em outra onda ou com separação por unidades amostrais. Comparações de métodos harmonizados serão mais informativas do que confrontar p-valores.
 
@@ -199,7 +202,7 @@ Para chegar a HA, autismo e TDAH, serão necessárias medidas cognitivas e diagn
 
 ## Nota editorial, fontes e reprodução
 
-Este artigo interpreta a execução original do ciclo 001 e sua nota de revisão. Não acrescenta nova análise de microdados. Os estudos comparadores foram selecionados por proximidade temática e metodológica, incluindo resultados positivos e inconclusivos; a busca não é uma revisão sistemática nem uma avaliação formal completa de risco de viés.
+Este artigo incorpora a correção analítica de H2 de 2026-09-09, documentada no adendo com comparação à execução original. Não constitui um novo ciclo ou replicação independente. Os estudos comparadores foram selecionados anteriormente por proximidade temática e metodológica, incluindo resultados positivos e inconclusivos; a busca não é uma revisão sistemática nem uma avaliação formal completa de risco de viés.
 
 As fichas de comparação identificam acesso por resumo ou trechos do artigo, desenhos e limites de transporte. O código e os resultados originais permanecem versionados. Execução e testes do projeto usam Pipenv.
 

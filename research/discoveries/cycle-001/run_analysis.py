@@ -30,6 +30,15 @@ ZERO_THRESHOLD = 1e-70
 SEED = 20260907
 
 
+def sleep_categories(hours: pd.Series) -> pd.Series:
+    """Registered H2 groups: <7, inclusive 7–9 reference, >9; preserve missing."""
+    labels = pd.Series(index=hours.index, dtype="object")
+    labels.loc[hours.lt(7)] = "short"
+    labels.loc[hours.between(7, 9, inclusive="both")] = "recommended"
+    labels.loc[hours.gt(9)] = "long"
+    return labels.astype(pd.CategoricalDtype(["recommended", "short", "long"]))
+
+
 def read_xpt(name: str) -> pd.DataFrame:
     frame = pd.read_sas(DATA / f"{name}.xpt", format="xport")
     numeric = frame.select_dtypes(include="number").columns
@@ -171,9 +180,7 @@ def main() -> None:
     valid_items = h2[phq_items].where(h2[phq_items].isin([0, 1, 2, 3]))
     h2["PHQ8_NOSLEEP"] = valid_items.sum(axis=1, min_count=8)
     h2["SED_HOURS"] = h2["PAD680"].where(h2["PAD680"].between(0, 1380)) / 60.0
-    h2["SLEEP_CAT"] = pd.cut(h2["SLD012"], [-np.inf, 7, 9, np.inf], right=True,
-                             labels=["short", "recommended", "long"])
-    h2["SLEEP_CAT"] = h2["SLEEP_CAT"].cat.reorder_categories(["recommended", "short", "long"])
+    h2["SLEEP_CAT"] = sleep_categories(h2["SLD012"])
     m2 = survey_wls(f"PHQ8_NOSLEEP ~ C(SLEEP_CAT) + SED_HOURS + {common}", h2, "WTMEC2YR")
 
     h3 = prepare_demographics(merge_tables(["DEMO_L", "DR1TOT_L", "DSQTOT_L", "SLQ_L"]))
@@ -266,12 +273,15 @@ def main() -> None:
     coefficient_plot(m2, [("C(SLEEP_CAT)[T.short]", "Sono curto (<7 h)"),
                           ("C(SLEEP_CAT)[T.long]", "Sono longo (>9 h)"),
                           ("SED_HOURS", "Sedentarismo, por hora/dia")],
-                     "Sono, sedentarismo e sintomas depressivos sem item de sono",
-                     "Diferença ajustada no escore PHQ-8 modificado (IC 95%)",
+                     f"Sono e sedentarismo: NHANES 2021–2023, n={m2['n']:,}\n".replace(",", ".") +
+                     "Referência: 7–9 h; peso MEC; IC95% por estratos/PSUs",
+                     "Diferença ajustada no escore de sintomas sem sono (0–24)",
                      FIGURES / "sleep-sedentary-depression.png")
+    # O ciclo 003 mostrou que o indicador legado significa qualquer suplemento
+    # relatado com DSQTMAGN ausente; ele não comprova uso de magnésio.
     coefficient_plot(m3, [("DIET_MAG100", "Magnésio alimentar, por 100 mg"),
                           ("SUPP_MAG100", "Magnésio de suplementos, por 100 mg"),
-                          ("SUPP_MAG_UNQUANT", "Uso com magnésio não quantificado")],
+                          ("SUPP_MAG_UNQUANT", "Qualquer suplemento; total de magnésio ausente")],
                      "Magnésio e duração habitual do sono", "Diferença ajustada em horas de sono (IC 95%)",
                      FIGURES / "magnesium-sleep.png")
 
@@ -287,7 +297,8 @@ def main() -> None:
     ax.plot([0, limit], [0, limit], linestyle="--", color="#555", label="calibração ideal")
     ax.plot(calibration["predicted"], calibration["observed"], marker="o", color="#087e8b",
             label="teste interno por décimo")
-    ax.set(xlabel="PHQ-8 modificado previsto", ylabel="PHQ-8 modificado observado",
+    ax.set(xlabel="Escore de sintomas sem sono previsto (0–24)",
+           ylabel="Escore de sintomas sem sono observado (0–24)",
            title="Calibração interna do modelo sem diagnóstico")
     ax.legend()
     ax.grid(alpha=0.2)
@@ -306,6 +317,11 @@ def main() -> None:
         "prediction_complete": len(prediction),
         "age_range": [int(prediction["RIDAGEYR"].min()), int(prediction["RIDAGEYR"].max())],
         "diagnostic_groups": "not_assessed",
+        "H2_sleep_definition": {"short": "<7 h", "recommended": "7–9 h inclusive", "long": ">9 h"},
+        "H2_sleep_counts": {str(key): int(value) for key, value in
+                            h2.loc[m2["used_index"], "SLEEP_CAT"].value_counts().items()},
+        "H2_exactly_7h_reclassified": int(h2.loc[m2["used_index"], "SLD012"].eq(7).sum()),
+        "symptom_score": "sum_DPQ010_DPQ020_DPQ040_to_DPQ090_complete_0_24_not_standard_PHQ8",
     }
     hashes = {path.name: hashlib.sha256(path.read_bytes()).hexdigest()
               for path in sorted(DATA.glob("*.xpt")) if path.stem in
