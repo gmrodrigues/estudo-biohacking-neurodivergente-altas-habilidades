@@ -1,5 +1,10 @@
 # Primeiro ciclo ABCD: capacidade contínua, perfil e trajetória
 
+Atualização da triagem: consultar [SOURCE_FIT_AUDIT.md](SOURCE_FIT_AUDIT.md).
+A documentação atual aponta NBDC/release 7.0, limitações de seleção/mensuração
+de autismo e proibição de inserir dados ABCD em IA generativa. Este protocolo
+é candidato, não autorização de ingestão neste assistente.
+
 Este é o primeiro ciclo analítico planejado após a fundação de dados. Não é uma
 análise de suplementos e não pressupõe que alta capacidade seja um diagnóstico.
 

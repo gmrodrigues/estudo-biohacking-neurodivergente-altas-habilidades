@@ -26,6 +26,11 @@ meça tempo e intervenção, não apenas de mais ajustes no mesmo corte transver
 
 ## Porta de entrada: fundação analítica antes de comparações
 
+E1 documental iniciada em 2026-09-10: [triagem de adequação das fontes](../../catalog/data-sources/SOURCE_FIT_AUDIT.md).
+Atualizar decisões com os dicionários e a cobertura conjunta, ainda não medida.
+ABCD/NBDC e seus limites de uso/autismo substituem a suposição de acesso NDA
+como caminho atual único. Nenhuma nova POC empírica foi aprovada.
+
 O [plano da fase 1](../../catalog/data-sources/PHASE_1_PLAN.md) detalha E1–E6,
 POC-01 a POC-06 e critérios de encerramento. Sua publicação é planejamento;
 não representa execução ou aprovação empírica das bases.

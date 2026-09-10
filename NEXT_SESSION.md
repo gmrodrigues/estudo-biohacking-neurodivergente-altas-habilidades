@@ -117,6 +117,18 @@ seleção observável.
 
 ## Próxima rodada: fundação analítica ABCD
 
+E1 documental iniciada: [triagem de fontes](catalog/data-sources/SOURCE_FIT_AUDIT.md).
+Achados: ABCD 7.0/NBDC; autismo com seleção restrita/relato parental; dados ABCD
+não podem ser inseridos em IA generativa. UKB tem campos confirmados, N conjunto
+desconhecido. NHANES CFQ_H oferece cognição 60+ para auditoria complementar.
+Nenhuma POC empírica nova executada; próximo passo é completar dicionários e
+contar cobertura nas fontes/ambientes autorizados.
+
+Correção de escopo: aprovar fontes pelos testes científicos A-01 a A-05 do plano,
+não por associações genéricas. Priorizar cobertura conjunta de capacidade,
+fator modificável e funcionamento, e precisão da interação exposição × capacidade.
+Auditorias de chaves e código são pré-requisitos, não validação do objetivo.
+
 Executar E1 do [plano da fase 1](catalog/data-sources/PHASE_1_PLAN.md): matriz
 pergunta × campo × fonte × onda, seguida de aquisição e auditoria por fonte.
 O plano inclui seis POCs, precisão por pergunta e alternativas durante pendência

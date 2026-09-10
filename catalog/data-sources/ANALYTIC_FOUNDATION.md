@@ -2,6 +2,10 @@
 
 Plano operacional vigente: [Fase 1 — base ampla e POCs](PHASE_1_PLAN.md).
 O plano define etapas, cobertura, precisão, seis POCs e critérios de encerramento.
+As seis POCs técnicas não bastam para aprovar a base: os testes A-01 a A-05 do
+plano avaliam adequação ao objetivo científico. O núcleo mínimo requer capacidade,
+fator modificável e funcionamento conjuntos, com precisão suficiente para estudar
+variação da associação conforme capacidade. Uma correlação genérica não o valida.
 
 Estado: `blocked_by_access` para microdados ABCD. O protocolo, os critérios e a
 auditoria de metadados podem ser concluídos agora; esta fase não estima benefício

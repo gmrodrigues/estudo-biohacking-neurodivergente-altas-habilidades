@@ -62,6 +62,10 @@ auditoria de campos, elegibilidade, grupos, ondas, ausências e qualidade.
 
 ## Primeira decisão de aquisição
 
+A sequência abaixo foi substituída pela [triagem E1](SOURCE_FIT_AUDIT.md): ABCD,
+HBN e UK Biobank como candidatas ao núcleo; NHANES cognitivo e NSCH como apoio.
+Totais deste inventário são históricos e não constituem aprovação por A-01/A-05.
+
 1. Baixar primeiro metadados/fenótipos públicos de **Project Talent,
    ABIDE II, ADHD-200 e NSCH** e gerar quatro relatórios de auditoria separados.
 2. Antes de baixar arquivos grandes, listar nomes de campos, licença, tamanho,

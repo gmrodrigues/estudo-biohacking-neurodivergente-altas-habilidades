@@ -81,19 +81,29 @@ Duas medidas cognitivas são um ponto de triagem, não prova de validade de um
 componentes futuros da construção do perfil. Desempenho acadêmico deve permanecer
 separado quando for o desfecho; evitar circularidade.
 
-## Hipóteses simples para experimentar a base
+## POCs de adequação ao objetivo científico
 
-Todas são propostas, sem resultados. Selecionar no máximo duas por primeira
-rodada, conforme E4; congelar instrumento e campo exato antes de estimar.
+Todas são propostas, sem resultados. Estes testes substituem as hipóteses
+genéricas de sono e atividade da versão anterior. O objetivo é demonstrar que
+a base permite estudar fatores modificáveis em função do perfil cognitivo e
+das condições medidas. Auditoria técnica é necessária, mas não aprova esse uso.
 
-| ID | Hipótese candidata | Desenho mínimo | O que valida na base |
+| ID | Pergunta de adequação | Desenho mínimo | Evidência exigida para aprovação |
 |---|---|---|---|
-| H-P01 | Sono basal associa-se à função executiva posterior após considerar seu nível basal | Uma exposição, um desfecho, duas ondas e ajustes pré-definidos | Ligação temporal, retenção e funcionamento do modelo longitudinal |
-| H-P02 | Atividade associa-se ao funcionamento escolar | Medidas conjuntas na mesma fonte; desenho transversal se não houver seguimento | Cobertura de hábito, desfecho e contexto |
-| H-P03 | Uso relatado de suplemento corresponde a exposição quantificável por ingrediente | Auditoria de produtos, frequência e quantidade | Quanto da base sustenta análise de dose e quanto permite apenas análise de uso |
+| A-01 | A base distingue capacidade cognitiva, dificuldades e funcionamento sem circularidade? | Medidas cognitivas documentadas, sintomas/condições independentes e desfecho separado | Matriz conjunta de cobertura, distribuição e validade das medidas; não basta haver colunas isoladas |
+| A-02 | Podemos estimar se a associação de um fator modificável com funcionamento varia ao longo da capacidade cognitiva? | Uma exposição, capacidade contínua, desfecho independente e ajustes na mesma amostra; uma interação exposição × capacidade | Suporte de exposição ao longo da capacidade, identificação do modelo e precisão pré-definida da interação; resultado pode ser nulo |
+| A-03 | Podemos investigar essa relação em participantes com TDAH/autismo e capacidade elevada? | Capacidade e condição medidas independentemente; contar elegíveis com exposição e desfecho por condição e faixa cognitiva | Cobertura e precisão por contraste; cada condição/coexistência recebe aprovação ou insuficiência própria, sem exigir interação tripla nesta fase |
+| A-04 | A base permite estudar trajetórias de funcionamento conforme perfil e hábito basal? | Requisitos de A-02 mais desfecho posterior e basal, pares de ondas e perdas auditadas | Estimando longitudinal viável e precisão após retenção; associação transversal não aprova trajetória |
+| A-05 | A nutrição/suplementação contribui diretamente ou por uma comparação indireta identificável? | Exposição documentada e perfil/desfecho conjuntos, ou pares de estudos com construto intermediário, população e janela comparáveis | Mapa de cada ligação exposição → hábito/biomarcador → funcionamento, sua fonte e limites; ligação ausente permanece lacuna |
 
-H-P03 é uma hipótese de mensuração, não de eficácia. Não começar por interações
-de alta ordem, P99 × TDAH × TEA, agrupamentos complexos ou dezenas de suplementos.
+Executar primeiro A-01 e a auditoria de suporte/precisão de A-02 e A-03. Somente
+depois ajustar uma POC de A-02, escolhendo um hábito pelo alinhamento e cobertura,
+antes de examinar associações. A-04 depende de seguimento; A-05 qualifica a linha
+nutricional. Não começar por clusters ou interações de alta ordem.
+
+A-05 não encadeia coeficientes de pessoas distintas para calcular benefício de
+suplemento. Estudos de exposição → hábito e hábito → funcionamento podem apoiar
+uma hipótese indireta; sua combinação não prova o efeito da intervenção.
 
 ## Suficiência e decisões sobre hipóteses
 
@@ -114,18 +124,22 @@ não uma teoria geral. Nenhuma POC observacional demonstra causalidade.
 
 ## Critério de encerramento da fase
 
-- Ao menos uma base real processada e reproduzível para perguntas de hábito e
-  funcionamento, com cobertura explicitada.
-- Frente cognitiva auditada: capacidade contínua utilizável ou lacuna explicitamente
-  aberta; sem ela, não declarar o programa neurocognitivo plenamente habilitado.
+- Ao menos uma base real aprovada em A-01 e A-02, com capacidade, fator modificável
+  e funcionamento conjuntamente medidos e precisão suficiente para o estimando.
+- A-03 documentada por condição e faixa cognitiva; sem cobertura adequada, a
+  frente correspondente de TDAH/autismo/alta capacidade permanece insuficiente.
 - Frente nutricional com produto/ingrediente ou uso distinguido e POC de mensuração.
-- POCs aplicáveis executadas; não aplicáveis justificadas; no mínimo uma hipótese
-  substantiva simples executada, ainda que inconclusiva.
+- Auditorias técnicas executadas e ao menos uma POC A-02 reproduzível. Resultado
+  nulo com precisão adequada pode aprovar a base; imprecisão excessiva não aprova
+  a pergunta, mesmo que o código rode. A-04/A-05 recebem decisões próprias.
 - Matriz de precisão e limites por pergunta, com plano para déficits.
 - Versão congelada e recomendação fundamentada de avançar, ampliar ou restringir.
 
 A aprovação é por uso: uma base pode sustentar sono e funcionamento e continuar
 insuficiente para suplementação, alta capacidade ou coexistência de condições.
+Uma associação genérica de sono ou atividade com desempenho não encerra a fase.
+Se nenhum núcleo atende A-01/A-02, o produto é um diagnóstico de insuficiência e
+um plano de aquisição, e a fundação científica permanece não aprovada.
 
 ## Documentação e retomada
 

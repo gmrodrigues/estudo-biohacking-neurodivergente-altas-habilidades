@@ -1,5 +1,14 @@
 # Acesso às fontes a partir deste ambiente
 
+Atualização de 2026-09-10: a [triagem de adequação](SOURCE_FIT_AUDIT.md) registra
+ABCD 7.0/NBDC, requisitos HBN e campos públicos UK Biobank. A FAQ ABCD proíbe
+inserir dados em IA generativa: acesso individual não autoriza sua leitura por
+este assistente. Aqui, trabalhar com documentação pública e código sem microdados;
+a execução com dados exige fluxo compatível com o acordo.
+Fonte: https://docs.abcdstudy.org/latest/info/faq.html
+As matrizes abaixo preservam a inspeção histórica de 07/09, não verificam o acesso
+individual atual.
+
 Esta matriz documenta a capacidade operacional de acessar as fontes catalogadas
 a partir do workspace atual. “Direto” significa que dados públicos podem ser
 consultados por página, API ou download sem usar uma conta pessoal do pesquisador.

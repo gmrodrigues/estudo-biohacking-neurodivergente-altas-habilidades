@@ -64,6 +64,7 @@
         {
           "title": "Documentos operacionais",
           "links": [
+            {"title": "Triagem E1: adequação, campos e limites das fontes", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/SOURCE_FIT_AUDIT.md"},
             {"title": "Plano da fase 1: base ampla e seis POCs", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/PHASE_1_PLAN.md"},
             {"title": "Programa científico", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/PROGRAM.md"},
             {"title": "Fundação analítica", "url": "https://github.com/gmrodrigues/estudo-biohacking-neurodivergente-altas-habilidades/blob/main/catalog/data-sources/ANALYTIC_FOUNDATION.md"},
